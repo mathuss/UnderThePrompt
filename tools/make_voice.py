@@ -8,6 +8,11 @@ prefix "w1 .. wk" and taking its length (fully offline, no ASR model needed).
 Caption words are mapped onto those times by character position, so TTS-only
 respellings don't break the alignment.
 Outputs: <out_dir>/voice.wav, <out_dir>/timeline.json
+
+Dialogue: add "speakers": {"mott": {"voice": "am_puck", "speed": 1.05}, ...} to the spec and
+"speaker": "<name>" to a scene (or to a line object). Each speaker then also gets its own
+time-aligned track <out_dir>/voice_<name>.wav (silence where others talk), used to drive mouths.
+Lines and words in the timeline carry their "speaker".
 """
 import argparse
 import json
@@ -69,7 +74,15 @@ def main():
     lang = {"es": "es", "en": "en-us"}[spec["lang"]]
     tts = Kokoro(str(MODELS / "kokoro-v1.0.onnx"), str(MODELS / "voices-v1.0.bin"))
 
+    speakers = spec.get("speakers") or {"narrator": {"voice": voice, "speed": spec["speed"]}}
+    default_spk = next(iter(speakers))
+    tracks = {k: [np.zeros(int(LEAD_IN * SR), dtype=np.float32)] for k in speakers}
     audio = [np.zeros(int(LEAD_IN * SR), dtype=np.float32)]
+
+    def push(chunk, who):
+        audio.append(chunk)
+        for k in tracks:
+            tracks[k].append(chunk if k == who else np.zeros_like(chunk))
     t = LEAD_IN
     scenes, words, lines_out = [], [], []
 
@@ -79,12 +92,14 @@ def main():
             text = line["text"] if isinstance(line, dict) else line
             say = line.get("say", text) if isinstance(line, dict) else text
             say = respell(say, spec["respell"])
-            samples, sr = tts.create(say, voice=voice, speed=spec["speed"], lang=lang)
+            who = (line.get("speaker") if isinstance(line, dict) else None) or scene.get("speaker") or default_spk
+            v_name, v_speed = speakers[who]["voice"], speakers[who].get("speed", spec["speed"])
+            samples, sr = tts.create(say, voice=v_name, speed=v_speed, lang=lang)
             assert sr == SR, sr
             samples = samples.astype(np.float32)
             dur = len(samples) / SR
 
-            fr, ts = speech_curve(tts, say, voice, spec["speed"], lang, dur)
+            fr, ts = speech_curve(tts, say, v_name, v_speed, lang, dur)
             caption_words = text.split()
             clen = [letters(w) for w in caption_words]
             ctot, acc = sum(clen), 0
@@ -92,23 +107,26 @@ def main():
                 ws = float(np.interp(acc / ctot, fr, ts))
                 we = float(np.interp((acc + n) / ctot, fr, ts))
                 words.append({"text": w, "start": round(t + ws, 3), "end": round(t + max(we, ws + 0.08), 3),
-                              "scene": scene["id"], "line": len(lines_out)})
+                              "scene": scene["id"], "line": len(lines_out), "speaker": who})
                 acc += n
-            lines_out.append({"scene": scene["id"], "text": text, "start": round(t, 3), "end": round(t + dur, 3)})
+            lines_out.append({"scene": scene["id"], "speaker": who, "text": text, "start": round(t, 3), "end": round(t + dur, 3)})
             print(f"  scene {scene['id']} line {li}: {dur:.2f}s", flush=True)
-            audio.append(samples)
+            push(samples, who)
             t += dur
             if li < len(scene["lines"]) - 1:
-                audio.append(np.zeros(int(LINE_GAP * SR), dtype=np.float32))
+                push(np.zeros(int(LINE_GAP * SR), dtype=np.float32), None)
                 t += LINE_GAP
         gap = SCENE_GAP if si < len(spec["scenes"]) - 1 else 1.2
-        audio.append(np.zeros(int(gap * SR), dtype=np.float32))
+        push(np.zeros(int(gap * SR), dtype=np.float32), None)
         t += gap
         scenes.append({"id": scene["id"], "start": round(scene_start, 3), "end": round(t, 3)})
 
     full = np.concatenate(audio)
-    full = full / (float(np.max(np.abs(full))) or 1.0) * 0.89
-    sf.write(out / "voice.wav", full, SR, subtype="PCM_16")
+    gain = 0.89 / (float(np.max(np.abs(full))) or 1.0)
+    sf.write(out / "voice.wav", full * gain, SR, subtype="PCM_16")
+    if len(speakers) > 1:
+        for k, chunks in tracks.items():
+            sf.write(out / f"voice_{k}.wav", np.concatenate(chunks) * gain, SR, subtype="PCM_16")
     (out / "timeline.json").write_text(json.dumps(
         {"voice": voice, "duration": round(t, 3), "scenes": scenes, "lines": lines_out, "words": words},
         ensure_ascii=False, indent=1), encoding="utf-8")
