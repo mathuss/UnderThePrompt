@@ -1,0 +1,25 @@
+# Media and heavy artifacts (never versioned)
+output/
+production/*/audio/
+production/*/captures/
+production/remotion/node_modules/
+production/remotion/out/
+tools/models/
+.venv/
+*.mp4
+*.wav
+*.mp3
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+
+# Remotion bundles (rebuilt on every render)
+production/remotion/build*/
+production/design-options/bundle/
+
+# Review renders and scratch stills (regenerable)
+production/design-options/*.png
+production/design-options/*.jpg
+production/design-options/web/
+production/*/stills/
