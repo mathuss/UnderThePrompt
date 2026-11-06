@@ -1,0 +1,2007 @@
+{
+ "voice": "am_puck",
+ "duration": 97.821,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 0.15,
+   "end": 4.483
+  },
+  {
+   "id": 2,
+   "start": 4.483,
+   "end": 10.254
+  },
+  {
+   "id": 3,
+   "start": 10.254,
+   "end": 23.705
+  },
+  {
+   "id": 4,
+   "start": 23.705,
+   "end": 38.946
+  },
+  {
+   "id": 5,
+   "start": 38.946,
+   "end": 51.361
+  },
+  {
+   "id": 6,
+   "start": 51.361,
+   "end": 58.391
+  },
+  {
+   "id": 7,
+   "start": 58.391,
+   "end": 70.615
+  },
+  {
+   "id": 8,
+   "start": 70.615,
+   "end": 78.425
+  },
+  {
+   "id": 9,
+   "start": 78.425,
+   "end": 89.155
+  },
+  {
+   "id": 10,
+   "start": 89.155,
+   "end": 93.369
+  },
+  {
+   "id": 11,
+   "start": 93.369,
+   "end": 97.821
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "text": "What if Claude could understand any program… even without the source code?",
+   "start": 0.15,
+   "end": 4.033
+  },
+  {
+   "scene": 2,
+   "text": "A binary is just this: millions of bytes.",
+   "start": 4.483,
+   "end": 6.957
+  },
+  {
+   "scene": 2,
+   "text": "You can't read it like this, and neither can an AI.",
+   "start": 7.137,
+   "end": 9.804
+  },
+  {
+   "scene": 3,
+   "text": "That's what REA, Reverse Engineer Anything, is for.",
+   "start": 10.254,
+   "end": 13.347
+  },
+  {
+   "scene": 3,
+   "text": "It's an MCP server that gives Claude over 200 reverse-engineering tools and connects it to real engines like Ghidra, IDA, Hopper and JADX.",
+   "start": 13.527,
+   "end": 23.255
+  },
+  {
+   "scene": 4,
+   "text": "Step one: open_binary.",
+   "start": 23.705,
+   "end": 25.199
+  },
+  {
+   "scene": 4,
+   "text": "REA works out what kind of file it is and picks the engine:",
+   "start": 25.379,
+   "end": 28.728
+  },
+  {
+   "scene": 4,
+   "text": "Ghidra, IDA or Hopper for native code, JADX for Android, Binwalk for firmware.",
+   "start": 28.908,
+   "end": 34.604
+  },
+  {
+   "scene": 4,
+   "text": "For an Electron app, it analyzes the JavaScript directly.",
+   "start": 34.784,
+   "end": 38.496
+  },
+  {
+   "scene": 5,
+   "text": "Step two: map it.",
+   "start": 38.946,
+   "end": 40.034
+  },
+  {
+   "scene": 5,
+   "text": "Claude sees the architecture, the libraries it uses and the text inside it.",
+   "start": 40.214,
+   "end": 44.651
+  },
+  {
+   "scene": 5,
+   "text": "It finds a message like ‘License invalid’ and follows its cross-references to the function that uses it.",
+   "start": 44.831,
+   "end": 50.911
+  },
+  {
+   "scene": 6,
+   "text": "Step three: decompile.",
+   "start": 51.361,
+   "end": 52.748
+  },
+  {
+   "scene": 6,
+   "text": "The assembly becomes C pseudocode, and the call graph shows which function calls which.",
+   "start": 52.928,
+   "end": 57.941
+  },
+  {
+   "scene": 7,
+   "text": "Step four: understand it.",
+   "start": 58.391,
+   "end": 59.863
+  },
+  {
+   "scene": 7,
+   "text": "Claude gives functions real names and adds comments.",
+   "start": 60.043,
+   "end": 62.902
+  },
+  {
+   "scene": 7,
+   "text": "Every conclusion is backed by an Evidence ID, separating what it saw from what it inferred and what it still doesn't know.",
+   "start": 63.082,
+   "end": 70.165
+  },
+  {
+   "scene": 8,
+   "text": "When static analysis isn't enough, REA watches the program while it runs, using Frida, GDB or the browser.",
+   "start": 70.615,
+   "end": 77.975
+  },
+  {
+   "scene": 9,
+   "text": "Step five: rebuild.",
+   "start": 78.425,
+   "end": 79.705
+  },
+  {
+   "scene": 9,
+   "text": "Using all that evidence, Claude writes clean source code in a normal project.",
+   "start": 79.885,
+   "end": 84.407
+  },
+  {
+   "scene": 9,
+   "text": "Then REA checks that the new code meets every documented behavior.",
+   "start": 84.587,
+   "end": 88.705
+  },
+  {
+   "scene": 10,
+   "text": "And now it's just regular code.",
+   "start": 89.155,
+   "end": 90.712
+  },
+  {
+   "scene": 10,
+   "text": "Claude can change it, build it and test it.",
+   "start": 90.892,
+   "end": 92.919
+  },
+  {
+   "scene": 11,
+   "text": "Binary → evidence → code.",
+   "start": 93.369,
+   "end": 94.755
+  },
+  {
+   "scene": 11,
+   "text": "Follow for more tools like this.",
+   "start": 94.935,
+   "end": 96.621
+  }
+ ],
+ "words": [
+  {
+   "text": "What",
+   "start": 0.15,
+   "end": 0.619,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "if",
+   "start": 0.619,
+   "end": 0.699,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "Claude",
+   "start": 0.683,
+   "end": 1.003,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "could",
+   "start": 1.003,
+   "end": 1.217,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "understand",
+   "start": 1.217,
+   "end": 1.515,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "any",
+   "start": 1.515,
+   "end": 1.814,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "program…",
+   "start": 1.814,
+   "end": 2.326,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "even",
+   "start": 2.326,
+   "end": 2.753,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "without",
+   "start": 2.753,
+   "end": 3.137,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "the",
+   "start": 3.137,
+   "end": 3.414,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "source",
+   "start": 3.414,
+   "end": 3.691,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "code?",
+   "start": 3.691,
+   "end": 4.033,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "A",
+   "start": 4.483,
+   "end": 4.973,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "binary",
+   "start": 4.973,
+   "end": 5.293,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "is",
+   "start": 5.293,
+   "end": 5.443,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "just",
+   "start": 5.443,
+   "end": 5.571,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "this:",
+   "start": 5.571,
+   "end": 5.827,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "millions",
+   "start": 5.827,
+   "end": 6.296,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "of",
+   "start": 6.296,
+   "end": 6.488,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "bytes.",
+   "start": 6.488,
+   "end": 6.957,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "You",
+   "start": 7.137,
+   "end": 7.649,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "can't",
+   "start": 7.649,
+   "end": 7.841,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "read",
+   "start": 7.841,
+   "end": 8.033,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "it",
+   "start": 8.033,
+   "end": 8.113,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "like",
+   "start": 8.097,
+   "end": 8.177,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "this,",
+   "start": 8.161,
+   "end": 8.417,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "and",
+   "start": 8.417,
+   "end": 8.695,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "neither",
+   "start": 8.695,
+   "end": 8.951,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "can",
+   "start": 8.951,
+   "end": 9.228,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "an",
+   "start": 9.228,
+   "end": 9.313,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "AI.",
+   "start": 9.313,
+   "end": 9.804,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "That's",
+   "start": 10.254,
+   "end": 10.766,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "what",
+   "start": 10.766,
+   "end": 10.958,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "REA,",
+   "start": 10.958,
+   "end": 11.427,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Reverse",
+   "start": 11.427,
+   "end": 11.705,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Engineer",
+   "start": 11.705,
+   "end": 12.238,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Anything,",
+   "start": 12.238,
+   "end": 12.878,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "is",
+   "start": 12.878,
+   "end": 13.049,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "for.",
+   "start": 13.049,
+   "end": 13.347,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "It's",
+   "start": 13.527,
+   "end": 13.961,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "an",
+   "start": 13.961,
+   "end": 14.226,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "MCP",
+   "start": 14.226,
+   "end": 14.708,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "server",
+   "start": 14.708,
+   "end": 14.961,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "that",
+   "start": 14.961,
+   "end": 15.146,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "gives",
+   "start": 15.146,
+   "end": 15.422,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Claude",
+   "start": 15.422,
+   "end": 15.651,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "over",
+   "start": 15.651,
+   "end": 16.189,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "200",
+   "start": 16.189,
+   "end": 16.481,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "reverse-engineering",
+   "start": 16.481,
+   "end": 17.922,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "tools",
+   "start": 17.922,
+   "end": 18.368,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "and",
+   "start": 18.368,
+   "end": 18.61,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "connects",
+   "start": 18.61,
+   "end": 19.08,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "it",
+   "start": 19.08,
+   "end": 19.244,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "to",
+   "start": 19.244,
+   "end": 19.59,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "real",
+   "start": 19.59,
+   "end": 19.951,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "engines",
+   "start": 19.951,
+   "end": 20.528,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "like",
+   "start": 20.528,
+   "end": 20.849,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Ghidra,",
+   "start": 20.849,
+   "end": 21.461,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "IDA,",
+   "start": 21.461,
+   "end": 21.903,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Hopper",
+   "start": 21.903,
+   "end": 22.566,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "and",
+   "start": 22.566,
+   "end": 22.914,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "JADX.",
+   "start": 22.914,
+   "end": 23.255,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Step",
+   "start": 23.705,
+   "end": 24.088,
+   "scene": 4,
+   "line": 5
+  },
+  {
+   "text": "one:",
+   "start": 24.088,
+   "end": 24.482,
+   "scene": 4,
+   "line": 5
+  },
+  {
+   "text": "open_binary.",
+   "start": 24.482,
+   "end": 25.199,
+   "scene": 4,
+   "line": 5
+  },
+  {
+   "text": "REA",
+   "start": 25.379,
+   "end": 26.147,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "works",
+   "start": 26.147,
+   "end": 26.232,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "out",
+   "start": 26.232,
+   "end": 26.381,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "what",
+   "start": 26.381,
+   "end": 26.552,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "kind",
+   "start": 26.552,
+   "end": 26.851,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "of",
+   "start": 26.851,
+   "end": 26.931,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "file",
+   "start": 26.901,
+   "end": 27.213,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "it",
+   "start": 27.213,
+   "end": 27.32,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "is",
+   "start": 27.32,
+   "end": 27.491,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "and",
+   "start": 27.491,
+   "end": 27.725,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "picks",
+   "start": 27.725,
+   "end": 28.024,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "the",
+   "start": 28.024,
+   "end": 28.259,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "engine:",
+   "start": 28.259,
+   "end": 28.728,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "Ghidra,",
+   "start": 28.908,
+   "end": 29.598,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "IDA",
+   "start": 29.598,
+   "end": 29.884,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "or",
+   "start": 29.884,
+   "end": 30.014,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "Hopper",
+   "start": 30.014,
+   "end": 30.473,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "for",
+   "start": 30.473,
+   "end": 30.677,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "native",
+   "start": 30.677,
+   "end": 31.086,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "code,",
+   "start": 31.086,
+   "end": 31.477,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "JADX",
+   "start": 31.477,
+   "end": 31.954,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "for",
+   "start": 31.954,
+   "end": 32.286,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "Android,",
+   "start": 32.286,
+   "end": 33.06,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "Binwalk",
+   "start": 33.06,
+   "end": 33.686,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "for",
+   "start": 33.686,
+   "end": 33.897,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "firmware.",
+   "start": 33.897,
+   "end": 34.604,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "For",
+   "start": 34.784,
+   "end": 35.211,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "an",
+   "start": 35.211,
+   "end": 35.445,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "Electron",
+   "start": 35.445,
+   "end": 35.829,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "app,",
+   "start": 35.829,
+   "end": 35.936,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "it",
+   "start": 35.936,
+   "end": 36.213,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "analyzes",
+   "start": 36.213,
+   "end": 36.64,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "the",
+   "start": 36.64,
+   "end": 36.96,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "JavaScript",
+   "start": 36.96,
+   "end": 37.664,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "directly.",
+   "start": 37.664,
+   "end": 38.496,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "Step",
+   "start": 38.946,
+   "end": 39.351,
+   "scene": 5,
+   "line": 9
+  },
+  {
+   "text": "two:",
+   "start": 39.351,
+   "end": 39.757,
+   "scene": 5,
+   "line": 9
+  },
+  {
+   "text": "map",
+   "start": 39.757,
+   "end": 39.906,
+   "scene": 5,
+   "line": 9
+  },
+  {
+   "text": "it.",
+   "start": 39.906,
+   "end": 40.034,
+   "scene": 5,
+   "line": 9
+  },
+  {
+   "text": "Claude",
+   "start": 40.214,
+   "end": 40.79,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "sees",
+   "start": 40.79,
+   "end": 41.046,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "the",
+   "start": 41.046,
+   "end": 41.281,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "architecture,",
+   "start": 41.281,
+   "end": 41.75,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "the",
+   "start": 41.75,
+   "end": 41.921,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "libraries",
+   "start": 41.921,
+   "end": 42.411,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "it",
+   "start": 42.411,
+   "end": 42.667,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "uses",
+   "start": 42.667,
+   "end": 43.115,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "and",
+   "start": 43.115,
+   "end": 43.393,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "the",
+   "start": 43.393,
+   "end": 43.521,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "text",
+   "start": 43.521,
+   "end": 43.777,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "inside",
+   "start": 43.777,
+   "end": 44.481,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "it.",
+   "start": 44.481,
+   "end": 44.651,
+   "scene": 5,
+   "line": 10
+  },
+  {
+   "text": "It",
+   "start": 44.831,
+   "end": 45.279,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "finds",
+   "start": 45.279,
+   "end": 45.557,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "a",
+   "start": 45.557,
+   "end": 45.706,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "message",
+   "start": 45.706,
+   "end": 45.962,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "like",
+   "start": 45.962,
+   "end": 46.111,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "‘License",
+   "start": 46.111,
+   "end": 46.623,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "invalid’",
+   "start": 46.623,
+   "end": 47.071,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "and",
+   "start": 47.071,
+   "end": 47.349,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "follows",
+   "start": 47.349,
+   "end": 47.861,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "its",
+   "start": 47.861,
+   "end": 48.01,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "cross-references",
+   "start": 48.01,
+   "end": 49.205,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "to",
+   "start": 49.205,
+   "end": 49.418,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "the",
+   "start": 49.418,
+   "end": 49.546,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "function",
+   "start": 49.546,
+   "end": 50.079,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "that",
+   "start": 50.079,
+   "end": 50.378,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "uses",
+   "start": 50.378,
+   "end": 50.805,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "it.",
+   "start": 50.805,
+   "end": 50.911,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "Step",
+   "start": 51.361,
+   "end": 51.767,
+   "scene": 6,
+   "line": 12
+  },
+  {
+   "text": "three:",
+   "start": 51.767,
+   "end": 52.215,
+   "scene": 6,
+   "line": 12
+  },
+  {
+   "text": "decompile.",
+   "start": 52.215,
+   "end": 52.748,
+   "scene": 6,
+   "line": 12
+  },
+  {
+   "text": "The",
+   "start": 52.928,
+   "end": 53.291,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "assembly",
+   "start": 53.291,
+   "end": 53.803,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "becomes",
+   "start": 53.803,
+   "end": 54.037,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "C",
+   "start": 54.037,
+   "end": 54.208,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "pseudocode,",
+   "start": 54.208,
+   "end": 54.869,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "and",
+   "start": 54.869,
+   "end": 55.147,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "the",
+   "start": 55.147,
+   "end": 55.339,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "call",
+   "start": 55.339,
+   "end": 55.488,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "graph",
+   "start": 55.488,
+   "end": 55.936,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "shows",
+   "start": 55.936,
+   "end": 56.363,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "which",
+   "start": 56.363,
+   "end": 56.64,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "function",
+   "start": 56.64,
+   "end": 57.088,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "calls",
+   "start": 57.088,
+   "end": 57.536,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "which.",
+   "start": 57.536,
+   "end": 57.941,
+   "scene": 6,
+   "line": 13
+  },
+  {
+   "text": "Step",
+   "start": 58.391,
+   "end": 58.797,
+   "scene": 7,
+   "line": 14
+  },
+  {
+   "text": "four:",
+   "start": 58.797,
+   "end": 59.223,
+   "scene": 7,
+   "line": 14
+  },
+  {
+   "text": "understand",
+   "start": 59.223,
+   "end": 59.799,
+   "scene": 7,
+   "line": 14
+  },
+  {
+   "text": "it.",
+   "start": 59.799,
+   "end": 59.879,
+   "scene": 7,
+   "line": 14
+  },
+  {
+   "text": "Claude",
+   "start": 60.043,
+   "end": 60.619,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "gives",
+   "start": 60.619,
+   "end": 60.897,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "functions",
+   "start": 60.897,
+   "end": 61.238,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "real",
+   "start": 61.238,
+   "end": 61.494,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "names",
+   "start": 61.494,
+   "end": 61.75,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "and",
+   "start": 61.75,
+   "end": 62.07,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "adds",
+   "start": 62.07,
+   "end": 62.262,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "comments.",
+   "start": 62.262,
+   "end": 62.902,
+   "scene": 7,
+   "line": 15
+  },
+  {
+   "text": "Every",
+   "start": 63.082,
+   "end": 63.679,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "conclusion",
+   "start": 63.679,
+   "end": 64.149,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "is",
+   "start": 64.149,
+   "end": 64.319,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "backed",
+   "start": 64.319,
+   "end": 64.49,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "by",
+   "start": 64.49,
+   "end": 64.682,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "an",
+   "start": 64.682,
+   "end": 64.831,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "Evidence",
+   "start": 64.831,
+   "end": 65.237,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "ID,",
+   "start": 65.237,
+   "end": 65.706,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "separating",
+   "start": 65.706,
+   "end": 66.623,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "what",
+   "start": 66.623,
+   "end": 66.815,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "it",
+   "start": 66.815,
+   "end": 66.901,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "saw",
+   "start": 66.901,
+   "end": 67.135,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "from",
+   "start": 67.135,
+   "end": 67.562,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "what",
+   "start": 67.562,
+   "end": 67.882,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "it",
+   "start": 67.882,
+   "end": 68.053,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "inferred",
+   "start": 68.053,
+   "end": 68.629,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "and",
+   "start": 68.629,
+   "end": 68.799,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "what",
+   "start": 68.799,
+   "end": 69.098,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "it",
+   "start": 69.098,
+   "end": 69.226,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "still",
+   "start": 69.226,
+   "end": 69.503,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "doesn't",
+   "start": 69.503,
+   "end": 69.823,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "know.",
+   "start": 69.823,
+   "end": 70.165,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "When",
+   "start": 70.615,
+   "end": 71.105,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "static",
+   "start": 71.105,
+   "end": 71.404,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "analysis",
+   "start": 71.404,
+   "end": 71.895,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "isn't",
+   "start": 71.895,
+   "end": 72.108,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "enough,",
+   "start": 72.108,
+   "end": 72.449,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "REA",
+   "start": 72.449,
+   "end": 73.153,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "watches",
+   "start": 73.153,
+   "end": 73.623,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "the",
+   "start": 73.623,
+   "end": 73.879,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "program",
+   "start": 73.879,
+   "end": 74.263,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "while",
+   "start": 74.263,
+   "end": 74.54,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "it",
+   "start": 74.54,
+   "end": 74.753,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "runs,",
+   "start": 74.753,
+   "end": 75.095,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "using",
+   "start": 75.095,
+   "end": 75.713,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "Frida,",
+   "start": 75.713,
+   "end": 76.076,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "GDB",
+   "start": 76.076,
+   "end": 76.951,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "or",
+   "start": 76.951,
+   "end": 77.249,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "the",
+   "start": 77.249,
+   "end": 77.463,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "browser.",
+   "start": 77.463,
+   "end": 77.975,
+   "scene": 8,
+   "line": 17
+  },
+  {
+   "text": "Step",
+   "start": 78.425,
+   "end": 78.83,
+   "scene": 9,
+   "line": 18
+  },
+  {
+   "text": "five:",
+   "start": 78.83,
+   "end": 79.278,
+   "scene": 9,
+   "line": 18
+  },
+  {
+   "text": "rebuild.",
+   "start": 79.278,
+   "end": 79.705,
+   "scene": 9,
+   "line": 18
+  },
+  {
+   "text": "Using",
+   "start": 79.885,
+   "end": 80.546,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "all",
+   "start": 80.546,
+   "end": 80.626,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "that",
+   "start": 80.596,
+   "end": 80.759,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "evidence,",
+   "start": 80.759,
+   "end": 81.122,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "Claude",
+   "start": 81.122,
+   "end": 81.378,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "writes",
+   "start": 81.378,
+   "end": 81.719,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "clean",
+   "start": 81.719,
+   "end": 81.997,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "source",
+   "start": 81.997,
+   "end": 82.509,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "code",
+   "start": 82.509,
+   "end": 82.829,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "in",
+   "start": 82.829,
+   "end": 82.909,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "a",
+   "start": 82.879,
+   "end": 83.085,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "normal",
+   "start": 83.085,
+   "end": 83.703,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "project.",
+   "start": 83.703,
+   "end": 84.407,
+   "scene": 9,
+   "line": 19
+  },
+  {
+   "text": "Then",
+   "start": 84.587,
+   "end": 85.142,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "REA",
+   "start": 85.142,
+   "end": 85.526,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "checks",
+   "start": 85.526,
+   "end": 85.611,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "that",
+   "start": 85.611,
+   "end": 85.846,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "the",
+   "start": 85.846,
+   "end": 86.017,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "new",
+   "start": 86.017,
+   "end": 86.102,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "code",
+   "start": 86.102,
+   "end": 86.315,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "meets",
+   "start": 86.315,
+   "end": 86.657,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "every",
+   "start": 86.657,
+   "end": 87.019,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "documented",
+   "start": 87.019,
+   "end": 87.915,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "behavior.",
+   "start": 87.915,
+   "end": 88.705,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "And",
+   "start": 89.155,
+   "end": 89.581,
+   "scene": 10,
+   "line": 21
+  },
+  {
+   "text": "now",
+   "start": 89.581,
+   "end": 89.816,
+   "scene": 10,
+   "line": 21
+  },
+  {
+   "text": "it's",
+   "start": 89.816,
+   "end": 89.896,
+   "scene": 10,
+   "line": 21
+  },
+  {
+   "text": "just",
+   "start": 89.866,
+   "end": 90.051,
+   "scene": 10,
+   "line": 21
+  },
+  {
+   "text": "regular",
+   "start": 90.051,
+   "end": 90.477,
+   "scene": 10,
+   "line": 21
+  },
+  {
+   "text": "code.",
+   "start": 90.477,
+   "end": 90.712,
+   "scene": 10,
+   "line": 21
+  },
+  {
+   "text": "Claude",
+   "start": 90.892,
+   "end": 91.468,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "can",
+   "start": 91.468,
+   "end": 91.724,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "change",
+   "start": 91.724,
+   "end": 91.959,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "it,",
+   "start": 91.959,
+   "end": 92.044,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "build",
+   "start": 92.044,
+   "end": 92.215,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "it",
+   "start": 92.215,
+   "end": 92.3,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "and",
+   "start": 92.3,
+   "end": 92.513,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "test",
+   "start": 92.513,
+   "end": 92.705,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "it.",
+   "start": 92.705,
+   "end": 92.919,
+   "scene": 10,
+   "line": 22
+  },
+  {
+   "text": "Binary",
+   "start": 93.369,
+   "end": 93.983,
+   "scene": 11,
+   "line": 23
+  },
+  {
+   "text": "→",
+   "start": 93.983,
+   "end": 94.069,
+   "scene": 11,
+   "line": 23
+  },
+  {
+   "text": "evidence",
+   "start": 94.069,
+   "end": 94.491,
+   "scene": 11,
+   "line": 23
+  },
+  {
+   "text": "→",
+   "start": 94.491,
+   "end": 94.571,
+   "scene": 11,
+   "line": 23
+  },
+  {
+   "text": "code.",
+   "start": 94.544,
+   "end": 94.755,
+   "scene": 11,
+   "line": 23
+  },
+  {
+   "text": "Follow",
+   "start": 94.935,
+   "end": 95.639,
+   "scene": 11,
+   "line": 24
+  },
+  {
+   "text": "for",
+   "start": 95.639,
+   "end": 95.853,
+   "scene": 11,
+   "line": 24
+  },
+  {
+   "text": "more",
+   "start": 95.853,
+   "end": 95.933,
+   "scene": 11,
+   "line": 24
+  },
+  {
+   "text": "tools",
+   "start": 95.903,
+   "end": 96.151,
+   "scene": 11,
+   "line": 24
+  },
+  {
+   "text": "like",
+   "start": 96.151,
+   "end": 96.322,
+   "scene": 11,
+   "line": 24
+  },
+  {
+   "text": "this.",
+   "start": 96.322,
+   "end": 96.621,
+   "scene": 11,
+   "line": 24
+  }
+ ]
+}

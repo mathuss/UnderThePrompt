@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opciones de diseño · Debajo del Prompt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Review board: neutral grey-blue canvas so each look is judged on its own colors. */
+    --canvas: #E9EBF0;
+    --card: #FFFFFF;
+    --ink: #15171C;
+    --muted: #5B6270;
+    --rule: #D3D7DF;
+    --accent: #2E5BFF;
+    --pick: #E8553A;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", Consolas, monospace;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+  main { max-width: 1180px; margin: 0 auto; padding: 40px 20px 80px; display: grid; gap: 28px; }
+  header { display: grid; gap: 8px; }
+  .kicker { font-family: var(--mono); font-size: 13px; color: var(--muted); letter-spacing: .06em; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4vw, 44px); line-height: 1.05; margin: 0; text-wrap: balance; }
+  header p { margin: 0; max-width: 70ch; color: var(--muted); }
+  .section-title { font-family: var(--display); font-weight: 800; font-size: 28px; margin: 18px 0 0; }
+  .opt { background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: 22px; display: grid; gap: 16px; }
+  .opt.rec { border: 2px solid var(--pick); }
+  .opt-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; }
+  .letter { font-family: var(--mono); font-size: 14px; background: var(--ink); color: #fff; border-radius: 8px; padding: 2px 10px; }
+  h2 { font-family: var(--display); font-weight: 800; font-size: 26px; margin: 0; }
+  .tag { font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 10px; }
+  .tag.pick { color: var(--pick); border-color: var(--pick); }
+  .desc { margin: 0; max-width: 74ch; }
+  .frames { display: grid; grid-template-columns: 1.25fr repeat(4, minmax(0, 1fr)); gap: 12px; align-items: start; }
+  figure { margin: 0; display: grid; gap: 6px; }
+  figure img, figure video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 14px; border: 1px solid var(--rule); display: block; background: #111; }
+  figcaption { font-size: 13px; color: var(--muted); }
+  .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; font-size: 15px; }
+  .pc h3 { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; margin: 0 0 4px; color: var(--muted); font-weight: 500; }
+  .pc ul { margin: 0; padding-left: 18px; }
+  .old { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .old .opt { padding: 14px; gap: 10px; }
+  .old h2 { font-size: 20px; }
+  .ideas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .idea { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+  .idea h3 { font-family: var(--display); font-weight: 800; font-size: 19px; margin: 0; }
+  .idea .src { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .idea p { margin: 0; font-size: 15px; }
+  .note { font-size: 15px; color: var(--muted); max-width: 74ch; margin: 0; }
+  @media (max-width: 900px) {
+    .frames { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .frames figure:first-child { grid-column: 1 / -1; max-width: 360px; }
+    .old { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ideas { grid-template-columns: 1fr; }
+    .pc { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="kicker">UTP-001 · REA · 1080×1920 · RONDA 3</div>
+    <h1>Doce looks en movimiento</h1>
+    <p>Todo lo que ves acá es un render real del video, hecho con la misma plantilla de Remotion: nada es un mockup. Cada opción trae un clip de 14 s (el diagrama de REA y el comienzo del paso 1, con audio) y 4 capturas fijas. Los cuatro estilos nuevos salen de lo que pediste: la identidad de Noir más el estilo de Papel, pero con fondo oscuro. Para crearlos tomé como guía la gramática de los estilos de <em>lemo-opuscar</em>.</p>
+  </header>
+
+  
+  <h2 class="section-title">Ronda 3 · sin papel</h2>
+  <p class="note">Elegí estos cuatro del catálogo con un criterio: menos capas y más concepto. Ninguno usa grano, contornos de recorte ni sombras duras, que es lo que hacía que la ronda 2 se viera sobrecargada.</p>
+  <section class="opt rec" id="opcion-i">
+    <div class="opt-head"><span class="letter">I</span><h2>Keynote</h2><span class="tag pick">mi elección</span></div>
+    <p class="desc">Escenario casi negro de tono frío, grilla de líneas finas y una luz suave que cambia de lugar en cada escena, con un barrido de luz en cada cambio. Hay <strong>un solo color de acento</strong> (verde lima), reservado para lo importante: REA, la palabra clave, la confirmación. Es el lenguaje de los lanzamientos de software.</p>
+    <div class="frames">
+      <figure><video src="clip-keynote.mp4" poster="keynote-1440.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · paso 1 → paso 2 · con audio</figcaption></figure>
+      <figure><img src="keynote-120.png" alt="Keynote: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="keynote-640.png" alt="Keynote: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="keynote-1440.png" alt="Keynote: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="keynote-2900.png" alt="Keynote: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>El más limpio: nada compite con el contenido</li><li>Sirve para cualquier tema de IA, no solo para este</li><li>El lima puede ser el color de la marca y repetirse en todos los videos</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Si el guion es flojo, no hay decoración que lo tape</li><li>Se parece más a Noir que los otros</li></ul></div>
+    </div>
+  </section>
+  <section class="opt" id="opcion-j">
+    <div class="opt-head"><span class="letter">J</span><h2>Placa</h2><span class="tag">circuit-board</span></div>
+    <p class="desc">Placa de circuito vista desde arriba: máscara verde, pistas a 0/45/90°, pads dorados y serigrafía blanca. Pulsos de luz ámbar recorren las pistas sin parar, como información que viaja.</p>
+    <div class="frames">
+      <figure><video src="clip-placa.mp4" poster="placa-1440.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · paso 1 → paso 2 · con audio</figcaption></figure>
+      <figure><img src="placa-120.png" alt="Placa: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="placa-640.png" alt="Placa: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="placa-1440.png" alt="Placa: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="placa-2900.png" alt="Placa: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>Identidad muy fuerte y poco vista</li><li>La luz que viaja por las pistas hace que el fondo se sienta vivo sin distraer</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Encaja con binarios y hardware; con temas como “un chatbot nuevo” queda forzado</li><li>Todo es verde: no se puede cambiar el color por escena</li></ul></div>
+    </div>
+  </section>
+  <section class="opt" id="opcion-k">
+    <div class="opt-head"><span class="letter">K</span><h2>Fósforo</h2><span class="tag">ascii-crt</span></div>
+    <p class="desc">Monitor CRT de fósforo ámbar: todo en monoespaciada, con líneas de barrido, viñeta y un leve resplandor. Un segundo color, celeste hielo, aparece solo para el código reconstruido al final.</p>
+    <div class="frames">
+      <figure><video src="clip-crt.mp4" poster="crt-1440.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · paso 1 → paso 2 · con audio</figcaption></figure>
+      <figure><img src="crt-120.png" alt="Fósforo: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="crt-640.png" alt="Fósforo: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="crt-1440.png" alt="Fósforo: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="crt-2900.png" alt="Fósforo: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>El más “hacker” y el más coherente con la ingeniería inversa</li><li>Ámbar sobre negro es muy cálido para ser oscuro</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Monocromo: con 90 s puede volverse parejo</li><li>La monoespaciada ocupa más espacio y obliga a achicar títulos</li></ul></div>
+    </div>
+  </section>
+  <section class="opt" id="opcion-l">
+    <div class="opt-head"><span class="letter">L</span><h2>Línea</h2><span class="tag">transit-map</span></div>
+    <p class="desc">Los cinco pasos son estaciones de una línea de subte que cruza la parte de abajo. La línea amarilla avanza y la estación actual se marca como cápsula. El resto es oscuro y limpio, y ocupa la zona vacía de abajo.</p>
+    <div class="frames">
+      <figure><video src="clip-linea.mp4" poster="linea-1440.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · paso 1 → paso 2 · con audio</figcaption></figure>
+      <figure><img src="linea-120.png" alt="Línea: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="linea-640.png" alt="Línea: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="linea-1440.png" alt="Línea: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="linea-2900.png" alt="Línea: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>Muestra el avance: el espectador sabe cuánto falta, y eso suele retener</li><li>Ocupa la mitad inferior, que en los otros queda vacía</li><li>Se puede sumar a cualquier otro estilo</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Solo tiene sentido en guiones con pasos</li><li>Las plataformas tapan parte de esa zona con su texto</li></ul></div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Ronda 2 · base papel</h2>
+
+  <section class="opt" id="opcion-e">
+    <div class="opt-head"><span class="letter">E</span><h2>Tinta</h2><span class="tag">Noir + Papel</span></div>
+    <p class="desc">Hoja carbón con grano y puntos crema. Los paneles parecen recortes de papel: tienen contorno crema grueso y sombra dura negra. Un círculo amarillo, un cuadrado azul y un triángulo rojo cambian de lugar en cada escena, así el fondo se mueve sin distraer. Es lo neo-brutalista de Papel, en modo oscuro.</p>
+    <div class="frames">
+      <figure><video src="clip-tinta.mp4" poster="tinta-640.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · con audio</figcaption></figure>
+      <figure><img src="tinta-120.png" alt="Tinta: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="tinta-640.png" alt="Tinta: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="tinta-1440.png" alt="Tinta: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="tinta-2900.png" alt="Tinta: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>Identidad propia: las formas primarias funcionan como logo</li><li>Oscuro, cómodo para ver de noche</li><li>Se puede repetir en todos los videos sin cansar</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Las sombras negras se notan menos que en Papel</li><li>La mitad inferior queda algo vacía (es del layout, no del tema; lo puedo arreglar)</li></ul></div>
+    </div>
+  </section>
+
+  <section class="opt" id="opcion-f">
+    <div class="opt-head"><span class="letter">F</span><h2>Plano</h2><span class="tag">blueprint · ingeniería</span></div>
+    <p class="desc">Papel de cianotipo azul de Prusia con grilla de dibujo técnico, marcas de registro en las esquinas y un rótulo de plano (“FIG. 4 · SHEET 4/11”) que avanza con cada escena. La metáfora encaja con el contenido: la ingeniería inversa redibuja el plano de un programa.</p>
+    <div class="frames">
+      <figure><video src="clip-plano.mp4" poster="plano-640.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · con audio</figcaption></figure>
+      <figure><img src="plano-120.png" alt="Plano: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="plano-640.png" alt="Plano: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="plano-1440.png" alt="Plano: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="plano-2900.png" alt="Plano: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>El que más concepto tiene para temas técnicos</li><li>Azul medio: ni negro ni claro, destaca en el feed</li><li>El rótulo da sensación de serie, como “lámina N”</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Un solo color dominante</li><li>Encaja mejor con temas de “cómo funciona” que con noticias</li></ul></div>
+    </div>
+  </section>
+
+  <section class="opt" id="opcion-g">
+    <div class="opt-head"><span class="letter">G</span><h2>Riso nocturno</h2><span class="tag">risograph · impresión</span></div>
+    <p class="desc">Papel índigo con tintas flúor rosa y amarilla y trama de semitono. Cada forma está impresa dos veces, con la plancha turquesa un poco corrida, como en una risografía mal registrada. Los paneles tienen borde rosa y sombra turquesa dura.</p>
+    <div class="frames">
+      <figure><video src="clip-riso.mp4" poster="riso-640.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · con audio</figcaption></figure>
+      <figure><img src="riso-120.png" alt="Riso: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="riso-640.png" alt="Riso: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="riso-1440.png" alt="Riso: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="riso-2900.png" alt="Riso: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>El más colorido de los oscuros</li><li>Textura “de imprenta”, muy poco común en tech</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Rosa + turquesa + amarillo puede ser demasiado en 90 s</li><li>El semitono se ensucia con la compresión de TikTok</li></ul></div>
+    </div>
+  </section>
+
+  <section class="opt" id="opcion-h">
+    <div class="opt-head"><span class="letter">H</span><h2>Suizo noir</h2><span class="tag">tipográfico · grilla</span></div>
+    <p class="desc">Negro, blanco y rojo señal; esquinas rectas y una grilla de columnas finas. Un círculo rojo enorme cambia de lado en cada escena, y detrás de todo aparece el número de escena gigante y calado (“04”). Diseño gráfico suizo de los 60, en negro.</p>
+    <div class="frames">
+      <figure><video src="clip-suizo.mp4" poster="suizo-640.png" controls loop muted playsinline preload="metadata"></video><figcaption>Clip 14 s · con audio</figcaption></figure>
+      <figure><img src="suizo-120.png" alt="Suizo: hook"><figcaption>Hook</figcaption></figure>
+      <figure><img src="suizo-640.png" alt="Suizo: diagrama REA"><figcaption>REA · 207 herramientas</figcaption></figure>
+      <figure><img src="suizo-1440.png" alt="Suizo: paso 2"><figcaption>Paso 2 · Mapear</figcaption></figure>
+      <figure><img src="suizo-2900.png" alt="Suizo: cierre"><figcaption>Cierre + CTA</figcaption></figure>
+    </div>
+    <div class="pc">
+      <div><h3>A FAVOR</h3><ul><li>Elegante y con mucha marca: rojo + negro</li><li>El número gigante ordena el video por pasos</li></ul></div>
+      <div><h3>EN CONTRA</h3><ul><li>Al tener un solo acento, los estados del código (ok / dudoso) se distinguen menos</li><li>El más sobrio de los cuatro</li></ul></div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Ronda 1, ahora en movimiento</h2>
+  <div class="old">
+    <section class="opt"><div class="opt-head"><span class="letter">A</span><h2>Noir</h2></div><figure><video src="clip-noir.mp4" poster="noir-640.png" controls loop muted playsinline preload="metadata"></video></figure></section>
+    <section class="opt"><div class="opt-head"><span class="letter">B</span><h2>Neón</h2></div><figure><video src="clip-neon.mp4" poster="neon-640.png" controls loop muted playsinline preload="metadata"></video></figure></section>
+    <section class="opt"><div class="opt-head"><span class="letter">C</span><h2>Papel</h2></div><figure><video src="clip-paper.mp4" poster="paper-640.png" controls loop muted playsinline preload="metadata"></video></figure></section>
+    <section class="opt"><div class="opt-head"><span class="letter">D</span><h2>Atardecer</h2></div><figure><video src="clip-sunset.mp4" poster="sunset-640.png" controls loop muted playsinline preload="metadata"></video></figure></section>
+  </div>
+
+  <h2 class="section-title">Más estilos para explorar</h2>
+  <p class="note">Estos todavía no están construidos. Salen del catálogo de 66 estilos de lemo-opuscar, filtrados por los que funcionan con fondo oscuro, explicaciones técnicas y video vertical. Si alguno te interesa, lo renderizo igual que los de arriba. Algunos cambian más que el color: cambian cómo se mueve la cámara y cómo se “dibuja” cada escena.</p>
+  <div class="ideas">
+    <div class="idea"><h3>Expediente semitono</h3><div class="src">halftone-dossier</div><p>Cada video es un “caso” (CASO 001 · REA), con sellos, trama de semitono y fichas sujetas con clips. Encaja muy bien con ingeniería inversa, que es como investigar. Funciona en papel oscuro.</p></div>
+    <div class="idea"><h3>Pizarra de briefing</h3><div class="src">briefing-board</div><p>Pizarra de ingeniería con fotos pegadas, cotas y anotaciones a mano. Sirve para mostrar capturas reales de productos, que es lo que pide la regla de no fabricar interfaces.</p></div>
+    <div class="idea"><h3>Títulos de espía 60s</h3><div class="src">spy-titles</div><p>Siluetas planas y recortes con un círculo de luz, al estilo de las secuencias de títulos de los 60. Muy llamativo para hooks y cierres; para las partes técnicas usaría otro estilo.</p></div>
+  </div>
+
+  <p class="note">Respondé en el chat con la letra que elegís, o con una mezcla. La que yo usaría es <strong>I Keynote con la línea de L</strong>: el estilo base más limpio, más una barra de avance que llena la zona vacía. Las capturas y los clips usan el audio en español porque ese timeline ya está terminado; el video en inglés va a usar el diseño que elijas, con la voz masculina.</p>
+  <p class="note">Referencia de estilos: lemo-opuscar de Lemomo (MIT · CC BY 4.0). Solo tomé las ideas de diseño; no se copió ninguna imagen ni código.</p>
+</main>
+</body>
+</html>

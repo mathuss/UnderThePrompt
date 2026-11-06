@@ -1,0 +1,27 @@
+{
+  "lang": "en",
+  "voice": "am_puck",
+  "speed": 1.05,
+  "respell": {
+    "REA": "R-E-A",
+    "Ghidra": "Geedruh",
+    "JADX": "jay-dex",
+    "open_binary": "open-binary",
+    "GDB": "G-D-B",
+    "AI": "A-I",
+    "200": "two hundred"
+  },
+  "scenes": [
+    {"id": 1, "lines": ["What if Claude could understand any program… even without the source code?"]},
+    {"id": 2, "lines": ["A binary is just this: millions of bytes.", "You can't read it like this, and neither can an AI."]},
+    {"id": 3, "lines": ["That's what REA, Reverse Engineer Anything, is for.", "It's an MCP server that gives Claude over 200 reverse-engineering tools and connects it to real engines like Ghidra, IDA, Hopper and JADX."]},
+    {"id": 4, "lines": ["Step one: open_binary.", "REA works out what kind of file it is and picks the engine:", "Ghidra, IDA or Hopper for native code, JADX for Android, Binwalk for firmware.", "For an Electron app, it analyzes the JavaScript directly."]},
+    {"id": 5, "lines": ["Step two: map it.", "Claude sees the architecture, the libraries it uses and the text inside it.", "It finds a message like ‘License invalid’ and follows its cross-references to the function that uses it."]},
+    {"id": 6, "lines": ["Step three: decompile.", "The assembly becomes C pseudocode, and the call graph shows which function calls which."]},
+    {"id": 7, "lines": ["Step four: understand it.", "Claude gives functions real names and adds comments.", "Every conclusion is backed by an Evidence ID, separating what it saw from what it inferred and what it still doesn't know."]},
+    {"id": 8, "lines": ["When static analysis isn't enough, REA watches the program while it runs, using Frida, GDB or the browser."]},
+    {"id": 9, "lines": ["Step five: rebuild.", "Using all that evidence, Claude writes clean source code in a normal project.", "Then REA checks that the new code meets every documented behavior."]},
+    {"id": 10, "lines": ["And now it's just regular code.", "Claude can change it, build it and test it."]},
+    {"id": 11, "lines": [{"text": "Binary → evidence → code.", "say": "Binary, evidence, code."}, "Follow for more tools like this."]}
+  ]
+}

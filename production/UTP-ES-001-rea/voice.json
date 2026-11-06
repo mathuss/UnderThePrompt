@@ -1,0 +1,43 @@
+{
+  "lang": "es",
+  "voice": "em_alex",
+  "speed": 1.08,
+  "respell": {
+    "Claude": "Clod",
+    "MCP": "eme-ce-pe",
+    "REA": "Réa",
+    "Reverse": "Rivérs",
+    "Engineer": "Enyinír",
+    "Anything": "Énizing",
+    "Ghidra": "Guídra",
+    "IDA": "Ída",
+    "Hopper": "Jóper",
+    "JADX": "Yéidex",
+    "open_binary": "ópen-báinari",
+    "Binwalk": "Bínuok",
+    "JavaScript": "Yavascript",
+    "License": "Láicens",
+    "invalid": "ínvalid",
+    "C": "ce",
+    "Evidence": "Évidens",
+    "ID": "ái-di",
+    "GDB": "ge-de-be",
+    "assembly": "asémbli",
+    "app": "ap",
+    "200": "doscientas",
+    "IA": "i-a"
+  },
+  "scenes": [
+    {"id": 1, "lines": ["¿Y si Claude pudiera entender cualquier programa… aunque no tengas el código fuente?"]},
+    {"id": 2, "lines": ["Un binario es esto: millones de bytes.", "Ni vos ni una IA pueden leerlo así nomás."]},
+    {"id": 3, "lines": ["Para eso está REA, Reverse Engineer Anything.", "Es un servidor MCP que le da a Claude más de 200 herramientas de ingeniería inversa y lo conecta con motores reales como Ghidra, IDA, Hopper o JADX."]},
+    {"id": 4, "lines": ["Paso uno: open_binary.", "REA reconoce qué tipo de archivo es y elige el motor.", "Para código nativo usa Ghidra, IDA o Hopper.", "Para Android, JADX.", "Para firmware, Binwalk.", "Y si es una app Electron, analiza directamente el JavaScript."]},
+    {"id": 5, "lines": ["Paso dos: mapear.", "Claude ve la arquitectura, las librerías que usa y los textos internos.", "Encuentra un mensaje como ‘License invalid’ y sigue sus referencias cruzadas hasta la función que lo usa."]},
+    {"id": 6, "lines": ["Paso tres: descompilar.", "El assembly pasa a pseudocódigo en C, y el grafo de llamadas muestra qué función llama a cuál."]},
+    {"id": 7, "lines": ["Paso cuatro: entender.", "Claude pone nombres reales a las funciones y agrega comentarios.", "Cada conclusión queda respaldada por una Evidence ID, separando lo que vio de lo que deduce y de lo que todavía no sabe."]},
+    {"id": 8, "lines": ["Si el análisis estático no alcanza, REA observa el programa mientras corre, con Frida, GDB o el navegador."]},
+    {"id": 9, "lines": ["Paso cinco: reconstruir.", "Con toda esa evidencia, Claude escribe código fuente limpio en un proyecto normal.", "Después REA verifica que el código nuevo cumpla con cada comportamiento que se documentó."]},
+    {"id": 10, "lines": ["Y ahora sí: ya es código como cualquier otro.", "Claude lo puede modificar, compilar y testear."]},
+    {"id": 11, "lines": [{"text": "Binario → evidencia → código.", "say": "Binario, evidencia, código."}, "Seguime para ver más herramientas como esta."]}
+  ]
+}

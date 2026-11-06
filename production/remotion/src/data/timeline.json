@@ -1,0 +1,2096 @@
+{
+ "voice": "em_alex",
+ "duration": 97.455,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 0.15,
+   "end": 5.016
+  },
+  {
+   "id": 2,
+   "start": 5.016,
+   "end": 10.361
+  },
+  {
+   "id": 3,
+   "start": 10.361,
+   "end": 22.169
+  },
+  {
+   "id": 4,
+   "start": 22.169,
+   "end": 36.853
+  },
+  {
+   "id": 5,
+   "start": 36.853,
+   "end": 48.564
+  },
+  {
+   "id": 6,
+   "start": 48.564,
+   "end": 55.679
+  },
+  {
+   "id": 7,
+   "start": 55.679,
+   "end": 67.881
+  },
+  {
+   "id": 8,
+   "start": 67.881,
+   "end": 74.454
+  },
+  {
+   "id": 9,
+   "start": 74.454,
+   "end": 86.251
+  },
+  {
+   "id": 10,
+   "start": 86.251,
+   "end": 91.937
+  },
+  {
+   "id": 11,
+   "start": 91.937,
+   "end": 97.455
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "text": "¿Y si Claude pudiera entender cualquier programa… aunque no tengas el código fuente?",
+   "start": 0.15,
+   "end": 4.566
+  },
+  {
+   "scene": 2,
+   "text": "Un binario es esto: millones de bytes.",
+   "start": 5.016,
+   "end": 7.107
+  },
+  {
+   "scene": 2,
+   "text": "Ni vos ni una IA pueden leerlo así nomás.",
+   "start": 7.287,
+   "end": 9.911
+  },
+  {
+   "scene": 3,
+   "text": "Para eso está REA, Reverse Engineer Anything.",
+   "start": 10.361,
+   "end": 12.857
+  },
+  {
+   "scene": 3,
+   "text": "Es un servidor MCP que le da a Claude más de 200 herramientas de ingeniería inversa y lo conecta con motores reales como Ghidra, IDA, Hopper o JADX.",
+   "start": 13.037,
+   "end": 21.719
+  },
+  {
+   "scene": 4,
+   "text": "Paso uno: open_binary.",
+   "start": 22.169,
+   "end": 23.684
+  },
+  {
+   "scene": 4,
+   "text": "REA reconoce qué tipo de archivo es y elige el motor.",
+   "start": 23.864,
+   "end": 26.829
+  },
+  {
+   "scene": 4,
+   "text": "Para código nativo usa Ghidra, IDA o Hopper.",
+   "start": 27.009,
+   "end": 29.527
+  },
+  {
+   "scene": 4,
+   "text": "Para Android, JADX.",
+   "start": 29.707,
+   "end": 31.051
+  },
+  {
+   "scene": 4,
+   "text": "Para firmware, Binwalk.",
+   "start": 31.231,
+   "end": 32.66
+  },
+  {
+   "scene": 4,
+   "text": "Y si es una app Electron, analiza directamente el JavaScript.",
+   "start": 32.84,
+   "end": 36.403
+  },
+  {
+   "scene": 5,
+   "text": "Paso dos: mapear.",
+   "start": 36.853,
+   "end": 38.133
+  },
+  {
+   "scene": 5,
+   "text": "Claude ve la arquitectura, las librerías que usa y los textos internos.",
+   "start": 38.313,
+   "end": 42.131
+  },
+  {
+   "scene": 5,
+   "text": "Encuentra un mensaje como ‘License invalid’ y sigue sus referencias cruzadas hasta la función que lo usa.",
+   "start": 42.311,
+   "end": 48.114
+  },
+  {
+   "scene": 6,
+   "text": "Paso tres: descompilar.",
+   "start": 48.564,
+   "end": 50.036
+  },
+  {
+   "scene": 6,
+   "text": "El assembly pasa a pseudocódigo en C, y el grafo de llamadas muestra qué función llama a cuál.",
+   "start": 50.216,
+   "end": 55.229
+  },
+  {
+   "scene": 7,
+   "text": "Paso cuatro: entender.",
+   "start": 55.679,
+   "end": 57.151
+  },
+  {
+   "scene": 7,
+   "text": "Claude pone nombres reales a las funciones y agrega comentarios.",
+   "start": 57.331,
+   "end": 60.83
+  },
+  {
+   "scene": 7,
+   "text": "Cada conclusión queda respaldada por una Evidence ID, separando lo que vio de lo que deduce y de lo que todavía no sabe.",
+   "start": 61.01,
+   "end": 67.431
+  },
+  {
+   "scene": 8,
+   "text": "Si el análisis estático no alcanza, REA observa el programa mientras corre, con Frida, GDB o el navegador.",
+   "start": 67.881,
+   "end": 74.004
+  },
+  {
+   "scene": 9,
+   "text": "Paso cinco: reconstruir.",
+   "start": 74.454,
+   "end": 76.054
+  },
+  {
+   "scene": 9,
+   "text": "Con toda esa evidencia, Claude escribe código fuente limpio en un proyecto normal.",
+   "start": 76.234,
+   "end": 80.714
+  },
+  {
+   "scene": 9,
+   "text": "Después REA verifica que el código nuevo cumpla con cada comportamiento que se documentó.",
+   "start": 80.894,
+   "end": 85.801
+  },
+  {
+   "scene": 10,
+   "text": "Y ahora sí: ya es código como cualquier otro.",
+   "start": 86.251,
+   "end": 88.683
+  },
+  {
+   "scene": 10,
+   "text": "Claude lo puede modificar, compilar y testear.",
+   "start": 88.863,
+   "end": 91.487
+  },
+  {
+   "scene": 11,
+   "text": "Binario → evidencia → código.",
+   "start": 91.937,
+   "end": 93.729
+  },
+  {
+   "scene": 11,
+   "text": "Seguime para ver más herramientas como esta.",
+   "start": 93.909,
+   "end": 96.255
+  }
+ ],
+ "words": [
+  {
+   "text": "¿Y",
+   "start": 0.15,
+   "end": 0.386,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "si",
+   "start": 0.386,
+   "end": 0.671,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "Claude",
+   "start": 0.671,
+   "end": 1.024,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "pudiera",
+   "start": 1.024,
+   "end": 1.418,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "entender",
+   "start": 1.418,
+   "end": 1.797,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "cualquier",
+   "start": 1.797,
+   "end": 2.259,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "programa…",
+   "start": 2.259,
+   "end": 2.714,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "aunque",
+   "start": 2.714,
+   "end": 3.049,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "no",
+   "start": 3.049,
+   "end": 3.178,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "tengas",
+   "start": 3.178,
+   "end": 3.602,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "el",
+   "start": 3.602,
+   "end": 3.78,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "código",
+   "start": 3.78,
+   "end": 4.193,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "fuente?",
+   "start": 4.193,
+   "end": 4.566,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "Un",
+   "start": 5.016,
+   "end": 5.443,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "binario",
+   "start": 5.443,
+   "end": 5.912,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "es",
+   "start": 5.912,
+   "end": 6.125,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "esto:",
+   "start": 6.125,
+   "end": 6.339,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "millones",
+   "start": 6.339,
+   "end": 6.744,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "de",
+   "start": 6.744,
+   "end": 6.829,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "bytes.",
+   "start": 6.829,
+   "end": 7.107,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "Ni",
+   "start": 7.287,
+   "end": 7.705,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "vos",
+   "start": 7.705,
+   "end": 7.991,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "ni",
+   "start": 7.991,
+   "end": 8.268,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "una",
+   "start": 8.268,
+   "end": 8.481,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "IA",
+   "start": 8.481,
+   "end": 8.588,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "pueden",
+   "start": 8.588,
+   "end": 8.887,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "leerlo",
+   "start": 8.887,
+   "end": 9.228,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "así",
+   "start": 9.228,
+   "end": 9.335,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "nomás.",
+   "start": 9.335,
+   "end": 9.911,
+   "scene": 2,
+   "line": 2
+  },
+  {
+   "text": "Para",
+   "start": 10.361,
+   "end": 10.812,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "eso",
+   "start": 10.812,
+   "end": 11.093,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "está",
+   "start": 11.093,
+   "end": 11.316,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "REA,",
+   "start": 11.316,
+   "end": 11.549,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Reverse",
+   "start": 11.549,
+   "end": 11.926,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Engineer",
+   "start": 11.926,
+   "end": 12.366,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Anything.",
+   "start": 12.366,
+   "end": 12.857,
+   "scene": 3,
+   "line": 3
+  },
+  {
+   "text": "Es",
+   "start": 13.037,
+   "end": 13.451,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "un",
+   "start": 13.451,
+   "end": 13.697,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "servidor",
+   "start": 13.697,
+   "end": 14.239,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "MCP",
+   "start": 14.239,
+   "end": 14.467,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "que",
+   "start": 14.467,
+   "end": 14.684,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "le",
+   "start": 14.684,
+   "end": 14.792,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "da",
+   "start": 14.792,
+   "end": 14.887,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "a",
+   "start": 14.887,
+   "end": 14.974,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Claude",
+   "start": 14.974,
+   "end": 15.37,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "más",
+   "start": 15.37,
+   "end": 15.593,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "de",
+   "start": 15.593,
+   "end": 15.747,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "200",
+   "start": 15.747,
+   "end": 15.906,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "herramientas",
+   "start": 15.906,
+   "end": 16.525,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "de",
+   "start": 16.525,
+   "end": 16.625,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "ingeniería",
+   "start": 16.625,
+   "end": 17.286,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "inversa",
+   "start": 17.286,
+   "end": 17.844,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "y",
+   "start": 17.844,
+   "end": 17.924,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "lo",
+   "start": 17.92,
+   "end": 18.072,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "conecta",
+   "start": 18.072,
+   "end": 18.502,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "con",
+   "start": 18.502,
+   "end": 18.697,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "motores",
+   "start": 18.697,
+   "end": 19.317,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "reales",
+   "start": 19.317,
+   "end": 19.882,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "como",
+   "start": 19.882,
+   "end": 20.093,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Ghidra,",
+   "start": 20.093,
+   "end": 20.698,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "IDA,",
+   "start": 20.698,
+   "end": 20.932,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Hopper",
+   "start": 20.932,
+   "end": 21.205,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "o",
+   "start": 21.205,
+   "end": 21.308,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "JADX.",
+   "start": 21.308,
+   "end": 21.719,
+   "scene": 3,
+   "line": 4
+  },
+  {
+   "text": "Paso",
+   "start": 22.169,
+   "end": 22.703,
+   "scene": 4,
+   "line": 5
+  },
+  {
+   "text": "uno:",
+   "start": 22.703,
+   "end": 23.044,
+   "scene": 4,
+   "line": 5
+  },
+  {
+   "text": "open_binary.",
+   "start": 23.044,
+   "end": 23.684,
+   "scene": 4,
+   "line": 5
+  },
+  {
+   "text": "REA",
+   "start": 23.864,
+   "end": 24.376,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "reconoce",
+   "start": 24.376,
+   "end": 24.931,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "qué",
+   "start": 24.931,
+   "end": 25.123,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "tipo",
+   "start": 25.123,
+   "end": 25.315,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "de",
+   "start": 25.315,
+   "end": 25.528,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "archivo",
+   "start": 25.528,
+   "end": 25.805,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "es",
+   "start": 25.805,
+   "end": 25.885,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "y",
+   "start": 25.869,
+   "end": 25.949,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "elige",
+   "start": 25.933,
+   "end": 26.36,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "el",
+   "start": 26.36,
+   "end": 26.488,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "motor.",
+   "start": 26.488,
+   "end": 26.829,
+   "scene": 4,
+   "line": 6
+  },
+  {
+   "text": "Para",
+   "start": 27.009,
+   "end": 27.486,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "código",
+   "start": 27.486,
+   "end": 27.866,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "nativo",
+   "start": 27.866,
+   "end": 28.278,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "usa",
+   "start": 28.278,
+   "end": 28.555,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "Ghidra,",
+   "start": 28.555,
+   "end": 28.835,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "IDA",
+   "start": 28.835,
+   "end": 29.037,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "o",
+   "start": 29.037,
+   "end": 29.117,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "Hopper.",
+   "start": 29.109,
+   "end": 29.527,
+   "scene": 4,
+   "line": 7
+  },
+  {
+   "text": "Para",
+   "start": 29.707,
+   "end": 30.227,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "Android,",
+   "start": 30.227,
+   "end": 30.696,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "JADX.",
+   "start": 30.696,
+   "end": 31.051,
+   "scene": 4,
+   "line": 8
+  },
+  {
+   "text": "Para",
+   "start": 31.231,
+   "end": 31.696,
+   "scene": 4,
+   "line": 9
+  },
+  {
+   "text": "firmware,",
+   "start": 31.696,
+   "end": 32.075,
+   "scene": 4,
+   "line": 9
+  },
+  {
+   "text": "Binwalk.",
+   "start": 32.075,
+   "end": 32.66,
+   "scene": 4,
+   "line": 9
+  },
+  {
+   "text": "Y",
+   "start": 32.84,
+   "end": 33.078,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "si",
+   "start": 33.078,
+   "end": 33.365,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "es",
+   "start": 33.365,
+   "end": 33.535,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "una",
+   "start": 33.535,
+   "end": 33.786,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "app",
+   "start": 33.786,
+   "end": 33.91,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "Electron,",
+   "start": 33.91,
+   "end": 34.371,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "analiza",
+   "start": 34.371,
+   "end": 34.79,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "directamente",
+   "start": 34.79,
+   "end": 35.525,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "el",
+   "start": 35.525,
+   "end": 35.671,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "JavaScript.",
+   "start": 35.671,
+   "end": 36.403,
+   "scene": 4,
+   "line": 10
+  },
+  {
+   "text": "Paso",
+   "start": 36.853,
+   "end": 37.386,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "dos:",
+   "start": 37.386,
+   "end": 37.727,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "mapear.",
+   "start": 37.727,
+   "end": 38.133,
+   "scene": 5,
+   "line": 11
+  },
+  {
+   "text": "Claude",
+   "start": 38.313,
+   "end": 38.997,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "ve",
+   "start": 38.997,
+   "end": 39.256,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "la",
+   "start": 39.256,
+   "end": 39.365,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "arquitectura,",
+   "start": 39.365,
+   "end": 39.859,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "las",
+   "start": 39.859,
+   "end": 40.001,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "librerías",
+   "start": 40.001,
+   "end": 40.532,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "que",
+   "start": 40.532,
+   "end": 40.753,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "usa",
+   "start": 40.753,
+   "end": 40.955,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "y",
+   "start": 40.955,
+   "end": 41.042,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "los",
+   "start": 41.042,
+   "end": 41.32,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "textos",
+   "start": 41.32,
+   "end": 41.575,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "internos.",
+   "start": 41.575,
+   "end": 42.131,
+   "scene": 5,
+   "line": 12
+  },
+  {
+   "text": "Encuentra",
+   "start": 42.311,
+   "end": 43.122,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "un",
+   "start": 43.122,
+   "end": 43.229,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "mensaje",
+   "start": 43.229,
+   "end": 43.719,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "como",
+   "start": 43.719,
+   "end": 43.954,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "‘License",
+   "start": 43.954,
+   "end": 44.317,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "invalid’",
+   "start": 44.317,
+   "end": 44.829,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "y",
+   "start": 44.829,
+   "end": 44.909,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "sigue",
+   "start": 44.879,
+   "end": 45.042,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "sus",
+   "start": 45.042,
+   "end": 45.234,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "referencias",
+   "start": 45.234,
+   "end": 45.917,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "cruzadas",
+   "start": 45.917,
+   "end": 46.45,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "hasta",
+   "start": 46.45,
+   "end": 46.834,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "la",
+   "start": 46.834,
+   "end": 46.962,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "función",
+   "start": 46.962,
+   "end": 47.474,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "que",
+   "start": 47.474,
+   "end": 47.623,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "lo",
+   "start": 47.623,
+   "end": 47.751,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "usa.",
+   "start": 47.751,
+   "end": 48.114,
+   "scene": 5,
+   "line": 13
+  },
+  {
+   "text": "Paso",
+   "start": 48.564,
+   "end": 49.097,
+   "scene": 6,
+   "line": 14
+  },
+  {
+   "text": "tres:",
+   "start": 49.097,
+   "end": 49.375,
+   "scene": 6,
+   "line": 14
+  },
+  {
+   "text": "descompilar.",
+   "start": 49.375,
+   "end": 50.036,
+   "scene": 6,
+   "line": 14
+  },
+  {
+   "text": "El",
+   "start": 50.216,
+   "end": 50.621,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "assembly",
+   "start": 50.621,
+   "end": 51.139,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "pasa",
+   "start": 51.139,
+   "end": 51.581,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "a",
+   "start": 51.581,
+   "end": 51.661,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "pseudocódigo",
+   "start": 51.631,
+   "end": 52.204,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "en",
+   "start": 52.204,
+   "end": 52.321,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "C,",
+   "start": 52.321,
+   "end": 52.413,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "y",
+   "start": 52.413,
+   "end": 52.493,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "el",
+   "start": 52.477,
+   "end": 52.557,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "grafo",
+   "start": 52.541,
+   "end": 52.904,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "de",
+   "start": 52.904,
+   "end": 53.053,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "llamadas",
+   "start": 53.053,
+   "end": 53.416,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "muestra",
+   "start": 53.416,
+   "end": 53.971,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "qué",
+   "start": 53.971,
+   "end": 54.099,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "función",
+   "start": 54.099,
+   "end": 54.547,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "llama",
+   "start": 54.547,
+   "end": 54.824,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "a",
+   "start": 54.824,
+   "end": 54.931,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "cuál.",
+   "start": 54.931,
+   "end": 55.229,
+   "scene": 6,
+   "line": 15
+  },
+  {
+   "text": "Paso",
+   "start": 55.679,
+   "end": 56.213,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "cuatro:",
+   "start": 56.213,
+   "end": 56.618,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "entender.",
+   "start": 56.618,
+   "end": 57.151,
+   "scene": 7,
+   "line": 16
+  },
+  {
+   "text": "Claude",
+   "start": 57.331,
+   "end": 57.986,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "pone",
+   "start": 57.986,
+   "end": 58.253,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "nombres",
+   "start": 58.253,
+   "end": 58.625,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "reales",
+   "start": 58.625,
+   "end": 59.068,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "a",
+   "start": 59.068,
+   "end": 59.148,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "las",
+   "start": 59.123,
+   "end": 59.28,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "funciones",
+   "start": 59.28,
+   "end": 59.711,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "y",
+   "start": 59.711,
+   "end": 59.791,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "agrega",
+   "start": 59.768,
+   "end": 60.132,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "comentarios.",
+   "start": 60.132,
+   "end": 60.83,
+   "scene": 7,
+   "line": 17
+  },
+  {
+   "text": "Cada",
+   "start": 61.01,
+   "end": 61.524,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "conclusión",
+   "start": 61.524,
+   "end": 62.127,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "queda",
+   "start": 62.127,
+   "end": 62.408,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "respaldada",
+   "start": 62.408,
+   "end": 62.992,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "por",
+   "start": 62.992,
+   "end": 63.188,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "una",
+   "start": 63.188,
+   "end": 63.402,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "Evidence",
+   "start": 63.402,
+   "end": 63.932,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "ID,",
+   "start": 63.932,
+   "end": 64.051,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "separando",
+   "start": 64.051,
+   "end": 64.569,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "lo",
+   "start": 64.569,
+   "end": 64.729,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "que",
+   "start": 64.729,
+   "end": 64.913,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "vio",
+   "start": 64.913,
+   "end": 65.123,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "de",
+   "start": 65.123,
+   "end": 65.309,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "lo",
+   "start": 65.309,
+   "end": 65.503,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "que",
+   "start": 65.503,
+   "end": 65.61,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "deduce",
+   "start": 65.61,
+   "end": 65.967,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "y",
+   "start": 65.967,
+   "end": 66.047,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "de",
+   "start": 66.031,
+   "end": 66.219,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "lo",
+   "start": 66.219,
+   "end": 66.432,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "que",
+   "start": 66.432,
+   "end": 66.512,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "todavía",
+   "start": 66.511,
+   "end": 67.021,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "no",
+   "start": 67.021,
+   "end": 67.13,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "sabe.",
+   "start": 67.13,
+   "end": 67.431,
+   "scene": 7,
+   "line": 18
+  },
+  {
+   "text": "Si",
+   "start": 67.881,
+   "end": 68.256,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "el",
+   "start": 68.256,
+   "end": 68.444,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "análisis",
+   "start": 68.444,
+   "end": 68.913,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "estático",
+   "start": 68.913,
+   "end": 69.499,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "no",
+   "start": 69.499,
+   "end": 69.661,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "alcanza,",
+   "start": 69.661,
+   "end": 70.151,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "REA",
+   "start": 70.151,
+   "end": 70.361,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "observa",
+   "start": 70.361,
+   "end": 70.821,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "el",
+   "start": 70.821,
+   "end": 70.953,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "programa",
+   "start": 70.953,
+   "end": 71.439,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "mientras",
+   "start": 71.439,
+   "end": 71.918,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "corre,",
+   "start": 71.918,
+   "end": 72.255,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "con",
+   "start": 72.255,
+   "end": 72.485,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "Frida,",
+   "start": 72.485,
+   "end": 72.857,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "GDB",
+   "start": 72.857,
+   "end": 73.078,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "o",
+   "start": 73.078,
+   "end": 73.158,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "el",
+   "start": 73.139,
+   "end": 73.26,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "navegador.",
+   "start": 73.26,
+   "end": 74.004,
+   "scene": 8,
+   "line": 19
+  },
+  {
+   "text": "Paso",
+   "start": 74.454,
+   "end": 74.987,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "cinco:",
+   "start": 74.987,
+   "end": 75.435,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "reconstruir.",
+   "start": 75.435,
+   "end": 76.054,
+   "scene": 9,
+   "line": 20
+  },
+  {
+   "text": "Con",
+   "start": 76.234,
+   "end": 76.71,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "toda",
+   "start": 76.71,
+   "end": 76.988,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "esa",
+   "start": 76.988,
+   "end": 77.31,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "evidencia,",
+   "start": 77.31,
+   "end": 77.764,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "Claude",
+   "start": 77.764,
+   "end": 78.039,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "escribe",
+   "start": 78.039,
+   "end": 78.445,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "código",
+   "start": 78.445,
+   "end": 78.771,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "fuente",
+   "start": 78.771,
+   "end": 79.173,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "limpio",
+   "start": 79.173,
+   "end": 79.484,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "en",
+   "start": 79.484,
+   "end": 79.587,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "un",
+   "start": 79.587,
+   "end": 79.695,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "proyecto",
+   "start": 79.695,
+   "end": 80.196,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "normal.",
+   "start": 80.196,
+   "end": 80.714,
+   "scene": 9,
+   "line": 21
+  },
+  {
+   "text": "Después",
+   "start": 80.894,
+   "end": 81.598,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "REA",
+   "start": 81.598,
+   "end": 81.854,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "verifica",
+   "start": 81.854,
+   "end": 82.387,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "que",
+   "start": 82.387,
+   "end": 82.494,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "el",
+   "start": 82.494,
+   "end": 82.601,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "código",
+   "start": 82.601,
+   "end": 82.985,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "nuevo",
+   "start": 82.985,
+   "end": 83.198,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "cumpla",
+   "start": 83.198,
+   "end": 83.561,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "con",
+   "start": 83.561,
+   "end": 83.731,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "cada",
+   "start": 83.731,
+   "end": 84.009,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "comportamiento",
+   "start": 84.009,
+   "end": 84.777,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "que",
+   "start": 84.777,
+   "end": 84.969,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "se",
+   "start": 84.969,
+   "end": 85.203,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "documentó.",
+   "start": 85.203,
+   "end": 85.801,
+   "scene": 9,
+   "line": 22
+  },
+  {
+   "text": "Y",
+   "start": 86.251,
+   "end": 86.494,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "ahora",
+   "start": 86.494,
+   "end": 86.997,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "sí:",
+   "start": 86.997,
+   "end": 87.104,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "ya",
+   "start": 87.104,
+   "end": 87.253,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "es",
+   "start": 87.253,
+   "end": 87.403,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "código",
+   "start": 87.403,
+   "end": 87.808,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "como",
+   "start": 87.808,
+   "end": 88.0,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "cualquier",
+   "start": 88.0,
+   "end": 88.427,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "otro.",
+   "start": 88.427,
+   "end": 88.683,
+   "scene": 10,
+   "line": 23
+  },
+  {
+   "text": "Claude",
+   "start": 88.863,
+   "end": 89.554,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "lo",
+   "start": 89.554,
+   "end": 89.669,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "puede",
+   "start": 89.669,
+   "end": 89.931,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "modificar,",
+   "start": 89.931,
+   "end": 90.482,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "compilar",
+   "start": 90.482,
+   "end": 90.879,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "y",
+   "start": 90.879,
+   "end": 90.981,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "testear.",
+   "start": 90.981,
+   "end": 91.487,
+   "scene": 10,
+   "line": 24
+  },
+  {
+   "text": "Binario",
+   "start": 91.937,
+   "end": 92.582,
+   "scene": 11,
+   "line": 25
+  },
+  {
+   "text": "→",
+   "start": 92.582,
+   "end": 92.664,
+   "scene": 11,
+   "line": 25
+  },
+  {
+   "text": "evidencia",
+   "start": 92.664,
+   "end": 93.251,
+   "scene": 11,
+   "line": 25
+  },
+  {
+   "text": "→",
+   "start": 93.251,
+   "end": 93.331,
+   "scene": 11,
+   "line": 25
+  },
+  {
+   "text": "código.",
+   "start": 93.318,
+   "end": 93.729,
+   "scene": 11,
+   "line": 25
+  },
+  {
+   "text": "Seguime",
+   "start": 93.909,
+   "end": 94.591,
+   "scene": 11,
+   "line": 26
+  },
+  {
+   "text": "para",
+   "start": 94.591,
+   "end": 94.847,
+   "scene": 11,
+   "line": 26
+  },
+  {
+   "text": "ver",
+   "start": 94.847,
+   "end": 94.927,
+   "scene": 11,
+   "line": 26
+  },
+  {
+   "text": "más",
+   "start": 94.911,
+   "end": 95.189,
+   "scene": 11,
+   "line": 26
+  },
+  {
+   "text": "herramientas",
+   "start": 95.189,
+   "end": 95.743,
+   "scene": 11,
+   "line": 26
+  },
+  {
+   "text": "como",
+   "start": 95.743,
+   "end": 95.978,
+   "scene": 11,
+   "line": 26
+  },
+  {
+   "text": "esta.",
+   "start": 95.978,
+   "end": 96.255,
+   "scene": 11,
+   "line": 26
+  }
+ ]
+}
