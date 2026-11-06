@@ -19,6 +19,27 @@ Two references were provided (in `Downloads`, 2026-11-05):
 | Text | Sentence captions, white, small, centred on the face. UI cards: dark panels with thin glowing borders colour-coded by meaning (green = done, pink = danger, amber = neutral), mono + sans, "source:" line on data. | Karaoke caption pill (dark pill, active word highlighted). A thin progress bar at the top. Number counters. |
 | Audio | −14.1 LUFS, LRA 5.4: voices plus a music bed. | −14.2 LUFS, LRA 2.6: steady narration with a soft bed. |
 
+**Ref 3: @canwebuildthis, the series behind ref 1** (watched 2026-11-05 in the browser pane, logged in with the user's account. I watched three reels frame by frame: "ELI5 #1: What's an API?" (55.6 s), "ELI5 #4: What's MCP?" (68.4 s) and "Daily Life: why not use AI?" (35.8 s). I also checked the profile grid: 30 posts, 73.5K followers.)
+- **No narrator. Two characters talk.** A human developer (the protagonist) and an AI sidekick. The **captions are the dialogue**: one short sentence at a time, white text in a dark translucent rounded box in the upper third.
+- **A recurring human protagonist does the actions.** The AI characters react and help. The story is hers.
+- **Very few shot types, one home set:** a close-up of her, a close-up of the sidekick, and a medium shot of both with the whiteboard. A city at night in bokeh, shallow depth of field.
+- **The ELI5 formula** (identical in #1 and #4):
+  1. She asks: "Claude. Explain X like I'm five."
+  2. The AI answers in jargon ("an interface that lets two systems…"), and the jargon is **crossed out in red** on the whiteboard.
+  3. She pushes back: "I'm five."
+  4. The AI draws **one analogy, built up step by step on a persistent whiteboard** (API = you / waiter / kitchen; MCP = phone + one cable + plugs), pointing at it with a stick.
+  5. **Labels map the analogy onto the real terms** ("= front end", "= API", "= back end").
+  6. A one-line recap.
+  7. A **punchline callback** at the end ("That's a bug." / "Too soon, Claude.").
+- **Daily Life formula:** a relatable work situation (the client asks "why not use AI? make it faster") with a reaction shot after every line and a twist at the end ("Good news. We already use AI. That's why it's three months.").
+- **Almost no on-screen text besides the dialogue and the whiteboard.** No data cards and no sources in the frame.
+- **Named series with episode numbers on every cover** ("EXPLAIN IT LIKE I'M FIVE · PART 5", "LET'S TRY THIS · EP 1", "DAILY LIFE · EP 17"). The cover is a 2–3 word line with the key word in colour.
+- **What this means for us:**
+  - People perform the story and Mott narrates, explains and reacts.
+  - Explanations use **one persistent drawn analogy that builds up**, with jargon crossed out.
+  - Minimal on-screen text and a punchline at the end.
+  - A series label and episode number on every video.
+
 **What we keep (the grammar):**
 - stylized low-poly 3D lit by one motivated warm light;
 - characters that *react* and drive the story;
@@ -190,7 +211,15 @@ Mott stands 1.0 unit tall: head 0.45, thorax 0.35, abdomen 0.25 (overlapping). A
 
 ---
 
-## 5. Story structure (every video, 45–75 s)
+## 5. Narrative format (decided 2026-11-05)
+**Mott tells the story to the intern** (`brand/host.md`), a systems student who is curious about tech.
+- **The Desk** (the frame of every video): Mott and the intern at the night desk. Mott narrates; the intern asks the audience's questions and reacts.
+- **The Story** (most of the screen time): the video cuts away to the story itself, where **the people in it perform the actions** (engineers searching relays, someone taping the moth into a logbook, visitors at a museum). Mott's voice continues over these shots, and Mott appears only occasionally, as a small observer.
+- **Analogies** are drawn as **one persistent diagram that builds up** (whiteboard or logbook), with jargon crossed out (from ref 3).
+- **Minimal on-screen text:** no sources inside frames (they go in the description), at most one short card per idea, a punchline at the end.
+- **A series label and episode number** on every video and cover.
+
+## 6. Story structure (every video, 45–75 s)
 
 | Beat | Time | Job | Mott's role |
 |---|---|---|---|

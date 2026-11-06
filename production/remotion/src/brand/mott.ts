@@ -66,6 +66,7 @@ export const EXPRESSIONS = {
   embarrassed: e({ spread: 0.72, fwd: 0.2, bendL: 0.8, bendR: 0.8, lid: 0.4, cat: 0.9, mw: 0.75, mh: 0.25, lean: 0.08, tilt: -0.12, look: 0.45, dust: 1, scale: 0.97 }),
 } satisfies Record<string, Expr>;
 export type ExprName = keyof typeof EXPRESSIONS;
+export type PoseOpts = { talk?: number; fly?: number; point?: number; shield?: number; tap?: number };
 export type Track = [number, ExprName][];
 
 const KEYS = Object.keys(D) as (keyof Expr)[];
@@ -192,13 +193,21 @@ export function buildMott() {
   const dustM = new THREE.PointsMaterial({ color: P.lilac, size: 0.025, transparent: true, opacity: 0 });
   root.add(new THREE.Points(dustG, dustM));
 
-  /** Set every joint for time t. `talk` (0…1) is the voice envelope; it opens the mouth on top of the preset. */
-  function pose(t: number, track: Track, talk = 0) {
+  /**
+   * Set every joint for time t.
+   * - talk 0…1: voice envelope; opens the mouth on top of the preset
+   * - fly 0…1: hover/flight (wings open, beating at a readable 4 Hz)
+   * - point 0…1: right front limb + both antennae aim forward ("Antenna Check")
+   * - shield 0…1: left forewing covers the face ("Wing Shield")
+   * - tap 0…1: right limb raised high (the "Lamp Tap")
+   */
+  function pose(t: number, track: Track, o: PoseOpts = {}) {
+    const { talk = 0, fly = 0, point = 0, shield = 0, tap = 0 } = o;
     const { x, name, since } = exprAt(t, track);
     const twitch = x.twitch * (since < 0.6 ? Math.sin(t * 50) * 0.12 : 0);
     ants.forEach((a) => {
-      a.seg1.rotation.z = -a.s * (x.spread + twitch);
-      a.seg1.rotation.x = x.fwd;
+      a.seg1.rotation.z = -a.s * (x.spread * (1 - point * 0.6) + twitch);
+      a.seg1.rotation.x = x.fwd + point * 0.9;
       a.seg2.rotation.z = -a.s * (a.s < 0 ? x.bendL : x.bendR);
     });
     const bl = blinkAt(t);
@@ -210,21 +219,27 @@ export function buildMott() {
       ey.c.scale.setScalar(x.cat);
       ey.c.visible = closed < 0.36; // the catchlight sits in the upper third; hide it once the lid passes it
     });
-    mouth.scale.set(x.mw, Math.max(x.mh, 0.35 + talk * 0.7), 0.32);
+    mouth.scale.set(x.mw * (1 - talk * 0.15), Math.max(x.mh, 0.3 + talk * 0.8), 0.32);
     mouth.position.x = x.mx;
     head.rotation.set(0, x.look, x.tilt);
     upper.rotation.x = x.lean;
     const shiver = x.shiver * Math.sin(t * 75) * 0.04;
     const flutter = x.flutter && since < 0.9 ? Math.sin(t * 30) * 0.5 : 0;
+    const beat = Math.sin(t * Math.PI * 8) * fly; // 4 Hz
     wings.forEach((w) => {
-      const o = x.wing;
-      w.pivot.rotation.y = w.s * (1.25 * (1 - o) + 0.22 * o + flutter * 0.4 + shiver);
-      w.pivot.rotation.z = w.s * (-0.55 * (1 - o) + 0.3 * o);
-      w.h.rotation.z = -0.15 * o;
+      const op = Math.max(x.wing, fly * 0.85);
+      let ry = w.s * (1.25 * (1 - op) + 0.22 * op + flutter * 0.4 + shiver + beat * 0.55);
+      let rz = w.s * (-0.55 * (1 - op) + 0.3 * op + beat * 0.25);
+      if (w.s < 0 && shield > 0) { ry += (1.45 - ry) * shield; rz += (-0.35 - rz) * shield; } // left wing swings forward over the face
+      w.pivot.rotation.y = ry; w.pivot.rotation.z = rz;
+      w.h.rotation.z = -0.15 * op;
     });
-    arms.forEach((a) => { a.g.rotation.set(-0.35, 0, a.s * 0.35); });
+    arms.forEach((a) => {
+      const up = a.s > 0 ? Math.max(point * 0.55, tap) : 0;
+      a.g.rotation.set(-0.35 - up * 2.3, 0, a.s * (0.35 - up * 0.2));
+    });
     const hop = x.twitch && since < 0.5 ? Math.sin((since / 0.5) * Math.PI) * 0.06 : 0;
-    root.position.y = Math.sin(t * Math.PI) * 0.008 + hop;
+    root.position.y = Math.sin(t * Math.PI) * 0.008 + hop + fly * Math.sin(t * Math.PI * 8 + 1) * 0.02;
     root.scale.setScalar(x.scale);
     dustM.opacity = name === "embarrassed" ? Math.max(0, 0.9 - since * 0.6) : 0;
     const s = Math.min(since, 2) * 0.5;

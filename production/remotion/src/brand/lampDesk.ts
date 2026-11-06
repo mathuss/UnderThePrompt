@@ -17,7 +17,7 @@ export function buildLampDesk() {
   group.add(new THREE.HemisphereLight(0x6a5bc0, P.night, 0.3 * PI));
   group.add(new THREE.AmbientLight(P.plum, 0.3 * PI));
   const key = new THREE.PointLight(P.amber, KEY, 6, 1.4);
-  key.position.set(-0.45, 1.5, 0.9);
+  key.position.set(-0.4, 1.78, 0.8);
   key.castShadow = true;
   key.shadow.mapSize.set(2048, 2048);
   key.shadow.bias = -0.002;
@@ -60,9 +60,9 @@ export function buildLampDesk() {
   // the cursor-lamp "_" and its cord
   const lampM = new THREE.MeshBasicMaterial({ color: P.amber });
   const lamp = new THREE.Mesh(new THREE.BoxGeometry(0.55, 0.07, 0.07), lampM);
-  lamp.position.set(-0.45, 1.5, 0.5); group.add(lamp);
+  lamp.position.set(-0.4, 1.85, 0.3); group.add(lamp);
   const cord = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, 1.2, 4), mat(0x2a2138));
-  cord.position.set(-0.45, 2.13, 0.5); group.add(cord);
+  cord.position.set(-0.4, 2.48, 0.3); group.add(cord);
 
   // dust motes drifting in the beam
   const n = 90, pos = new Float32Array(n * 3), base: number[][] = [];

@@ -144,13 +144,18 @@ It's the cursor of "Under the Prompt" grown on a moth's wing, and the eyespots a
 - Wings shiver on security topics. Covers its face with the Wing Shield at the worst detail.
 - Looks straight at the camera only for the hook and the sign-off. Otherwise it looks at the story.
 
-## 9. Relationship with the audience
+## 9. Relationship with the intern (since 2026-11-05)
+- Mott is the storyteller, and the intern (`brand/host.md`) is Mott's favourite listener. Mott tells, the intern asks and reacts, and the audience learns through the intern's questions.
+- Mott is fond of the intern and teases gently, never condescending.
+- Mott narrates the story shots; on camera he's mostly at the desk with the intern, and only occasionally a tiny observer inside the story.
+
+## 10. Relationship with the audience
 - Mott is the **night-shift friend who reads the fine print so you don't have to**, and brings you along ("come with me").
 - Admits mistakes on camera, and corrects them in the next log.
 - Always credits sources ("receipts in the description").
 - Treats viewers as smart people who are short on time.
 
-## 10. The Cursor (silent partner)
+## 11. The Cursor (silent partner)
 - The giant blinking "_" lamp over Mott's desk. It never speaks aloud.
 - It "answers" Mott by **typing UI cards**: evidence, numbers, sources, commands. This turns evidence into dialogue.
 - Its blink is the signature transition.
