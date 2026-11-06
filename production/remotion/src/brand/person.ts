@@ -22,7 +22,7 @@ export type Look = {
 
 export type Action = "idle" | "walk" | "point" | "inspect" | "reach" | "write" | "scratch" | "talk" | "laugh" | "wave" | "surprised" | "lean";
 export type Face = { browUp: number; browInner: number; browAsym: number; lid: number; lidAsym: number; smile: number; open: number; mouthX: number; tilt: number; turn: number; lean: number };
-export type PersonPose = { action?: Action; amount?: number; look?: number; talk?: number; walkSpeed?: number; phase?: number; face?: Partial<Face> };
+export type PersonPose = { action?: Action; amount?: number; look?: number; lookPitch?: number; talk?: number; walkSpeed?: number; phase?: number; face?: Partial<Face> };
 
 /* ───────────── facial expression presets (shared by every person) ───────────── */
 const F0: Face = { browUp: 0, browInner: 0, browAsym: 0, lid: 0.12, lidAsym: 0, smile: 0.2, open: 0, mouthX: 0, tilt: 0, turn: 0, lean: 0 };
@@ -225,7 +225,7 @@ export function buildPerson(L: Look) {
     const a = p.action ?? "idle", k = p.amount ?? 1, ph = p.phase ?? 0;
     const breath = Math.sin(t * 1.6 + ph) * 0.012;
     // reset
-    hips.position.y = 0.84; hips.rotation.set(0, 0, 0); spine.rotation.set(breath, 0, 0); neck.rotation.set(0, p.look ?? 0, 0); head.rotation.set(0, 0, 0);
+    hips.position.y = 0.84; hips.rotation.set(0, 0, 0); spine.rotation.set(breath, 0, 0); neck.rotation.set(p.lookPitch ?? 0, p.look ?? 0, 0); /* lookPitch > 0 looks down */ head.rotation.set(0, 0, 0);
     legs.forEach((l) => { l.hip.rotation.set(0, 0, 0); l.knee.rotation.set(0, 0, 0); });
     arms.forEach((r) => { r.sh.rotation.set(0.05, 0, r.s * 0.08); r.elbow.rotation.set(-0.15, 0, 0); });
     const R = arms[1], Lf = arms[0];

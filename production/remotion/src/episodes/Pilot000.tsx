@@ -10,20 +10,21 @@ import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { buildMott, P, Track } from "../brand/mott";
 import { buildPerson, CAST, faceAt, FaceName } from "../brand/person";
-import { buildHostDesk, MOTT_SPOT } from "../brand/sets/hostDesk";
-import { buildMachineRoom, HERO } from "../brand/sets/machineRoom";
+import { buildHostDesk, DESK_Y } from "../brand/sets/hostDesk";
+import { buildMachineRoom, heroAt } from "../brand/sets/machineRoom";
 import { buildDesk1947, buildWorkshop1878, buildStoryRoom, buildMuseum } from "../brand/sets/storySets";
 import { HOSTS } from "../HostOptions";
 import { makeSync, ramp, lerp, lerp3, smooth, clamp01, Timeline } from "../brand/sync";
 import { ProgressBar, BrandLine, CaptionPill, Card, Tag, Blink, EndCard, DocumentShot, UI } from "../brand/ui";
-import tlJson from "../data/utp000v2_en.json";
-import envMott from "../data/utp000v2_env_mott.json";
-import envLeo from "../data/utp000v2_env_leo.json";
+import tlJson from "../data/utp000v3_en.json";
+import envMott from "../data/utp000v3_env_mott.json";
+import envLeo from "../data/utp000v3_env_leo.json";
 
 const TL = tlJson as unknown as Timeline;
 const EM = (envMott as { env: number[] }).env, EL = (envLeo as { env: number[] }).env;
 const { W, S, chunks, duration } = makeSync(TL);
-const HS = 0.27;                                  // machine room: Mott units → metres
+const HS = 0.27, AX = 3.6; // machine room: Mott units → metres; a wider aisle so people fit (faces at ±0.81 m)
+const HERO = heroAt(AX);
 const relayW = (lx: number, ly: number, lz: number): [number, number, number] => [(HERO.x + lz) * HS, (HERO.y + ly) * HS, (HERO.z - lx) * HS];
 const MOTH_IN_RELAY = relayW(0.62, 0.86, 0.02), COIL_TOP = relayW(-0.3, 0.83, 0);
 
@@ -62,30 +63,35 @@ type V3 = [number, number, number];
 type Cam = { pos: V3; look: V3; fov?: number };
 
 /** Camera for every beat. Desk shots: Mott close-up, Leo close-up, or the two-shot. */
-const MOTT_HEAD: V3 = [MOTT_SPOT.x, MOTT_SPOT.y + 0.075, MOTT_SPOT.z];
-const CAM_MOTT: Cam = { pos: [0.52, 0.94, 0.55], look: MOTT_HEAD, fov: 30 };
-const CAM_LEO: Cam = { pos: [0.24, 1.58, 0.8], look: [-0.1, 1.48, -0.5], fov: 30 };
-const CAM_TWO: Cam = { pos: [0.6, 1.32, 1.7], look: [0.05, 1.1, -0.2], fov: 34 };
+// Mott sits on the desk right in front of Leo, so they can look at each other
+const MOTT_DESK: V3 = [0.1, DESK_Y, -0.12];
+const LEO_POS: V3 = [-0.12, 0, -0.55], LEO_HEAD: V3 = [-0.1, 1.52, -0.52];
+const MOTT_HEAD: V3 = [MOTT_DESK[0], MOTT_DESK[1] + 0.075, MOTT_DESK[2]];
+const CAM_MOTT: Cam = { pos: [0.3, 1.32, -0.72], look: MOTT_HEAD, fov: 18 };         // over Leo's right shoulder, down on Mott
+const CAM_LEO: Cam = { pos: [0.4, 1.1, 0.6], look: [-0.11, 1.45, -0.53], fov: 36 }; // from Mott's side, low, up at Leo
+const CAM_TWO: Cam = { pos: [1.85, 1.45, 0.8], look: [-0.05, 1.2, -0.35], fov: 34 }; // side two-shot: both in profile
+const push = (c: Cam, k: number, amt = 0.07): Cam => ({ ...c, pos: lerp3(c.pos, c.look, k * amt) as V3 }); // slow push-in
 
 function camAt(t: number): Cam {
   const id = sceneId(t), k = smooth(u(t, id)), set = setAt(t);
   if (set === "desk") {
-    if (id === 1) return CAM_MOTT;
-    if (id === 2 || id === 7 || id === 10 || id === 13 || id === 16) return CAM_LEO;
-    if (id === 3) return { ...CAM_TWO, pos: lerp3(CAM_TWO.pos, [0.5, 1.25, 1.45], k) as V3 };
-    if (id === 11 || id === 14) return CAM_MOTT;
-    if (id === 17) return t < W(17, "stay") ? CAM_MOTT : { pos: lerp3([0.45, 1.3, 1.6], [0.1, 1.45, 2.1], ramp(t, W(17, "light", 0, "end"), 0.8)) as V3, look: [-0.15, 1.25, -0.1], fov: 34 };
+    if (id === 1 || id === 11) return push(CAM_MOTT, k);
+    if (id === 2 || id === 7 || id === 10 || id === 13 || id === 16) return push(CAM_LEO, k, 0.1);
+    if (id === 3) return push(CAM_TWO, k, 0.12);
+    if (id === 14) return push(CAM_MOTT, k);
+    if (id === 17 && t >= W(17, "family") + 0.25 && t < W(17, "stay") - 0.1) return push(CAM_LEO, k, 0.1); // Leo reacts (laughs)
+    if (id === 17) return t < W(17, "stay") ? push(CAM_MOTT, k) : { pos: lerp3([0.45, 1.3, 1.7], [0.2, 1.4, 2.1], ramp(t, W(17, "light", 0, "end"), 0.8)) as V3, look: [-0.2, 1.3, -0.15], fov: 34 };
   }
   if (set === "hall") {
     if (id === 3) { const q = smooth((t - T.toHall) / (S(3).end - T.toHall)); return { pos: lerp3([0, 1.45, 1.9], [0.15, 1.95, 2.3], q) as V3, look: [0, 1.0, -1.6], fov: 36 }; }
-    if (id === 4) return { pos: [-0.4, 1.62, -1.0], look: [0.3, 1.45, -1.66], fov: 30 };
+    if (id === 4) return { pos: [-0.05, 1.62, -1.0], look: [COIL_TOP[0], 1.45, -1.66], fov: 30 };
     if (id === 5) {
       // seen from deeper in the aisle, looking back at the engineers, so their faces read
       if (t < W(5, "so")) return { pos: [-0.25, 1.6, -2.85], look: [0.05, 1.38, -1.05], fov: 36 };
       const q = smooth((t - W(5, "so")) / (S(5).end - W(5, "so")));
       return { pos: [-0.25, 1.6, lerp(-3.7, -3.9, q)], look: [0.02, 1.25, -1.3], fov: 36 };
     }
-    return { pos: [-0.3, 1.52, -1.4], look: [0.3, 1.45, -1.86], fov: 32 }; // 6: the relay with the moth, the engineer leaning in behind it
+    return { pos: [0.0, 1.52, -1.35], look: [MOTH_IN_RELAY[0] - 0.05, 1.45, -1.88], fov: 32 }; // 6: the relay with the moth, the engineer leaning in behind it
   }
   if (set === "desk1947") return { pos: lerp3([1.6, 1.7, 1.1], [1.35, 1.55, 0.9], k) as V3, look: [0.02, 1.12, -0.2], fov: 34 }; // 3/4 from the side: engineer, book and tape
   if (set === "workshop") return { pos: [0.9, 1.15, 1.4], look: [0.0, 1.0, -0.3], fov: 34 };
@@ -97,9 +103,9 @@ function camAt(t: number): Cam {
 const Scene: React.FC<{ t: number; frame: number; photo: THREE.Texture | null }> = ({ t, frame, photo }) => {
   const { camera } = useThree();
   const w = useMemo(() => {
-    const desk = buildHostDesk(), hall = buildMachineRoom(HS), d47 = buildDesk1947(), shop = buildWorkshop1878(), room = buildStoryRoom(), museum = buildMuseum(null);
+    const desk = buildHostDesk(), hall = buildMachineRoom(HS, AX), d47 = buildDesk1947(), shop = buildWorkshop1878(), room = buildStoryRoom(), museum = buildMuseum(null);
     // the host and Mott at the night desk
-    const leo = buildPerson(HOSTS.host.look); leo.root.position.set(-0.12, 0, -0.55); leo.root.rotation.y = 0.15; desk.group.add(leo.root);
+    const leo = buildPerson(HOSTS.host.look); leo.root.position.set(...LEO_POS); leo.root.rotation.y = 0.1; desk.group.add(leo.root);
     const mott = buildMott(), mottHolder = new THREE.Group(); mottHolder.add(mott.root); mottHolder.scale.setScalar(0.1); desk.group.add(mottHolder);
     // 1947: three engineers in the hall
     const engA = buildPerson(CAST.engineer1947A), engB = buildPerson(CAST.engineer1947B), engC = buildPerson(CAST.engineer1947C);
@@ -135,14 +141,19 @@ const Scene: React.FC<{ t: number; frame: number; photo: THREE.Texture | null }>
   const talkM = EM[Math.min(frame, EM.length - 1)] ?? 0, talkL = EL[Math.min(frame, EL.length - 1)] ?? 0;
   const lf = faceAt(t, LEO_TRACK);
   const leoAct = lf.name === "happy" ? "laugh" : lf.name === "confused" ? "scratch" : talkL > 0.1 ? "talk" : "idle";
-  w.leo.pose(t, { action: leoAct, amount: Math.min(1, lf.since / 0.35) * (leoAct === "laugh" ? 0.6 : 1), face: lf.face, look: 0.5, talk: talkL * 0.8 });
-  // Mott: sits on the keyboard facing Leo/camera; at the end flies up and taps the lamp
+  // Mott: on the desk in front of Leo; at the end flies up and taps the lamp
   const go = smooth((t - (W(17, "light", 0, "end") + 0.05)) / 0.55);
-  w.mottHolder.position.set(...(lerp3([MOTT_SPOT.x, MOTT_SPOT.y, MOTT_SPOT.z], [-0.42, 1.64, 0.22], go) as V3));
-  w.mottHolder.rotation.y = lerp(0.25, -0.4, go);
+  w.mottHolder.position.set(...(lerp3(MOTT_DESK, [-0.42, 1.64, 0.22], go) as V3));
+  // gaze: each looks at the other's head (Mott: whole body turns, head tilts up; Leo: neck turns and bends down)
+  const mh = w.mottHolder.position, toLeo = [LEO_HEAD[0] - mh.x, LEO_HEAD[1] - (mh.y + 0.075), LEO_HEAD[2] - mh.z];
+  const mottYaw = Math.atan2(toLeo[0], toLeo[2]), mottPitch = Math.min(0.75, Math.atan2(toLeo[1], Math.hypot(toLeo[0], toLeo[2])));
+  w.mottHolder.rotation.y = lerp(mottYaw, -0.4, go);
+  const toMott = [mh.x - LEO_HEAD[0], mh.y + 0.075 - LEO_HEAD[1], mh.z - LEO_HEAD[2]];
+  const leoYaw = Math.atan2(toMott[0], toMott[2]) - 0.1, leoPitch = Math.min(0.6, Math.atan2(-toMott[1], Math.hypot(toMott[0], toMott[2])) * 0.6);
+  w.leo.pose(t, { action: leoAct, amount: Math.min(1, lf.since / 0.35) * (leoAct === "laugh" ? 0.6 : 1), face: { ...lf.face, lean: lf.face.lean + 0.12 }, look: leoYaw, lookPitch: leoPitch, talk: talkL * 0.8 });
   const lean = id === 14 && t < T.toStoryRoom ? ramp(t, S(14).start + 0.1, 0.5) * (1 - ramp(t, W(14, "lamp") - 0.1, 0.35)) : 0; // Light Lean
   w.mottHolder.position.x -= lean * 0.05; w.mottHolder.position.y += lean * 0.03;
-  w.mott.pose(t, MOTT_TRACK, { talk: talkM, fly: Math.max(go, lean), tap: ramp(t, T.tap - 0.15, 0.15) });
+  w.mott.pose(t, MOTT_TRACK, { talk: talkM, fly: Math.max(go, lean), tap: ramp(t, T.tap - 0.15, 0.15), gazePitch: mottPitch * (1 - go) * (1 - lean), gazeYaw: lean * 0.9 }); // Light Lean: glances at the lamp
   w.desk.update(t, t > END_AT - 0.05 ? 1 : 0);
 
   /* hall: 1947 */
@@ -155,15 +166,15 @@ const Scene: React.FC<{ t: number; frame: number; photo: THREE.Texture | null }>
   });
   if (hallOn) {
     // A: walks the aisle (3) → checks the right cabinets with a flashlight (5) → leans in at relay #70 (6)
-    if (id <= 4) { w.engA.root.position.set(0.05, 0, lerp(-0.5, -1.0, u(t, 3))); w.engA.root.rotation.y = Math.PI; w.engA.pose(t, { action: "walk" }); }
-    else if (id === 5) { const q = t < W(5, "so") ? 0 : (t - W(5, "so")) / (S(5).end - W(5, "so")); w.engA.root.position.set(0.12, 0, lerp(-0.75, -1.7, q)); /* stays ahead of the camera */ w.engA.root.rotation.y = Math.PI - 0.6; w.engA.pose(t, { action: "inspect" }); }
-    else { w.engA.root.position.set(0.05, 0, -2.2); w.engA.root.rotation.y = Math.PI / 2 - 0.55; w.engA.pose(t, { action: "inspect", face: id === 6 && t > W(6, "found") ? { browUp: 1, open: 0.6, lid: -0.1 } : undefined }); } // beyond the relay, facing it and the camera
+    if (id <= 4) { w.engA.root.position.set(0.05, 0, id === 4 ? -2.9 : lerp(-0.5, -1.0, u(t, 3))); w.engA.root.rotation.y = Math.PI; w.engA.pose(t, { action: "walk" }); }
+    else if (id === 5) { const q = t < W(5, "so") ? 0 : (t - W(5, "so")) / (S(5).end - W(5, "so")); w.engA.root.position.set(0.3, 0, lerp(-0.75, -1.7, q)); /* own lane, right */ w.engA.root.rotation.y = Math.PI - 0.6; w.engA.pose(t, { action: "inspect" }); }
+    else { w.engA.root.position.set(0.15, 0, -2.05); w.engA.root.rotation.y = Math.PI / 2 - 0.55; w.engA.pose(t, { action: "inspect", face: id === 6 && t > W(6, "found") ? { browUp: 1, open: 0.6, lid: -0.1 } : undefined }); } // beyond the relay, facing it and the camera
     w.lightA.visible = id >= 5;
     // B: at a panel; scratches his head when the lamps turn coral, then searches with a flashlight
-    if (id === 5 && t < W(5, "so")) { w.engB.root.position.set(0.05, 0, -1.05); w.engB.root.rotation.y = 2.2; w.engB.pose(t, { action: "scratch", face: { browInner: 0.8, smile: -0.4 } }); w.lightB.visible = false; }
-    else { w.engB.root.position.set(id >= 5 ? -0.12 : 0.15, 0, id >= 5 ? lerp(-0.6, -1.4, clamp01((t - W(5, "so")) / 3)) : -2.7); w.engB.root.rotation.y = id >= 5 ? Math.PI + 0.6 : Math.PI / 2; w.engB.pose(t, { action: id >= 5 ? "inspect" : "idle" }); w.lightB.visible = id >= 5; }
+    if (id === 5 && t < W(5, "so")) { w.engB.root.position.set(0.25, 0, -1.05); w.engB.root.rotation.y = 2.2; w.engB.pose(t, { action: "scratch", face: { browInner: 0.8, smile: -0.4 } }); w.lightB.visible = false; }
+    else { w.engB.root.position.set(id >= 5 ? -0.3 : 0.3, 0, id >= 5 ? lerp(-0.6, -1.4, clamp01((t - W(5, "so")) / 3)) : -2.7); w.engB.root.rotation.y = id >= 5 ? Math.PI + 0.6 : Math.PI / 2; w.engB.pose(t, { action: id >= 5 ? "inspect" : "idle" }); w.lightB.visible = id >= 5; }
     // C: notes on a clipboard by the left cabinets
-    w.engC.root.position.set(-0.22, 0, -0.55); w.engC.root.rotation.y = -Math.PI / 2 + 0.3; w.engC.pose(t, { action: "write", amount: 0.6 });
+    w.engC.root.position.set(-0.4, 0, -0.55); w.engC.root.rotation.y = -Math.PI / 2 + 0.3; w.engC.pose(t, { action: "write", amount: 0.6 });
     w.mott2.root.visible = id === 4;
     w.mott2.pose(t, [[0, "curious"]]);
   }
@@ -243,7 +254,7 @@ export const Pilot000: React.FC = () => {
       <Blink t={t} at={T.toHall} />
       <Blink t={t} at={S(16).start} />
       <EndCard t={t} at={END_AT} brand="UNDER THE PROMPT" line="Sources in the description." />
-      <Audio src={staticFile("utp000v2_en.wav")} />
+      <Audio src={staticFile("utp000v3_en.wav")} />
     </AbsoluteFill>
   );
 };

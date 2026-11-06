@@ -1,0 +1,34 @@
+{
+  "lang": "en",
+  "voice": "am_puck",
+  "speed": 1.05,
+  "speakers": {
+    "mott": {"voice": "am_puck", "speed": 1.05},
+    "leo": {"voice": "am_eric", "speed": 1.1}
+  },
+  "respell": {
+    "1947": "nineteen forty-seven",
+    "1878": "eighteen seventy-eight",
+    "9th": "ninth",
+    "II": "Two"
+  },
+  "scenes": [
+    {"id": 1, "speaker": "mott", "gap": 0.2, "lines": [{"text": "In 1947… a moth made a computer fail.", "speed": 1.0}]},
+    {"id": 2, "speaker": "leo", "gap": 0.25, "lines": [{"text": "Wait. A moth? Like… you?", "speed": 1.15}]},
+    {"id": 3, "speaker": "mott", "gap": 0.3, "lines": [{"text": "Like me.", "speed": 0.98, "pause": 0.35}, {"text": "Picture Harvard, 1947. The Mark II.", "speed": 1.08}]},
+    {"id": 4, "speaker": "mott", "gap": 0.35, "lines": [{"text": "A room full of relays: little metal switches that click open, and shut, to do math.", "speed": 1.1}]},
+    {"id": 5, "speaker": "mott", "gap": 0.6, "lines": [{"text": "On September 9th, it started making errors.", "speed": 1.08, "pause": 0.3}, {"text": "So the team went looking for the problem…", "speed": 0.98}]},
+    {"id": 6, "speaker": "mott", "gap": 0.12, "lines": [{"text": "and found her.", "speed": 0.92, "pause": 0.45}, {"text": "A moth. Stuck between the contacts.", "speed": 1.0}]},
+    {"id": 7, "speaker": "leo", "gap": 0.25, "lines": [{"text": "No way!", "speed": 1.2}]},
+    {"id": 8, "speaker": "mott", "gap": 0.55, "lines": [{"text": "So they did the most engineer thing ever.", "speed": 1.12, "pause": 0.2}, {"text": "They taped her into the logbook, and wrote:", "speed": 1.04}]},
+    {"id": 9, "speaker": "mott", "gap": 0.35, "lines": [{"text": "\"First actual case of bug being found.\"", "speed": 0.94}]},
+    {"id": 10, "speaker": "leo", "gap": 0.12, "lines": [{"text": "So that's where \"bug\" comes from!", "speed": 1.18}]},
+    {"id": 11, "speaker": "mott", "gap": 0.35, "lines": [{"text": "Nope.", "speed": 1.0, "pause": 0.35}, {"text": "Engineers already called glitches bugs. Edison wrote it in 1878.", "speed": 1.1}]},
+    {"id": 12, "speaker": "mott", "gap": 0.3, "lines": [{"text": "That's the joke. An actual bug.", "speed": 1.0}]},
+    {"id": 13, "speaker": "leo", "gap": 0.15, "lines": [{"text": "Okay, but Grace Hopper found it, right?", "speed": 1.12}]},
+    {"id": 14, "speaker": "mott", "gap": 0.4, "lines": [{"text": "Bright light.", "speed": 0.95, "pause": 0.2}, {"text": "Lamp or fire?", "speed": 1.0, "pause": 0.35}, {"text": "She was on the team, and she helped make the story famous.", "speed": 1.08}]},
+    {"id": 15, "speaker": "mott", "gap": 0.35, "lines": [{"text": "That page is still kept at the Smithsonian.", "speed": 1.05, "pause": 0.25}, {"text": "Moth included.", "speed": 0.95}]},
+    {"id": 16, "speaker": "leo", "gap": 0.08, "lines": [{"text": "So every time I debug something…", "speed": 1.08}]},
+    {"id": 17, "speaker": "mott", "lines": [{"text": "…you're talking about my family.", "speed": 1.0, "pause": 0.55}, {"text": "Stay curious. Not too close to the light.", "speed": 0.96}]}
+  ]
+}

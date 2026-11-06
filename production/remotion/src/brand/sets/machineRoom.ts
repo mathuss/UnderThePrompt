@@ -11,13 +11,16 @@ export const AISLE_X = 2.4;            // cabinets stand at x = ±AISLE_X, faces
 export const CAB_Z = [2, -2.2, -6.4, -10.6, -14.8];
 export const CAB = { w: 3.8, h: 9, d: 1.2 };
 /** Hero relay "#70": right row, third cabinet, at Mott's landing height. Faces the aisle (-x). */
-export const HERO = new THREE.Vector3(AISLE_X - CAB.d / 2 - 0.55, 4.6, CAB_Z[2]); // chest height for a person when the room is scaled to metres
+/** Hero relay "#70" position for a given aisle half-width (local units). */
+export const heroAt = (aisleX: number) => new THREE.Vector3(aisleX - CAB.d / 2 - 0.55, 4.6, CAB_Z[2]);
+export const HERO = heroAt(AISLE_X); // chest height for a person when the room is scaled to metres
 
 /**
  * @param S world scale. 1 = Mott units; 0.27 = metres (a 9-unit cabinet becomes 2.4 m).
  *          Light distances and intensities are compensated so the look is the same at any scale.
  */
-export function buildMachineRoom(S = 1) {
+export function buildMachineRoom(S = 1, aisleX = AISLE_X) {
+  const HERO = heroAt(aisleX);
   const rnd = prng(23);
   const outer = new THREE.Group(); outer.scale.setScalar(S);
   const group = new THREE.Group(); outer.add(group);
@@ -62,8 +65,8 @@ export function buildMachineRoom(S = 1) {
   let k = 0;
   [-1, 1].forEach((side) => CAB_Z.forEach((z) => {
     const cab = new THREE.Mesh(new THREE.BoxGeometry(CAB.d, CAB.h, CAB.w), cabM);
-    cab.position.set(side * AISLE_X, CAB.h / 2, z); cab.castShadow = true; cab.receiveShadow = true; group.add(cab);
-    const faceX = side * (AISLE_X - CAB.d / 2) - side * 0.08;
+    cab.position.set(side * aisleX, CAB.h / 2, z); cab.castShadow = true; cab.receiveShadow = true; group.add(cab);
+    const faceX = side * (aisleX - CAB.d / 2) - side * 0.08;
     for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
       const y = 0.9 + r * 0.38, zz = z - CAB.w / 2 + 0.3 + c * 0.4;
       q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), PI / 2);

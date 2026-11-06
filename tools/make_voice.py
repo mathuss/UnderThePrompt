@@ -13,6 +13,9 @@ Dialogue: add "speakers": {"mott": {"voice": "am_puck", "speed": 1.05}, ...} to 
 "speaker": "<name>" to a scene (or to a line object). Each speaker then also gets its own
 time-aligned track <out_dir>/voice_<name>.wav (silence where others talk), used to drive mouths.
 Lines and words in the timeline carry their "speaker".
+
+Pacing (so dialogue doesn't sound mechanical): a line object may set "speed" (overrides the speaker's)
+and "pause" (silence after it, seconds); a scene may set "gap" (silence after the scene).
 """
 import argparse
 import json
@@ -94,12 +97,15 @@ def main():
             say = respell(say, spec["respell"])
             who = (line.get("speaker") if isinstance(line, dict) else None) or scene.get("speaker") or default_spk
             v_name, v_speed = speakers[who]["voice"], speakers[who].get("speed", spec["speed"])
-            samples, sr = tts.create(say, voice=v_name, speed=v_speed, lang=lang)
+            if isinstance(line, dict) and "speed" in line:
+                v_speed = line["speed"]
+            v_lang = speakers[who].get("lang", lang)
+            samples, sr = tts.create(say, voice=v_name, speed=v_speed, lang=v_lang)
             assert sr == SR, sr
             samples = samples.astype(np.float32)
             dur = len(samples) / SR
 
-            fr, ts = speech_curve(tts, say, v_name, v_speed, lang, dur)
+            fr, ts = speech_curve(tts, say, v_name, v_speed, v_lang, dur)
             caption_words = text.split()
             clen = [letters(w) for w in caption_words]
             ctot, acc = sum(clen), 0
@@ -114,9 +120,10 @@ def main():
             push(samples, who)
             t += dur
             if li < len(scene["lines"]) - 1:
-                push(np.zeros(int(LINE_GAP * SR), dtype=np.float32), None)
-                t += LINE_GAP
-        gap = SCENE_GAP if si < len(spec["scenes"]) - 1 else 1.2
+                pause = line.get("pause", LINE_GAP) if isinstance(line, dict) else LINE_GAP
+                push(np.zeros(int(pause * SR), dtype=np.float32), None)
+                t += pause
+        gap = scene.get("gap", SCENE_GAP) if si < len(spec["scenes"]) - 1 else 1.2
         push(np.zeros(int(gap * SR), dtype=np.float32), None)
         t += gap
         scenes.append({"id": scene["id"], "start": round(scene_start, 3), "end": round(t, 3)})

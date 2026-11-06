@@ -66,7 +66,7 @@ export const EXPRESSIONS = {
   embarrassed: e({ spread: 0.72, fwd: 0.2, bendL: 0.8, bendR: 0.8, lid: 0.4, cat: 0.9, mw: 0.75, mh: 0.25, lean: 0.08, tilt: -0.12, look: 0.45, dust: 1, scale: 0.97 }),
 } satisfies Record<string, Expr>;
 export type ExprName = keyof typeof EXPRESSIONS;
-export type PoseOpts = { talk?: number; fly?: number; point?: number; shield?: number; tap?: number };
+export type PoseOpts = { talk?: number; fly?: number; point?: number; shield?: number; tap?: number; gazeYaw?: number; gazePitch?: number }; // gazePitch > 0 looks up
 export type Track = [number, ExprName][];
 
 const KEYS = Object.keys(D) as (keyof Expr)[];
@@ -202,7 +202,7 @@ export function buildMott() {
    * - tap 0…1: right limb raised high (the "Lamp Tap")
    */
   function pose(t: number, track: Track, o: PoseOpts = {}) {
-    const { talk = 0, fly = 0, point = 0, shield = 0, tap = 0 } = o;
+    const { talk = 0, fly = 0, point = 0, shield = 0, tap = 0, gazeYaw = 0, gazePitch = 0 } = o;
     const { x, name, since } = exprAt(t, track);
     const twitch = x.twitch * (since < 0.6 ? Math.sin(t * 50) * 0.12 : 0);
     ants.forEach((a) => {
@@ -221,7 +221,7 @@ export function buildMott() {
     });
     mouth.scale.set(x.mw * (1 - talk * 0.15), Math.max(x.mh, 0.3 + talk * 0.8), 0.32);
     mouth.position.x = x.mx;
-    head.rotation.set(0, x.look, x.tilt);
+    head.rotation.set(-gazePitch, x.look + gazeYaw, x.tilt);
     upper.rotation.x = x.lean;
     const shiver = x.shiver * Math.sin(t * 75) * 0.04;
     const flutter = x.flutter && since < 0.9 ? Math.sin(t * 30) * 0.5 : 0;

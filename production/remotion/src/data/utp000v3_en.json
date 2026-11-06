@@ -1,0 +1,1573 @@
+{
+ "voice": "am_puck",
+ "duration": 61.678,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 0.15,
+   "end": 3.593
+  },
+  {
+   "id": 2,
+   "start": 3.593,
+   "end": 5.336
+  },
+  {
+   "id": 3,
+   "start": 5.336,
+   "end": 9.698
+  },
+  {
+   "id": 4,
+   "start": 9.698,
+   "end": 14.699
+  },
+  {
+   "id": 5,
+   "start": 14.699,
+   "end": 20.057
+  },
+  {
+   "id": 6,
+   "start": 20.057,
+   "end": 23.507
+  },
+  {
+   "id": 7,
+   "start": 23.507,
+   "end": 24.568
+  },
+  {
+   "id": 8,
+   "start": 24.568,
+   "end": 29.307
+  },
+  {
+   "id": 9,
+   "start": 29.307,
+   "end": 32.047
+  },
+  {
+   "id": 10,
+   "start": 32.047,
+   "end": 33.873
+  },
+  {
+   "id": 11,
+   "start": 33.873,
+   "end": 39.843
+  },
+  {
+   "id": 12,
+   "start": 39.843,
+   "end": 41.977
+  },
+  {
+   "id": 13,
+   "start": 41.977,
+   "end": 44.261
+  },
+  {
+   "id": 14,
+   "start": 44.261,
+   "end": 49.797
+  },
+  {
+   "id": 15,
+   "start": 49.797,
+   "end": 53.683
+  },
+  {
+   "id": 16,
+   "start": 53.683,
+   "end": 55.981
+  },
+  {
+   "id": 17,
+   "start": 55.981,
+   "end": 61.678
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "speaker": "mott",
+   "text": "In 1947… a moth made a computer fail.",
+   "start": 0.15,
+   "end": 3.393
+  },
+  {
+   "scene": 2,
+   "speaker": "leo",
+   "text": "Wait. A moth? Like… you?",
+   "start": 3.593,
+   "end": 5.086
+  },
+  {
+   "scene": 3,
+   "speaker": "mott",
+   "text": "Like me.",
+   "start": 5.336,
+   "end": 6.168
+  },
+  {
+   "scene": 3,
+   "speaker": "mott",
+   "text": "Picture Harvard, 1947. The Mark II.",
+   "start": 6.518,
+   "end": 9.398
+  },
+  {
+   "scene": 4,
+   "speaker": "mott",
+   "text": "A room full of relays: little metal switches that click open, and shut, to do math.",
+   "start": 9.698,
+   "end": 14.349
+  },
+  {
+   "scene": 5,
+   "speaker": "mott",
+   "text": "On September 9th, it started making errors.",
+   "start": 14.699,
+   "end": 17.109
+  },
+  {
+   "scene": 5,
+   "speaker": "mott",
+   "text": "So the team went looking for the problem…",
+   "start": 17.409,
+   "end": 19.457
+  },
+  {
+   "scene": 6,
+   "speaker": "mott",
+   "text": "and found her.",
+   "start": 20.057,
+   "end": 21.017
+  },
+  {
+   "scene": 6,
+   "speaker": "mott",
+   "text": "A moth. Stuck between the contacts.",
+   "start": 21.467,
+   "end": 23.387
+  },
+  {
+   "scene": 7,
+   "speaker": "leo",
+   "text": "No way!",
+   "start": 23.507,
+   "end": 24.318
+  },
+  {
+   "scene": 8,
+   "speaker": "mott",
+   "text": "So they did the most engineer thing ever.",
+   "start": 24.568,
+   "end": 26.595
+  },
+  {
+   "scene": 8,
+   "speaker": "mott",
+   "text": "They taped her into the logbook, and wrote:",
+   "start": 26.795,
+   "end": 28.757
+  },
+  {
+   "scene": 9,
+   "speaker": "mott",
+   "text": "\"First actual case of bug being found.\"",
+   "start": 29.307,
+   "end": 31.697
+  },
+  {
+   "scene": 10,
+   "speaker": "leo",
+   "text": "So that's where \"bug\" comes from!",
+   "start": 32.047,
+   "end": 33.753
+  },
+  {
+   "scene": 11,
+   "speaker": "mott",
+   "text": "Nope.",
+   "start": 33.873,
+   "end": 34.449
+  },
+  {
+   "scene": 11,
+   "speaker": "mott",
+   "text": "Engineers already called glitches bugs. Edison wrote it in 1878.",
+   "start": 34.799,
+   "end": 39.493
+  },
+  {
+   "scene": 12,
+   "speaker": "mott",
+   "text": "That's the joke. An actual bug.",
+   "start": 39.843,
+   "end": 41.677
+  },
+  {
+   "scene": 13,
+   "speaker": "leo",
+   "text": "Okay, but Grace Hopper found it, right?",
+   "start": 41.977,
+   "end": 44.111
+  },
+  {
+   "scene": 14,
+   "speaker": "mott",
+   "text": "Bright light.",
+   "start": 44.261,
+   "end": 45.071
+  },
+  {
+   "scene": 14,
+   "speaker": "mott",
+   "text": "Lamp or fire?",
+   "start": 45.271,
+   "end": 46.253
+  },
+  {
+   "scene": 14,
+   "speaker": "mott",
+   "text": "She was on the team, and she helped make the story famous.",
+   "start": 46.603,
+   "end": 49.397
+  },
+  {
+   "scene": 15,
+   "speaker": "mott",
+   "text": "That page is still kept at the Smithsonian.",
+   "start": 49.797,
+   "end": 52.037
+  },
+  {
+   "scene": 15,
+   "speaker": "mott",
+   "text": "Moth included.",
+   "start": 52.287,
+   "end": 53.333
+  },
+  {
+   "scene": 16,
+   "speaker": "leo",
+   "text": "So every time I debug something…",
+   "start": 53.683,
+   "end": 55.901
+  },
+  {
+   "scene": 17,
+   "speaker": "mott",
+   "text": "…you're talking about my family.",
+   "start": 55.981,
+   "end": 57.56
+  },
+  {
+   "scene": 17,
+   "speaker": "mott",
+   "text": "Stay curious. Not too close to the light.",
+   "start": 58.11,
+   "end": 60.478
+  }
+ ],
+ "words": [
+  {
+   "text": "In",
+   "start": 0.15,
+   "end": 0.694,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "1947…",
+   "start": 0.694,
+   "end": 1.014,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "a",
+   "start": 1.014,
+   "end": 1.094,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "moth",
+   "start": 1.093,
+   "end": 1.4,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "made",
+   "start": 1.4,
+   "end": 2.025,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "a",
+   "start": 2.025,
+   "end": 2.105,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "computer",
+   "start": 2.044,
+   "end": 2.907,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "fail.",
+   "start": 2.907,
+   "end": 3.393,
+   "scene": 1,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Wait.",
+   "start": 3.593,
+   "end": 4.218,
+   "scene": 2,
+   "line": 1,
+   "speaker": "leo"
+  },
+  {
+   "text": "A",
+   "start": 4.218,
+   "end": 4.298,
+   "scene": 2,
+   "line": 1,
+   "speaker": "leo"
+  },
+  {
+   "text": "moth?",
+   "start": 4.268,
+   "end": 4.595,
+   "scene": 2,
+   "line": 1,
+   "speaker": "leo"
+  },
+  {
+   "text": "Like…",
+   "start": 4.595,
+   "end": 4.787,
+   "scene": 2,
+   "line": 1,
+   "speaker": "leo"
+  },
+  {
+   "text": "you?",
+   "start": 4.787,
+   "end": 5.086,
+   "scene": 2,
+   "line": 1,
+   "speaker": "leo"
+  },
+  {
+   "text": "Like",
+   "start": 5.336,
+   "end": 5.933,
+   "scene": 3,
+   "line": 2,
+   "speaker": "mott"
+  },
+  {
+   "text": "me.",
+   "start": 5.933,
+   "end": 6.168,
+   "scene": 3,
+   "line": 2,
+   "speaker": "mott"
+  },
+  {
+   "text": "Picture",
+   "start": 6.518,
+   "end": 7.367,
+   "scene": 3,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "Harvard,",
+   "start": 7.367,
+   "end": 7.852,
+   "scene": 3,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "1947.",
+   "start": 7.852,
+   "end": 8.297,
+   "scene": 3,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "The",
+   "start": 8.297,
+   "end": 8.649,
+   "scene": 3,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "Mark",
+   "start": 8.649,
+   "end": 8.948,
+   "scene": 3,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "II.",
+   "start": 8.948,
+   "end": 9.398,
+   "scene": 3,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "A",
+   "start": 9.698,
+   "end": 10.125,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "room",
+   "start": 10.125,
+   "end": 10.317,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "full",
+   "start": 10.317,
+   "end": 10.509,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "of",
+   "start": 10.509,
+   "end": 10.615,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "relays:",
+   "start": 10.615,
+   "end": 10.871,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "little",
+   "start": 10.871,
+   "end": 11.213,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "metal",
+   "start": 11.213,
+   "end": 11.383,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "switches",
+   "start": 11.383,
+   "end": 12.087,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "that",
+   "start": 12.087,
+   "end": 12.301,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "click",
+   "start": 12.301,
+   "end": 12.45,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "open,",
+   "start": 12.45,
+   "end": 13.026,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "and",
+   "start": 13.026,
+   "end": 13.282,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "shut,",
+   "start": 13.282,
+   "end": 13.495,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "to",
+   "start": 13.495,
+   "end": 13.773,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "do",
+   "start": 13.773,
+   "end": 13.853,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "math.",
+   "start": 13.823,
+   "end": 14.349,
+   "scene": 4,
+   "line": 4,
+   "speaker": "mott"
+  },
+  {
+   "text": "On",
+   "start": 14.699,
+   "end": 15.216,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "September",
+   "start": 15.216,
+   "end": 15.68,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "9th,",
+   "start": 15.68,
+   "end": 15.788,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "it",
+   "start": 15.788,
+   "end": 15.907,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "started",
+   "start": 15.907,
+   "end": 16.25,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "making",
+   "start": 16.25,
+   "end": 16.639,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "errors.",
+   "start": 16.639,
+   "end": 17.109,
+   "scene": 5,
+   "line": 5,
+   "speaker": "mott"
+  },
+  {
+   "text": "So",
+   "start": 17.409,
+   "end": 17.943,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 17.943,
+   "end": 18.177,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "team",
+   "start": 18.177,
+   "end": 18.263,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "went",
+   "start": 18.263,
+   "end": 18.433,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "looking",
+   "start": 18.433,
+   "end": 18.625,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "for",
+   "start": 18.625,
+   "end": 18.945,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 18.945,
+   "end": 19.025,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "problem…",
+   "start": 19.009,
+   "end": 19.457,
+   "scene": 5,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "and",
+   "start": 20.057,
+   "end": 20.548,
+   "scene": 6,
+   "line": 7,
+   "speaker": "mott"
+  },
+  {
+   "text": "found",
+   "start": 20.548,
+   "end": 20.868,
+   "scene": 6,
+   "line": 7,
+   "speaker": "mott"
+  },
+  {
+   "text": "her.",
+   "start": 20.868,
+   "end": 21.017,
+   "scene": 6,
+   "line": 7,
+   "speaker": "mott"
+  },
+  {
+   "text": "A",
+   "start": 21.467,
+   "end": 21.979,
+   "scene": 6,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "moth.",
+   "start": 21.979,
+   "end": 22.171,
+   "scene": 6,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "Stuck",
+   "start": 22.171,
+   "end": 22.406,
+   "scene": 6,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "between",
+   "start": 22.406,
+   "end": 22.854,
+   "scene": 6,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 22.854,
+   "end": 22.982,
+   "scene": 6,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "contacts.",
+   "start": 22.982,
+   "end": 23.387,
+   "scene": 6,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "No",
+   "start": 23.507,
+   "end": 23.958,
+   "scene": 7,
+   "line": 9,
+   "speaker": "leo"
+  },
+  {
+   "text": "way!",
+   "start": 23.958,
+   "end": 24.318,
+   "scene": 7,
+   "line": 9,
+   "speaker": "leo"
+  },
+  {
+   "text": "So",
+   "start": 24.568,
+   "end": 25.037,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "they",
+   "start": 25.037,
+   "end": 25.272,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "did",
+   "start": 25.272,
+   "end": 25.379,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 25.379,
+   "end": 25.507,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "most",
+   "start": 25.507,
+   "end": 25.587,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "engineer",
+   "start": 25.557,
+   "end": 25.976,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "thing",
+   "start": 25.976,
+   "end": 26.275,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "ever.",
+   "start": 26.275,
+   "end": 26.595,
+   "scene": 8,
+   "line": 10,
+   "speaker": "mott"
+  },
+  {
+   "text": "They",
+   "start": 26.795,
+   "end": 27.328,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "taped",
+   "start": 27.328,
+   "end": 27.52,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "her",
+   "start": 27.52,
+   "end": 27.733,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "into",
+   "start": 27.733,
+   "end": 27.904,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 27.904,
+   "end": 28.011,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "logbook,",
+   "start": 28.011,
+   "end": 28.288,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "and",
+   "start": 28.288,
+   "end": 28.587,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "wrote:",
+   "start": 28.587,
+   "end": 28.757,
+   "scene": 8,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "\"First",
+   "start": 29.307,
+   "end": 29.926,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "actual",
+   "start": 29.926,
+   "end": 30.395,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "case",
+   "start": 30.395,
+   "end": 30.566,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "of",
+   "start": 30.566,
+   "end": 30.737,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "bug",
+   "start": 30.737,
+   "end": 30.971,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "being",
+   "start": 30.971,
+   "end": 31.249,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "found.\"",
+   "start": 31.249,
+   "end": 31.697,
+   "scene": 9,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "So",
+   "start": 32.047,
+   "end": 32.422,
+   "scene": 10,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "that's",
+   "start": 32.422,
+   "end": 32.697,
+   "scene": 10,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "where",
+   "start": 32.697,
+   "end": 32.879,
+   "scene": 10,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "\"bug\"",
+   "start": 32.879,
+   "end": 33.22,
+   "scene": 10,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "comes",
+   "start": 33.22,
+   "end": 33.497,
+   "scene": 10,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "from!",
+   "start": 33.497,
+   "end": 33.753,
+   "scene": 10,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "Nope.",
+   "start": 33.873,
+   "end": 34.449,
+   "scene": 11,
+   "line": 14,
+   "speaker": "mott"
+  },
+  {
+   "text": "Engineers",
+   "start": 34.799,
+   "end": 35.751,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "already",
+   "start": 35.751,
+   "end": 36.076,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "called",
+   "start": 36.076,
+   "end": 36.419,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "glitches",
+   "start": 36.419,
+   "end": 37.418,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "bugs.",
+   "start": 37.418,
+   "end": 37.763,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "Edison",
+   "start": 37.763,
+   "end": 38.27,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "wrote",
+   "start": 38.27,
+   "end": 38.826,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "it",
+   "start": 38.826,
+   "end": 38.993,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "in",
+   "start": 38.993,
+   "end": 39.159,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "1878.",
+   "start": 39.159,
+   "end": 39.493,
+   "scene": 11,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "That's",
+   "start": 39.843,
+   "end": 40.376,
+   "scene": 12,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 40.376,
+   "end": 40.611,
+   "scene": 12,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "joke.",
+   "start": 40.611,
+   "end": 40.76,
+   "scene": 12,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "An",
+   "start": 40.76,
+   "end": 41.293,
+   "scene": 12,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "actual",
+   "start": 41.293,
+   "end": 41.373,
+   "scene": 12,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "bug.",
+   "start": 41.357,
+   "end": 41.677,
+   "scene": 12,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "Okay,",
+   "start": 41.977,
+   "end": 42.728,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "but",
+   "start": 42.728,
+   "end": 42.808,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "Grace",
+   "start": 42.778,
+   "end": 43.236,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "Hopper",
+   "start": 43.236,
+   "end": 43.599,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "found",
+   "start": 43.599,
+   "end": 43.855,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "it,",
+   "start": 43.855,
+   "end": 43.935,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "right?",
+   "start": 43.905,
+   "end": 44.111,
+   "scene": 13,
+   "line": 17,
+   "speaker": "leo"
+  },
+  {
+   "text": "Bright",
+   "start": 44.261,
+   "end": 44.901,
+   "scene": 14,
+   "line": 18,
+   "speaker": "mott"
+  },
+  {
+   "text": "light.",
+   "start": 44.901,
+   "end": 45.071,
+   "scene": 14,
+   "line": 18,
+   "speaker": "mott"
+  },
+  {
+   "text": "Lamp",
+   "start": 45.271,
+   "end": 45.762,
+   "scene": 14,
+   "line": 19,
+   "speaker": "mott"
+  },
+  {
+   "text": "or",
+   "start": 45.762,
+   "end": 46.039,
+   "scene": 14,
+   "line": 19,
+   "speaker": "mott"
+  },
+  {
+   "text": "fire?",
+   "start": 46.039,
+   "end": 46.253,
+   "scene": 14,
+   "line": 19,
+   "speaker": "mott"
+  },
+  {
+   "text": "She",
+   "start": 46.603,
+   "end": 47.093,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "was",
+   "start": 47.093,
+   "end": 47.221,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "on",
+   "start": 47.221,
+   "end": 47.371,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 47.371,
+   "end": 47.477,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "team,",
+   "start": 47.477,
+   "end": 47.605,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "and",
+   "start": 47.605,
+   "end": 47.797,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "she",
+   "start": 47.797,
+   "end": 47.947,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "helped",
+   "start": 47.947,
+   "end": 48.053,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "make",
+   "start": 48.053,
+   "end": 48.267,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 48.267,
+   "end": 48.523,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "story",
+   "start": 48.523,
+   "end": 48.864,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "famous.",
+   "start": 48.864,
+   "end": 49.397,
+   "scene": 14,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "That",
+   "start": 49.797,
+   "end": 50.352,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "page",
+   "start": 50.352,
+   "end": 50.48,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "is",
+   "start": 50.48,
+   "end": 50.672,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "still",
+   "start": 50.672,
+   "end": 50.907,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "kept",
+   "start": 50.907,
+   "end": 51.077,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "at",
+   "start": 51.077,
+   "end": 51.163,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 51.163,
+   "end": 51.376,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "Smithsonian.",
+   "start": 51.376,
+   "end": 52.037,
+   "scene": 15,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "Moth",
+   "start": 52.287,
+   "end": 52.906,
+   "scene": 15,
+   "line": 22,
+   "speaker": "mott"
+  },
+  {
+   "text": "included.",
+   "start": 52.906,
+   "end": 53.333,
+   "scene": 15,
+   "line": 22,
+   "speaker": "mott"
+  },
+  {
+   "text": "So",
+   "start": 53.683,
+   "end": 54.083,
+   "scene": 16,
+   "line": 23,
+   "speaker": "leo"
+  },
+  {
+   "text": "every",
+   "start": 54.083,
+   "end": 54.451,
+   "scene": 16,
+   "line": 23,
+   "speaker": "leo"
+  },
+  {
+   "text": "time",
+   "start": 54.451,
+   "end": 54.771,
+   "scene": 16,
+   "line": 23,
+   "speaker": "leo"
+  },
+  {
+   "text": "I",
+   "start": 54.771,
+   "end": 54.963,
+   "scene": 16,
+   "line": 23,
+   "speaker": "leo"
+  },
+  {
+   "text": "debug",
+   "start": 54.963,
+   "end": 55.432,
+   "scene": 16,
+   "line": 23,
+   "speaker": "leo"
+  },
+  {
+   "text": "something…",
+   "start": 55.432,
+   "end": 55.901,
+   "scene": 16,
+   "line": 23,
+   "speaker": "leo"
+  },
+  {
+   "text": "…you're",
+   "start": 55.981,
+   "end": 56.493,
+   "scene": 17,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "talking",
+   "start": 56.493,
+   "end": 56.877,
+   "scene": 17,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "about",
+   "start": 56.877,
+   "end": 57.069,
+   "scene": 17,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "my",
+   "start": 57.069,
+   "end": 57.219,
+   "scene": 17,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "family.",
+   "start": 57.219,
+   "end": 57.56,
+   "scene": 17,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "Stay",
+   "start": 58.11,
+   "end": 58.771,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "curious.",
+   "start": 58.771,
+   "end": 59.134,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "Not",
+   "start": 59.134,
+   "end": 59.475,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "too",
+   "start": 59.475,
+   "end": 59.753,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "close",
+   "start": 59.753,
+   "end": 59.923,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "to",
+   "start": 59.923,
+   "end": 60.137,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 60.137,
+   "end": 60.307,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  },
+  {
+   "text": "light.",
+   "start": 60.307,
+   "end": 60.478,
+   "scene": 17,
+   "line": 25,
+   "speaker": "mott"
+  }
+ ]
+}
