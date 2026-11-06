@@ -1,0 +1,36 @@
+{
+  "lang": "en",
+  "voice": "am_puck",
+  "speed": 1.05,
+  "speakers": {
+    "mott": {"voice": "am_puck", "speed": 1.05},
+    "leo": {"voice": "am_michael", "speed": 1.02}
+  },
+  "respell": {
+    "1947": "nineteen forty-seven",
+    "1947.": "nineteen forty-seven.",
+    "1878": "eighteen seventy-eight",
+    "1878.": "eighteen seventy-eight.",
+    "9th": "ninth",
+    "II": "Two"
+  },
+  "scenes": [
+    {"id": 1, "speaker": "mott", "lines": ["In 1947, a moth made a computer fail."]},
+    {"id": 2, "speaker": "leo", "lines": ["Wait. A moth? Like… you?"]},
+    {"id": 3, "speaker": "mott", "lines": ["Like me. Picture Harvard, 1947. The Mark II."]},
+    {"id": 4, "speaker": "mott", "lines": ["A room full of relays: little metal switches that click open and shut to do math."]},
+    {"id": 5, "speaker": "mott", "lines": ["On September 9th, it started making errors. So the team went looking for the problem…"]},
+    {"id": 6, "speaker": "mott", "lines": ["and found her. A moth, stuck between the contacts."]},
+    {"id": 7, "speaker": "leo", "lines": ["No way."]},
+    {"id": 8, "speaker": "mott", "lines": ["So they did the most engineer thing ever. They taped her into the logbook, and wrote:"]},
+    {"id": 9, "speaker": "mott", "lines": ["\"First actual case of bug being found.\""]},
+    {"id": 10, "speaker": "leo", "lines": ["So that's where \"bug\" comes from!"]},
+    {"id": 11, "speaker": "mott", "lines": ["Nope. Engineers already called glitches bugs. Edison wrote it in 1878."]},
+    {"id": 12, "speaker": "mott", "lines": ["That's the joke. An actual bug."]},
+    {"id": 13, "speaker": "leo", "lines": ["And Grace Hopper found it, right?"]},
+    {"id": 14, "speaker": "mott", "lines": ["Bright light. Lamp or fire? She was on the team, and she helped make the story famous."]},
+    {"id": 15, "speaker": "mott", "lines": ["That page is still kept at the Smithsonian. Moth included."]},
+    {"id": 16, "speaker": "leo", "lines": ["So every time I debug something…"]},
+    {"id": 17, "speaker": "mott", "lines": ["…you're talking about my family. Stay curious. Not too close to the light."]}
+  ]
+}

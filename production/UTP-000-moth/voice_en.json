@@ -1,0 +1,27 @@
+{
+  "lang": "en",
+  "voice": "am_puck",
+  "speed": 1.05,
+  "respell": {
+    "1947": "nineteen forty-seven",
+    "1878": "eighteen seventy-eight",
+    "9th": "ninth",
+    "II": "Two"
+  },
+  "scenes": [
+    {"id": 1, "lines": ["In 1947, a moth made a computer fail."]},
+    {"id": 2, "lines": ["I'm a moth. We need to talk about it."]},
+    {"id": 3, "lines": ["This is the Harvard Mark II."]},
+    {"id": 4, "lines": ["A room full of relays: little metal switches that click open and shut to do math."]},
+    {"id": 5, "lines": ["On September 9th, it started giving wrong answers.", "So the team searched it, relay by relay…"]},
+    {"id": 6, "lines": ["and found her. A moth, stuck between the contacts."]},
+    {"id": 7, "lines": ["And they did the most engineer thing possible:", "they taped her into the logbook, and wrote:", "\"First actual case of bug being found.\""]},
+    {"id": 8, "lines": ["Here's the part nobody tells you.", "They didn't invent the word. Engineers already called glitches \"bugs\".", "Edison wrote it in 1878."]},
+    {"id": 9, "lines": ["That's the joke: an actual bug."]},
+    {"id": 10, "lines": ["Bright light. Let's check if it's a lamp or a fire.", "No, Grace Hopper didn't pull it out.", "She was on the team, and she helped make the story famous."]},
+    {"id": 11, "lines": ["So the most famous bug in history wasn't the first bug.", "Just the first one with wings."]},
+    {"id": 12, "lines": ["That page is kept at the Smithsonian today. Moth included."]},
+    {"id": 13, "lines": ["Every time you debug something… you're talking about my family."]},
+    {"id": 14, "lines": ["Stay curious. Not too close to the light."]}
+  ]
+}

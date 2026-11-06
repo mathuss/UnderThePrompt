@@ -1,0 +1,1535 @@
+{
+ "voice": "am_puck",
+ "duration": 64.277,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 0.15,
+   "end": 3.672
+  },
+  {
+   "id": 2,
+   "start": 3.672,
+   "end": 5.957
+  },
+  {
+   "id": 3,
+   "start": 5.957,
+   "end": 7.964
+  },
+  {
+   "id": 4,
+   "start": 7.964,
+   "end": 12.979
+  },
+  {
+   "id": 5,
+   "start": 12.979,
+   "end": 18.687
+  },
+  {
+   "id": 6,
+   "start": 18.687,
+   "end": 21.761
+  },
+  {
+   "id": 7,
+   "start": 21.761,
+   "end": 29.163
+  },
+  {
+   "id": 8,
+   "start": 29.163,
+   "end": 37.717
+  },
+  {
+   "id": 9,
+   "start": 37.717,
+   "end": 39.852
+  },
+  {
+   "id": 10,
+   "start": 39.852,
+   "end": 47.83
+  },
+  {
+   "id": 11,
+   "start": 47.83,
+   "end": 53.025
+  },
+  {
+   "id": 12,
+   "start": 53.025,
+   "end": 57.038
+  },
+  {
+   "id": 13,
+   "start": 57.038,
+   "end": 60.816
+  },
+  {
+   "id": 14,
+   "start": 60.816,
+   "end": 64.277
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "text": "In 1947, a moth made a computer fail.",
+   "start": 0.15,
+   "end": 3.222
+  },
+  {
+   "scene": 2,
+   "text": "I'm a moth. We need to talk about it.",
+   "start": 3.672,
+   "end": 5.507
+  },
+  {
+   "scene": 3,
+   "text": "This is the Harvard Mark II.",
+   "start": 5.957,
+   "end": 7.514
+  },
+  {
+   "scene": 4,
+   "text": "A room full of relays: little metal switches that click open and shut to do math.",
+   "start": 7.964,
+   "end": 12.529
+  },
+  {
+   "scene": 5,
+   "text": "On September 9th, it started giving wrong answers.",
+   "start": 12.979,
+   "end": 15.817
+  },
+  {
+   "scene": 5,
+   "text": "So the team searched it, relay by relay…",
+   "start": 15.997,
+   "end": 18.237
+  },
+  {
+   "scene": 6,
+   "text": "and found her. A moth, stuck between the contacts.",
+   "start": 18.687,
+   "end": 21.311
+  },
+  {
+   "scene": 7,
+   "text": "And they did the most engineer thing possible:",
+   "start": 21.761,
+   "end": 24.15
+  },
+  {
+   "scene": 7,
+   "text": "they taped her into the logbook, and wrote:",
+   "start": 24.33,
+   "end": 26.293
+  },
+  {
+   "scene": 7,
+   "text": "\"First actual case of bug being found.\"",
+   "start": 26.473,
+   "end": 28.713
+  },
+  {
+   "scene": 8,
+   "text": "Here's the part nobody tells you.",
+   "start": 29.163,
+   "end": 30.912
+  },
+  {
+   "scene": 8,
+   "text": "They didn't invent the word. Engineers already called glitches \"bugs\".",
+   "start": 31.092,
+   "end": 34.975
+  },
+  {
+   "scene": 8,
+   "text": "Edison wrote it in 1878.",
+   "start": 35.155,
+   "end": 37.267
+  },
+  {
+   "scene": 9,
+   "text": "That's the joke: an actual bug.",
+   "start": 37.717,
+   "end": 39.402
+  },
+  {
+   "scene": 10,
+   "text": "Bright light. Let's check if it's a lamp or a fire.",
+   "start": 39.852,
+   "end": 42.348
+  },
+  {
+   "scene": 10,
+   "text": "No, Grace Hopper didn't pull it out.",
+   "start": 42.528,
+   "end": 44.384
+  },
+  {
+   "scene": 10,
+   "text": "She was on the team, and she helped make the story famous.",
+   "start": 44.564,
+   "end": 47.38
+  },
+  {
+   "scene": 11,
+   "text": "So the most famous bug in history wasn't the first bug.",
+   "start": 47.83,
+   "end": 50.923
+  },
+  {
+   "scene": 11,
+   "text": "Just the first one with wings.",
+   "start": 51.103,
+   "end": 52.575
+  },
+  {
+   "scene": 12,
+   "text": "That page is kept at the Smithsonian today. Moth included.",
+   "start": 53.025,
+   "end": 56.588
+  },
+  {
+   "scene": 13,
+   "text": "Every time you debug something… you're talking about my family.",
+   "start": 57.038,
+   "end": 60.366
+  },
+  {
+   "scene": 14,
+   "text": "Stay curious. Not too close to the light.",
+   "start": 60.816,
+   "end": 63.077
+  }
+ ],
+ "words": [
+  {
+   "text": "In",
+   "start": 0.15,
+   "end": 0.67,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "1947,",
+   "start": 0.67,
+   "end": 0.974,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "a",
+   "start": 0.974,
+   "end": 1.054,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "moth",
+   "start": 1.048,
+   "end": 1.33,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "made",
+   "start": 1.33,
+   "end": 1.755,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "a",
+   "start": 1.755,
+   "end": 1.835,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "computer",
+   "start": 1.803,
+   "end": 2.79,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "fail.",
+   "start": 2.79,
+   "end": 3.222,
+   "scene": 1,
+   "line": 0
+  },
+  {
+   "text": "I'm",
+   "start": 3.672,
+   "end": 4.227,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "a",
+   "start": 4.227,
+   "end": 4.376,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "moth.",
+   "start": 4.376,
+   "end": 4.456,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "We",
+   "start": 4.44,
+   "end": 4.739,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "need",
+   "start": 4.739,
+   "end": 4.824,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "to",
+   "start": 4.824,
+   "end": 4.995,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "talk",
+   "start": 4.995,
+   "end": 5.08,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "about",
+   "start": 5.08,
+   "end": 5.443,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "it.",
+   "start": 5.443,
+   "end": 5.523,
+   "scene": 2,
+   "line": 1
+  },
+  {
+   "text": "This",
+   "start": 5.957,
+   "end": 6.445,
+   "scene": 3,
+   "line": 2
+  },
+  {
+   "text": "is",
+   "start": 6.445,
+   "end": 6.649,
+   "scene": 3,
+   "line": 2
+  },
+  {
+   "text": "the",
+   "start": 6.649,
+   "end": 6.761,
+   "scene": 3,
+   "line": 2
+  },
+  {
+   "text": "Harvard",
+   "start": 6.761,
+   "end": 7.033,
+   "scene": 3,
+   "line": 2
+  },
+  {
+   "text": "Mark",
+   "start": 7.033,
+   "end": 7.276,
+   "scene": 3,
+   "line": 2
+  },
+  {
+   "text": "II.",
+   "start": 7.276,
+   "end": 7.514,
+   "scene": 3,
+   "line": 2
+  },
+  {
+   "text": "A",
+   "start": 7.964,
+   "end": 8.455,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "room",
+   "start": 8.455,
+   "end": 8.625,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "full",
+   "start": 8.625,
+   "end": 8.796,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "of",
+   "start": 8.796,
+   "end": 8.924,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "relays:",
+   "start": 8.924,
+   "end": 9.201,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "little",
+   "start": 9.201,
+   "end": 9.521,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "metal",
+   "start": 9.521,
+   "end": 9.692,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "switches",
+   "start": 9.692,
+   "end": 10.375,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "that",
+   "start": 10.375,
+   "end": 10.609,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "click",
+   "start": 10.609,
+   "end": 10.78,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "open",
+   "start": 10.78,
+   "end": 11.356,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "and",
+   "start": 11.356,
+   "end": 11.633,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "shut",
+   "start": 11.633,
+   "end": 11.825,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "to",
+   "start": 11.825,
+   "end": 12.167,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "do",
+   "start": 12.167,
+   "end": 12.247,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "math.",
+   "start": 12.217,
+   "end": 12.529,
+   "scene": 4,
+   "line": 3
+  },
+  {
+   "text": "On",
+   "start": 12.979,
+   "end": 13.496,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "September",
+   "start": 13.496,
+   "end": 13.96,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "9th,",
+   "start": 13.96,
+   "end": 14.081,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "it",
+   "start": 14.081,
+   "end": 14.19,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "started",
+   "start": 14.19,
+   "end": 14.579,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "giving",
+   "start": 14.579,
+   "end": 14.911,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "wrong",
+   "start": 14.911,
+   "end": 15.22,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "answers.",
+   "start": 15.22,
+   "end": 15.817,
+   "scene": 5,
+   "line": 4
+  },
+  {
+   "text": "So",
+   "start": 15.997,
+   "end": 16.509,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "the",
+   "start": 16.509,
+   "end": 16.701,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "team",
+   "start": 16.701,
+   "end": 16.85,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "searched",
+   "start": 16.85,
+   "end": 17.042,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "it,",
+   "start": 17.042,
+   "end": 17.213,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "relay",
+   "start": 17.213,
+   "end": 17.554,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "by",
+   "start": 17.554,
+   "end": 17.789,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "relay…",
+   "start": 17.789,
+   "end": 18.237,
+   "scene": 5,
+   "line": 5
+  },
+  {
+   "text": "and",
+   "start": 18.687,
+   "end": 19.113,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "found",
+   "start": 19.113,
+   "end": 19.412,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "her.",
+   "start": 19.412,
+   "end": 19.519,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "A",
+   "start": 19.519,
+   "end": 19.732,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "moth,",
+   "start": 19.732,
+   "end": 19.881,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "stuck",
+   "start": 19.881,
+   "end": 20.095,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "between",
+   "start": 20.095,
+   "end": 20.543,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "the",
+   "start": 20.543,
+   "end": 20.671,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "contacts.",
+   "start": 20.671,
+   "end": 21.311,
+   "scene": 6,
+   "line": 6
+  },
+  {
+   "text": "And",
+   "start": 21.761,
+   "end": 22.187,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "they",
+   "start": 22.187,
+   "end": 22.379,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "did",
+   "start": 22.379,
+   "end": 22.571,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "the",
+   "start": 22.571,
+   "end": 22.699,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "most",
+   "start": 22.699,
+   "end": 22.779,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "engineer",
+   "start": 22.749,
+   "end": 23.211,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "thing",
+   "start": 23.211,
+   "end": 23.51,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "possible:",
+   "start": 23.51,
+   "end": 24.15,
+   "scene": 7,
+   "line": 7
+  },
+  {
+   "text": "they",
+   "start": 24.33,
+   "end": 24.863,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "taped",
+   "start": 24.863,
+   "end": 25.055,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "her",
+   "start": 25.055,
+   "end": 25.269,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "into",
+   "start": 25.269,
+   "end": 25.439,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "the",
+   "start": 25.439,
+   "end": 25.546,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "logbook,",
+   "start": 25.546,
+   "end": 25.823,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "and",
+   "start": 25.823,
+   "end": 26.122,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "wrote:",
+   "start": 26.122,
+   "end": 26.293,
+   "scene": 7,
+   "line": 8
+  },
+  {
+   "text": "\"First",
+   "start": 26.473,
+   "end": 27.049,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "actual",
+   "start": 27.049,
+   "end": 27.475,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "case",
+   "start": 27.475,
+   "end": 27.646,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "of",
+   "start": 27.646,
+   "end": 27.817,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "bug",
+   "start": 27.817,
+   "end": 27.987,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "being",
+   "start": 27.987,
+   "end": 28.286,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "found.\"",
+   "start": 28.286,
+   "end": 28.713,
+   "scene": 7,
+   "line": 9
+  },
+  {
+   "text": "Here's",
+   "start": 29.163,
+   "end": 29.76,
+   "scene": 8,
+   "line": 10
+  },
+  {
+   "text": "the",
+   "start": 29.76,
+   "end": 29.888,
+   "scene": 8,
+   "line": 10
+  },
+  {
+   "text": "part",
+   "start": 29.888,
+   "end": 30.037,
+   "scene": 8,
+   "line": 10
+  },
+  {
+   "text": "nobody",
+   "start": 30.037,
+   "end": 30.421,
+   "scene": 8,
+   "line": 10
+  },
+  {
+   "text": "tells",
+   "start": 30.421,
+   "end": 30.677,
+   "scene": 8,
+   "line": 10
+  },
+  {
+   "text": "you.",
+   "start": 30.677,
+   "end": 30.912,
+   "scene": 8,
+   "line": 10
+  },
+  {
+   "text": "They",
+   "start": 31.092,
+   "end": 31.625,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "didn't",
+   "start": 31.625,
+   "end": 31.881,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "invent",
+   "start": 31.881,
+   "end": 32.073,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "the",
+   "start": 32.073,
+   "end": 32.201,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "word.",
+   "start": 32.201,
+   "end": 32.372,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "Engineers",
+   "start": 32.372,
+   "end": 33.012,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "already",
+   "start": 33.012,
+   "end": 33.631,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "called",
+   "start": 33.631,
+   "end": 33.865,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "glitches",
+   "start": 33.865,
+   "end": 34.399,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "\"bugs\".",
+   "start": 34.399,
+   "end": 34.975,
+   "scene": 8,
+   "line": 11
+  },
+  {
+   "text": "Edison",
+   "start": 35.155,
+   "end": 36.075,
+   "scene": 8,
+   "line": 12
+  },
+  {
+   "text": "wrote",
+   "start": 36.075,
+   "end": 36.44,
+   "scene": 8,
+   "line": 12
+  },
+  {
+   "text": "it",
+   "start": 36.44,
+   "end": 36.559,
+   "scene": 8,
+   "line": 12
+  },
+  {
+   "text": "in",
+   "start": 36.559,
+   "end": 36.795,
+   "scene": 8,
+   "line": 12
+  },
+  {
+   "text": "1878.",
+   "start": 36.795,
+   "end": 37.267,
+   "scene": 8,
+   "line": 12
+  },
+  {
+   "text": "That's",
+   "start": 37.717,
+   "end": 38.229,
+   "scene": 9,
+   "line": 13
+  },
+  {
+   "text": "the",
+   "start": 38.229,
+   "end": 38.442,
+   "scene": 9,
+   "line": 13
+  },
+  {
+   "text": "joke:",
+   "start": 38.442,
+   "end": 38.613,
+   "scene": 9,
+   "line": 13
+  },
+  {
+   "text": "an",
+   "start": 38.613,
+   "end": 38.933,
+   "scene": 9,
+   "line": 13
+  },
+  {
+   "text": "actual",
+   "start": 38.933,
+   "end": 39.125,
+   "scene": 9,
+   "line": 13
+  },
+  {
+   "text": "bug.",
+   "start": 39.125,
+   "end": 39.402,
+   "scene": 9,
+   "line": 13
+  },
+  {
+   "text": "Bright",
+   "start": 39.852,
+   "end": 40.407,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "light.",
+   "start": 40.407,
+   "end": 40.577,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "Let's",
+   "start": 40.577,
+   "end": 40.748,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "check",
+   "start": 40.748,
+   "end": 41.004,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "if",
+   "start": 41.004,
+   "end": 41.111,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "it's",
+   "start": 41.111,
+   "end": 41.281,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "a",
+   "start": 41.281,
+   "end": 41.495,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "lamp",
+   "start": 41.495,
+   "end": 41.575,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "or",
+   "start": 41.545,
+   "end": 41.857,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "a",
+   "start": 41.857,
+   "end": 41.937,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "fire.",
+   "start": 41.907,
+   "end": 42.348,
+   "scene": 10,
+   "line": 14
+  },
+  {
+   "text": "No,",
+   "start": 42.528,
+   "end": 43.083,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "Grace",
+   "start": 43.083,
+   "end": 43.339,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "Hopper",
+   "start": 43.339,
+   "end": 43.723,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "didn't",
+   "start": 43.723,
+   "end": 43.872,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "pull",
+   "start": 43.872,
+   "end": 44.064,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "it",
+   "start": 44.064,
+   "end": 44.144,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "out.",
+   "start": 44.114,
+   "end": 44.384,
+   "scene": 10,
+   "line": 15
+  },
+  {
+   "text": "She",
+   "start": 44.564,
+   "end": 45.055,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "was",
+   "start": 45.055,
+   "end": 45.183,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "on",
+   "start": 45.183,
+   "end": 45.353,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "the",
+   "start": 45.353,
+   "end": 45.46,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "team,",
+   "start": 45.46,
+   "end": 45.588,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "and",
+   "start": 45.588,
+   "end": 45.823,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "she",
+   "start": 45.823,
+   "end": 45.951,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "helped",
+   "start": 45.951,
+   "end": 46.036,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "make",
+   "start": 46.036,
+   "end": 46.249,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "the",
+   "start": 46.249,
+   "end": 46.505,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "story",
+   "start": 46.505,
+   "end": 46.868,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "famous.",
+   "start": 46.868,
+   "end": 47.38,
+   "scene": 10,
+   "line": 16
+  },
+  {
+   "text": "So",
+   "start": 47.83,
+   "end": 48.342,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "the",
+   "start": 48.342,
+   "end": 48.534,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "most",
+   "start": 48.534,
+   "end": 48.641,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "famous",
+   "start": 48.641,
+   "end": 48.897,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "bug",
+   "start": 48.897,
+   "end": 49.067,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "in",
+   "start": 49.067,
+   "end": 49.323,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "history",
+   "start": 49.323,
+   "end": 49.622,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "wasn't",
+   "start": 49.622,
+   "end": 49.899,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "the",
+   "start": 49.899,
+   "end": 50.091,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "first",
+   "start": 50.091,
+   "end": 50.347,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "bug.",
+   "start": 50.347,
+   "end": 50.923,
+   "scene": 11,
+   "line": 17
+  },
+  {
+   "text": "Just",
+   "start": 51.103,
+   "end": 51.594,
+   "scene": 11,
+   "line": 18
+  },
+  {
+   "text": "the",
+   "start": 51.594,
+   "end": 51.807,
+   "scene": 11,
+   "line": 18
+  },
+  {
+   "text": "first",
+   "start": 51.807,
+   "end": 51.978,
+   "scene": 11,
+   "line": 18
+  },
+  {
+   "text": "one",
+   "start": 51.978,
+   "end": 52.191,
+   "scene": 11,
+   "line": 18
+  },
+  {
+   "text": "with",
+   "start": 52.191,
+   "end": 52.271,
+   "scene": 11,
+   "line": 18
+  },
+  {
+   "text": "wings.",
+   "start": 52.241,
+   "end": 52.575,
+   "scene": 11,
+   "line": 18
+  },
+  {
+   "text": "That",
+   "start": 53.025,
+   "end": 53.58,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "page",
+   "start": 53.58,
+   "end": 53.708,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "is",
+   "start": 53.708,
+   "end": 53.9,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "kept",
+   "start": 53.9,
+   "end": 54.135,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "at",
+   "start": 54.135,
+   "end": 54.241,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "the",
+   "start": 54.241,
+   "end": 54.433,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "Smithsonian",
+   "start": 54.433,
+   "end": 54.945,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "today.",
+   "start": 54.945,
+   "end": 55.308,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "Moth",
+   "start": 55.308,
+   "end": 55.692,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "included.",
+   "start": 55.692,
+   "end": 56.588,
+   "scene": 12,
+   "line": 19
+  },
+  {
+   "text": "Every",
+   "start": 57.038,
+   "end": 57.635,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "time",
+   "start": 57.635,
+   "end": 57.913,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "you",
+   "start": 57.913,
+   "end": 58.083,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "debug",
+   "start": 58.083,
+   "end": 58.297,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "something…",
+   "start": 58.297,
+   "end": 58.745,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "you're",
+   "start": 58.745,
+   "end": 58.83,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "talking",
+   "start": 58.83,
+   "end": 59.193,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "about",
+   "start": 59.193,
+   "end": 59.641,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "my",
+   "start": 59.641,
+   "end": 59.918,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "family.",
+   "start": 59.918,
+   "end": 60.366,
+   "scene": 13,
+   "line": 20
+  },
+  {
+   "text": "Stay",
+   "start": 60.816,
+   "end": 61.413,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "curious.",
+   "start": 61.413,
+   "end": 61.755,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "Not",
+   "start": 61.755,
+   "end": 62.053,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "too",
+   "start": 62.053,
+   "end": 62.331,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "close",
+   "start": 62.331,
+   "end": 62.523,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "to",
+   "start": 62.523,
+   "end": 62.779,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "the",
+   "start": 62.779,
+   "end": 62.885,
+   "scene": 14,
+   "line": 21
+  },
+  {
+   "text": "light.",
+   "start": 62.885,
+   "end": 63.077,
+   "scene": 14,
+   "line": 21
+  }
+ ]
+}
