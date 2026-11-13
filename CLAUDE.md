@@ -18,6 +18,9 @@ The Researcher runs daily around 07:00 local time (cron `0 7 * * *`; the app add
 
 Each stage reads only the previous stage's output. State lives in the YAML `status:` field and in which folder a file sits.
 
+## Craft knowledge (read before writing)
+Before writing or reviewing a script, storyboard or episode, read `brand/knowledge/playbook.md`. It holds the rules distilled from the reference videos; the evidence is in `brand/knowledge/videos/`, tool checks in `brand/knowledge/tools.md`. New reference videos get added there (steps in `brand/knowledge/README.md`). Learn patterns, never recreate a reference.
+
 ## Hard rules (apply to every agent run, scheduled or manual)
 1. **Approval mode.** Nothing becomes public (upload, post, schedule, publish) without the user's explicit "approve UTP-…" in chat.
 2. **No accounts, money or authorizations.** Never create accounts, publish, spend money, buy plans, accept terms or grant OAuth/third-party access without the user's permission. Guide the user; they do the click.
