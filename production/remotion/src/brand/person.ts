@@ -20,9 +20,15 @@ export type Look = {
   silhouette?: boolean;             // historical figures: one dark material, no face
 };
 
-export type Action = "idle" | "walk" | "point" | "inspect" | "reach" | "write" | "scratch" | "talk" | "laugh" | "wave" | "surprised" | "lean";
+export type Action = "idle" | "walk" | "point" | "inspect" | "reach" | "write" | "scratch" | "talk" | "laugh" | "wave" | "surprised" | "lean" | "type";
 export type Face = { browUp: number; browInner: number; browAsym: number; lid: number; lidAsym: number; smile: number; open: number; mouthX: number; tilt: number; turn: number; lean: number };
-export type PersonPose = { action?: Action; amount?: number; look?: number; lookPitch?: number; talk?: number; walkSpeed?: number; phase?: number; face?: Partial<Face> };
+export type PersonPose = { action?: Action; amount?: number; look?: number; lookPitch?: number; talk?: number; walkSpeed?: number; phase?: number; face?: Partial<Face>; sit?: number; hands?: Hands }; // sit 0…1: seated on a chair (hips at 0.5 m)
+/** World-space targets for the hands (2-bone IK). k 0…1 blends from the action's arm pose to the target. left = arms[0] (the person's -x side). */
+export type Hands = { left?: THREE.Vector3; right?: THREE.Vector3; k?: number; lean?: number };
+
+const _q = new THREE.Quaternion(), _qa = new THREE.Quaternion(), _v = new THREE.Vector3(), _down = new THREE.Vector3(0, -1, 0), _x = new THREE.Vector3(1, 0, 0);
+const UPPER = 0.27, FORE = 0.26; // shoulder→elbow, elbow→hand (body units)
+const clampN = (x: number) => Math.max(-1, Math.min(1, x));
 
 /* ───────────── facial expression presets (shared by every person) ───────────── */
 const F0: Face = { browUp: 0, browInner: 0, browAsym: 0, lid: 0.12, lidAsym: 0, smile: 0.2, open: 0, mouthX: 0, tilt: 0, turn: 0, lean: 0 };
@@ -37,6 +43,11 @@ export const FACE = {
   worried: f({ browInner: 0.9, browUp: 0.1, lid: 0.18, smile: -0.6, lean: 0.04 }),
   excited: f({ browUp: 0.7, lid: 0, smile: 0.9, open: 0.55 }),
   thinking: f({ browUp: -0.25, browInner: -0.3, lid: 0.3, smile: 0, turn: 0.25, tilt: 0.08 }),
+  // dialogue format (brand/knowledge/proposals-2026-11-11.md §3)
+  panic: f({ browUp: 0.9, browInner: 0.8, lid: -0.2, smile: -0.5, open: 0.45, lean: -0.04 }),
+  deadpan: f({ browUp: -0.1, lid: 0.45, smile: -0.05 }),
+  guilty: f({ browUp: 0.3, browInner: 0.9, lid: 0.3, smile: -0.25, turn: 0.3, tilt: -0.1, lean: 0.03 }),
+  smug: f({ browUp: 0.2, browAsym: 0.6, lid: 0.45, smile: 0.7, mouthX: 0.004, tilt: 0.1, lean: -0.05 }),
 } satisfies Record<string, Face>;
 export type FaceName = keyof typeof FACE;
 const FKEYS = Object.keys(F0) as (keyof Face)[];
@@ -111,7 +122,10 @@ export function buildPerson(L: Look) {
     add(sh, new THREE.Mesh(new THREE.CylinderGeometry(0.045 * B, 0.04 * B, 0.27, 7), sleeve), 0, -0.135, 0);
     const elbow = add(sh, new THREE.Group(), 0, -0.27, 0);
     add(elbow, new THREE.Mesh(new THREE.CylinderGeometry(0.038 * B, 0.032 * B, 0.24, 7), L.overlay?.kind === "apron" ? skin : sleeve), 0, -0.12, 0);
-    const hand = add(elbow, new THREE.Mesh(new THREE.IcosahedronGeometry(0.036, 1), skin), 0, -0.26, 0);
+    // mitten hand: a flattened palm plus a thumb (the old ball read as uncanny); palm faces the body's front when the arm hangs
+    const hand = add(elbow, new THREE.Group(), 0, -0.26, 0);
+    add(hand, new THREE.Mesh(new THREE.IcosahedronGeometry(0.034, 1), skin), 0, -0.006, 0).scale.set(0.95, 1.3, 0.55);
+    add(hand, new THREE.Mesh(new THREE.IcosahedronGeometry(0.013, 0), skin), s * 0.026, 0.006, 0.012).scale.set(1, 1.6, 1);
     return { s, sh, elbow, hand };
   });
 
@@ -143,7 +157,7 @@ export function buildPerson(L: Look) {
     // lips: upper and lower, each a centre piece plus two corner pieces that rotate up (smile) or down (frown);
     // a dark inner mouth only shows when the lips part
     const lipM = mat(L.lips ?? 0xc98a80, { roughness: 0.55 });
-    const mg = add(head, new THREE.Group(), 0, -0.068, 0.128);
+    const mg = add(head, new THREE.Group(), 0, -0.068, 0.121); // flush with the skull, so the lips don't stick out in profile
     const mkLip = (rad: number, y: number) => {
       const g = add(mg, new THREE.Group(), 0, y, 0);
       add(g, new THREE.Mesh(new THREE.CapsuleGeometry(rad, 0.016, 3, 8), lipM)).rotation.z = Math.PI / 2;
@@ -172,7 +186,10 @@ export function buildPerson(L: Look) {
         const lensShape = new THREE.Shape(ring(0.034, 0.024).getPoints(48).map((v) => new THREE.Vector2(v.x, v.y)));
         const lens = add(head, new THREE.Mesh(new THREE.ShapeGeometry(lensShape), lensM), cx, cy, cz); lens.castShadow = false;
         const glint = add(head, new THREE.Mesh(new THREE.PlaneGeometry(0.018, 0.004), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.45 })), cx - 0.014, cy + 0.011, cz + 0.002); glint.rotation.z = 0.5; glint.castShadow = false;
-        const arm = add(head, new THREE.Mesh(new THREE.CylinderGeometry(0.0035, 0.0035, 0.11, 6), frameM), s * 0.088, 0.022, 0.085); arm.rotation.x = Math.PI / 2; arm.castShadow = false;
+        // temple arm: from the frame's outer edge back to the ear, so the glasses sit on the head instead of floating
+        const a0 = new THREE.Vector3(s * 0.086, 0.02, 0.138), a1 = new THREE.Vector3(s * 0.128, 0.012, 0.0), ad = a1.clone().sub(a0);
+        const arm = add(head, new THREE.Mesh(new THREE.CylinderGeometry(0.0035, 0.0035, ad.length(), 6), frameM), (a0.x + a1.x) / 2, (a0.y + a1.y) / 2, (a0.z + a1.z) / 2);
+        arm.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), ad.normalize()); arm.castShadow = false;
       });
       const bridge = add(head, new THREE.Mesh(new THREE.TubeGeometry(new THREE.QuadraticBezierCurve3(new THREE.Vector3(-0.014, 0.024, 0.142), new THREE.Vector3(0, 0.03, 0.146), new THREE.Vector3(0.014, 0.024, 0.142)), 8, 0.004, 6, false), frameM));
       bridge.castShadow = false;
@@ -246,8 +263,10 @@ export function buildPerson(L: Look) {
       case "laugh": { const b = Math.abs(Math.sin(t * 9 + ph)); spine.rotation.x = -0.12 * k + b * 0.08 * k; head.rotation.x = -0.25 * k; hips.position.y = 0.84 + b * 0.015 * k; arms.forEach((r) => { r.sh.rotation.set(-0.3 * k, 0, r.s * 0.1); r.elbow.rotation.x = -1.2 * k; }); break; }
       case "wave": R.sh.rotation.set(-0.3, 0, 2.6 * k); R.elbow.rotation.set(0, 0, (0.5 + Math.sin(t * 9) * 0.35) * k); break;
       case "surprised": spine.rotation.x = -0.18 * k; head.rotation.x = -0.1 * k; arms.forEach((r) => { r.sh.rotation.set(-0.6 * k, 0, r.s * 0.35 * k); r.elbow.rotation.x = -1.3 * k; }); break;
+      case "type": { const j = Math.sin(t * 17 + ph) * 0.05; spine.rotation.x += 0.1 * k; arms.forEach((r) => { r.sh.rotation.set(-0.5 * k, 0, -r.s * 0.12 * k); r.elbow.rotation.x = (-1.3 + j * r.s) * k; }); break; }
       case "lean": spine.rotation.x = 0.5 * k; arms.forEach((r) => { r.sh.rotation.set(-0.9 * k, 0, -r.s * 0.1); r.elbow.rotation.x = -0.3 * k; }); break;
     }
+    if (p.sit) { const q = p.sit; hips.position.y -= 0.34 * q; legs.forEach((l) => { l.hip.rotation.x = -1.5 * q; l.knee.rotation.x = 1.5 * q; }); }
     // face: expression (blended track or a named preset), plus talk and action extras
     const fx = p.face ? { ...FACE.neutral, ...p.face } : FACE.neutral;
     const open = Math.min(1, fx.open + (p.talk ?? 0) + (a === "laugh" ? 0.4 * k : a === "surprised" ? 0.5 * k : 0));
@@ -268,6 +287,25 @@ export function buildPerson(L: Look) {
       b.rotation.z = -sd * fx.browInner * 0.35;
     });
     head.rotation.z += fx.tilt; neck.rotation.y += fx.turn; spine.rotation.x += fx.lean;
+    if (p.hands) {
+      spine.rotation.x += p.hands.lean ?? 0;
+      const hk = p.hands.k ?? 1;
+      if (p.hands.left) reach(arms[0], p.hands.left, hk);
+      if (p.hands.right) reach(arms[1], p.hands.right, hk);
+    }
+  }
+  /** Analytic 2-bone IK: aim the upper arm, bend the elbow (elbow points back and down), so the hand lands on `target`. */
+  function reach(arm: (typeof arms)[number], target: THREE.Vector3, k: number) {
+    if (k <= 0) return;
+    root.updateMatrixWorld(true);
+    _v.copy(target); arm.sh.parent!.worldToLocal(_v); _v.sub(arm.sh.position);
+    const L = Math.min(Math.max(_v.length(), 0.08), (UPPER + FORE) * 0.995);
+    _v.normalize();
+    const interior = Math.acos(clampN((UPPER * UPPER + FORE * FORE - L * L) / (2 * UPPER * FORE)));
+    const alpha = Math.acos(clampN((UPPER * UPPER + L * L - FORE * FORE) / (2 * UPPER * L)));
+    _q.setFromUnitVectors(_down, _v); _qa.setFromAxisAngle(_x, alpha); _q.multiply(_qa);
+    arm.sh.quaternion.slerp(_q, k);
+    arm.elbow.rotation.set(arm.elbow.rotation.x + (-(Math.PI - interior) - arm.elbow.rotation.x) * k, 0, 0);
   }
   /** Props held in the right hand (e.g. a flashlight). Returns the prop group so callers can toggle it. */
   function holdFlashlight() {

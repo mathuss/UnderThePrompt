@@ -66,19 +66,20 @@ export const EXPRESSIONS = {
   embarrassed: e({ spread: 0.72, fwd: 0.2, bendL: 0.8, bendR: 0.8, lid: 0.4, cat: 0.9, mw: 0.75, mh: 0.25, lean: 0.08, tilt: -0.12, look: 0.45, dust: 1, scale: 0.97 }),
 } satisfies Record<string, Expr>;
 export type ExprName = keyof typeof EXPRESSIONS;
-export type PoseOpts = { talk?: number; fly?: number; point?: number; shield?: number; tap?: number; gazeYaw?: number; gazePitch?: number }; // gazePitch > 0 looks up
+/** intensity 0…1 (default 1): how far every expression moves away from neutral. Below 1 also slows the blends and calms twitches, flutters, hops and the mouth. */
+export type PoseOpts = { talk?: number; fly?: number; point?: number; shield?: number; tap?: number; gazeYaw?: number; gazePitch?: number; intensity?: number }; // gazePitch > 0 looks up
 export type Track = [number, ExprName][];
 
 const KEYS = Object.keys(D) as (keyof Expr)[];
 const smooth = (x: number) => { const c = Math.min(1, Math.max(0, x)); return c * c * (3 - 2 * c); };
 
 /** Expression state at time t from a track of [time, preset] keys. Blends 0.35 s (shocked snaps in 0.1 s). */
-export function exprAt(t: number, track: Track) {
+export function exprAt(t: number, track: Track, blend = 0.35) {
   let i = 0;
   while (i + 1 < track.length && track[i + 1][0] <= t) i++;
   const [t1, n1] = track[i];
   const n0 = i > 0 ? track[i - 1][1] : n1;
-  const k = smooth((t - t1) / (n1 === "shocked" ? 0.1 : 0.35));
+  const k = smooth((t - t1) / (n1 === "shocked" ? Math.max(0.1, blend * 0.5 - 0.075) : blend));
   const a = EXPRESSIONS[n0], b = EXPRESSIONS[n1], out = { ...b };
   KEYS.forEach((key) => { out[key] = a[key] + (b[key] - a[key]) * k; });
   return { x: out, name: n1, since: Math.max(0, t - t1) };
@@ -202,12 +203,18 @@ export function buildMott() {
    * - tap 0…1: right limb raised high (the "Lamp Tap")
    */
   function pose(t: number, track: Track, o: PoseOpts = {}) {
-    const { talk = 0, fly = 0, point = 0, shield = 0, tap = 0, gazeYaw = 0, gazePitch = 0 } = o;
-    const { x, name, since } = exprAt(t, track);
+    const { fly = 0, point = 0, shield = 0, tap = 0, gazeYaw = 0, gazePitch = 0, intensity: I = 1 } = o;
+    const talk = (o.talk ?? 0) * (0.55 + 0.45 * I);
+    const { x, name, since } = exprAt(t, track, 0.35 + (1 - I) * 0.5);
+    if (I < 1) {
+      KEYS.forEach((key) => { x[key] = D[key] + (x[key] - D[key]) * I; });
+      x.twitch *= I * I; x.flutter *= I * I; x.shiver *= I * I; // the nervous extras fade fastest
+    }
     const twitch = x.twitch * (since < 0.6 ? Math.sin(t * 50) * 0.12 : 0);
+    const pointK = point * (0.6 + 0.4 * I);
     ants.forEach((a) => {
-      a.seg1.rotation.z = -a.s * (x.spread * (1 - point * 0.6) + twitch);
-      a.seg1.rotation.x = x.fwd + point * 0.9;
+      a.seg1.rotation.z = -a.s * (x.spread * (1 - pointK * 0.6) + twitch);
+      a.seg1.rotation.x = x.fwd + pointK * 0.9;
       a.seg2.rotation.z = -a.s * (a.s < 0 ? x.bendL : x.bendR);
     });
     const bl = blinkAt(t);
@@ -224,7 +231,7 @@ export function buildMott() {
     head.rotation.set(-gazePitch, x.look + gazeYaw, x.tilt);
     upper.rotation.x = x.lean;
     const shiver = x.shiver * Math.sin(t * 75) * 0.04;
-    const flutter = x.flutter && since < 0.9 ? Math.sin(t * 30) * 0.5 : 0;
+    const flutter = since < 0.9 ? Math.sin(t * 30) * 0.5 * x.flutter : 0;
     const beat = Math.sin(t * Math.PI * 8) * fly; // 4 Hz
     wings.forEach((w) => {
       const op = Math.max(x.wing, fly * 0.85);
@@ -235,13 +242,13 @@ export function buildMott() {
       w.h.rotation.z = -0.15 * op;
     });
     arms.forEach((a) => {
-      const up = a.s > 0 ? Math.max(point * 0.55, tap) : 0;
+      const up = a.s > 0 ? Math.max(pointK * 0.55, tap) : 0;
       a.g.rotation.set(-0.35 - up * 2.3, 0, a.s * (0.35 - up * 0.2));
     });
-    const hop = x.twitch && since < 0.5 ? Math.sin((since / 0.5) * Math.PI) * 0.06 : 0;
+    const hop = since < 0.5 ? Math.sin((since / 0.5) * Math.PI) * 0.06 * x.twitch : 0;
     root.position.y = Math.sin(t * Math.PI) * 0.008 + hop + fly * Math.sin(t * Math.PI * 8 + 1) * 0.02;
     root.scale.setScalar(x.scale);
-    dustM.opacity = name === "embarrassed" ? Math.max(0, 0.9 - since * 0.6) : 0;
+    dustM.opacity = name === "embarrassed" ? Math.max(0, 0.9 - since * 0.6) * I : 0;
     const s = Math.min(since, 2) * 0.5;
     for (let i = 0; i < N; i++) { const v = dustV[i]; dustPos.set([v[0] * s, 0.5 + v[1] * s, -0.1 + v[2] * s], i * 3); }
     dustG.attributes.position.needsUpdate = true;

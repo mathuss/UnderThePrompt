@@ -38,7 +38,7 @@ export const CaptionPill: React.FC<{ t: number; chunks: { words: Word[]; start: 
   const k = ramp(t, c.start - 0.05, 0.12);
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: 1350, display: "flex", justifyContent: "center", opacity: k, transform: `translateY(${(1 - k) * 8}px)` }}>
-      <div style={{ display: "flex", gap: 16, padding: "16px 30px", borderRadius: 999, background: "rgba(14,11,20,.86)", border: "1px solid rgba(185,174,242,.18)", maxWidth: 960 }}>
+      <div style={{ display: "flex", gap: 16, padding: "16px 30px", borderRadius: 999, background: "rgba(14,11,20,.94)", border: "1px solid rgba(185,174,242,.22)", maxWidth: 960 }}>
         {c.words.map((w, i) => {
           const on = t >= w.start - 0.03 && t < w.end + 0.12;
           return <span key={i} style={{ fontFamily: SANS, fontWeight: 800, fontSize: 56, lineHeight: 1.15, color: on ? (accent ? accent(w) : UI.amber) : UI.cream, opacity: t >= w.start - 0.03 ? 1 : 0.5, whiteSpace: "nowrap" }}>{w.text}</span>;
