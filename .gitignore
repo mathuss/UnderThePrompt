@@ -23,3 +23,11 @@ production/design-options/*.png
 production/design-options/*.jpg
 production/design-options/web/
 production/*/stills/
+
+# Local secrets (API keys). Never versioned.
+.env
+.env.*
+!.env.example
+
+# Real captures of third-party pages used in renders (kept local; sources are cited in each script)
+production/remotion/public/captures/

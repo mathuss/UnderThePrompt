@@ -5,7 +5,7 @@ Everything is synthesized here (numpy), so there is nothing to license (project 
 Usage:
   python tools/sound.py music <seconds> <out.wav>
   python tools/sound.py sfx <cues.json> <seconds> <out.wav>
-cues.json: [{"t": 1.23, "kind": "tink" | "hum" | "relay" | "flutter" | "card" | "crack" | "tick", "gain": 1.0}, ...]
+cues.json: [{"t": 1.23, "kind": "tink" | "hum" | "relay" | "flutter" | "card" | "crack" | "tick" | "key" | "space" | "whoosh", "gain": 1.0}, ...]
 """
 import json
 import sys
@@ -101,13 +101,34 @@ def tick(gain=1.0):
     return 0.25 * gain * np.sin(2 * np.pi * 420 * t) * env_ad(n, 0.001, 0.03)
 
 
-KINDS = {"tink": tink, "hum": hum, "relay": relay, "flutter": flutter, "card": card, "crack": crack, "tick": tick}
+def key(gain=1.0, space=False):
+    """Laptop key, modelled on a real low-travel keyboard: mostly a soft low "thock" (the key bottoming out),
+    a little mid-range click on top, almost no highs. space=True is the deeper, longer space bar."""
+    n = int(SR * (0.07 if space else 0.05))
+    t = np.arange(n) / SR
+    body_f = rng.uniform(150, 190) if space else rng.uniform(230, 330)
+    thock = lowpass(rng.standard_normal(n), 700 if space else 1000) * env_ad(n, 0.0006, 0.014 if space else 0.009)
+    body = np.sin(2 * np.pi * body_f * t) * env_ad(n, 0.0008, 0.018 if space else 0.011)
+    click = bandnoise(n, 1100, 3000) * env_ad(n, 0.0003, 0.0025)
+    s = lowpass(2.2 * thock + 0.7 * body + 0.25 * click, 3500)
+    return 0.07 * gain * s * rng.uniform(0.75, 1.0)
+
+
+def whoosh(gain=1.0):
+    """Soft air movement (≈0.9 s) under a camera move."""
+    n = int(SR * 0.9)
+    t = np.arange(n) / SR
+    s = bandnoise(n, 200, 1400) * np.sin(np.pi * np.clip(t / 0.9, 0, 1)) ** 2
+    return 0.22 * gain * s
+
+
+KINDS = {"tink": tink, "hum": hum, "relay": relay, "flutter": flutter, "card": card, "crack": crack, "tick": tick, "key": key, "whoosh": whoosh}
 
 
 def render_sfx(cues, seconds):
     out = np.zeros(int(SR * seconds) + SR)
     for c in cues:
-        s = KINDS[c["kind"]](c.get("gain", 1.0))
+        s = key(c.get("gain", 1.0), space=True) if c["kind"] == "space" else KINDS[c["kind"]](c.get("gain", 1.0))
         i = int(c["t"] * SR)
         if i < 0 or i >= len(out):
             continue

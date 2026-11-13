@@ -1,0 +1,18 @@
+{
+ "eleven": {
+  "voices": {
+   "en": {
+    "mott": "SAz9YHcvj6GT2YYXdXww",
+    "leo": "TX3LPaxmHKxFdv7VOQHJ"
+   },
+   "es": {
+    "mott": "gBTPbHzRd0ZmV75Z5Zk4",
+    "leo": "QK4xDwo9ESPHA4JNUpX3"
+   }
+  },
+  "_chosen": "2026-11-12, chosen by ear by the user. Model: eleven_v4 with audio tags. EN: Mott = River (SAz9YHcvj6GT2YYXdXww, premade), Leo = Liam (TX3LPaxmHKxFdv7VOQHJ, premade). Callum was too raspy for Mott. ES: Mott = Carlos Pro (gBTPbHzRd0ZmV75Z5Zk4), Leo = Tomas (QK4xDwo9ESPHA4JNUpX3), both Argentine voices from the shared library, added to the account as 'UTP Mott ES - Carlos Pro' and 'UTP Leo ES - Tomas'.",
+  "models": [
+   "eleven_v4"
+  ]
+ }
+}
