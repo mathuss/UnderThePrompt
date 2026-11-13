@@ -1,0 +1,1576 @@
+{
+ "voice": "am_puck",
+ "duration": 62.111,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 0.15,
+   "end": 2.868
+  },
+  {
+   "id": 2,
+   "start": 2.868,
+   "end": 4.121
+  },
+  {
+   "id": 3,
+   "start": 4.121,
+   "end": 5.978
+  },
+  {
+   "id": 4,
+   "start": 5.978,
+   "end": 7.003
+  },
+  {
+   "id": 5,
+   "start": 7.003,
+   "end": 9.231
+  },
+  {
+   "id": 6,
+   "start": 9.231,
+   "end": 10.818
+  },
+  {
+   "id": 7,
+   "start": 10.818,
+   "end": 12.197
+  },
+  {
+   "id": 8,
+   "start": 12.197,
+   "end": 14.078
+  },
+  {
+   "id": 9,
+   "start": 14.078,
+   "end": 15.602
+  },
+  {
+   "id": 10,
+   "start": 15.602,
+   "end": 17.217
+  },
+  {
+   "id": 11,
+   "start": 17.217,
+   "end": 19.936
+  },
+  {
+   "id": 12,
+   "start": 19.936,
+   "end": 21.359
+  },
+  {
+   "id": 13,
+   "start": 21.359,
+   "end": 24.151
+  },
+  {
+   "id": 14,
+   "start": 24.151,
+   "end": 27.546
+  },
+  {
+   "id": 15,
+   "start": 27.546,
+   "end": 28.493
+  },
+  {
+   "id": 16,
+   "start": 28.493,
+   "end": 31.766
+  },
+  {
+   "id": 17,
+   "start": 31.766,
+   "end": 32.947
+  },
+  {
+   "id": 18,
+   "start": 32.947,
+   "end": 36.47
+  },
+  {
+   "id": 19,
+   "start": 36.47,
+   "end": 37.715
+  },
+  {
+   "id": 20,
+   "start": 37.715,
+   "end": 40.143
+  },
+  {
+   "id": 21,
+   "start": 40.143,
+   "end": 43.459
+  },
+  {
+   "id": 22,
+   "start": 43.459,
+   "end": 44.917
+  },
+  {
+   "id": 23,
+   "start": 44.917,
+   "end": 48.32
+  },
+  {
+   "id": 24,
+   "start": 48.32,
+   "end": 52.826
+  },
+  {
+   "id": 25,
+   "start": 52.826,
+   "end": 57.323
+  },
+  {
+   "id": 27,
+   "start": 57.323,
+   "end": 60.25
+  },
+  {
+   "id": 28,
+   "start": 60.25,
+   "end": 62.111
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "speaker": "leo",
+   "text": "Mott. One prompt, and my app ships tonight.",
+   "start": 0.15,
+   "end": 2.518
+  },
+  {
+   "scene": 2,
+   "speaker": "mott",
+   "text": "What's the prompt?",
+   "start": 2.868,
+   "end": 3.871
+  },
+  {
+   "scene": 3,
+   "speaker": "leo",
+   "text": "Build me a habit tracker.",
+   "start": 4.121,
+   "end": 5.678
+  },
+  {
+   "scene": 4,
+   "speaker": "mott",
+   "text": "For who?",
+   "start": 5.978,
+   "end": 6.703
+  },
+  {
+   "scene": 5,
+   "speaker": "leo",
+   "text": "For… people.",
+   "start": 7.003,
+   "end": 7.878
+  },
+  {
+   "scene": 5,
+   "speaker": "leo",
+   "text": "With habits.",
+   "start": 8.178,
+   "end": 9.031
+  },
+  {
+   "scene": 6,
+   "speaker": "mott",
+   "text": "Where do the habits get saved?",
+   "start": 9.231,
+   "end": 10.618
+  },
+  {
+   "scene": 7,
+   "speaker": "leo",
+   "text": "In the… in the app.",
+   "start": 10.818,
+   "end": 12.077
+  },
+  {
+   "scene": 8,
+   "speaker": "mott",
+   "text": "And if they miss a day?",
+   "start": 12.197,
+   "end": 13.178
+  },
+  {
+   "scene": 9,
+   "speaker": "leo",
+   "text": "I don't know.",
+   "start": 14.078,
+   "end": 15.102
+  },
+  {
+   "scene": 10,
+   "speaker": "leo",
+   "text": "Why are you grilling me?",
+   "start": 15.602,
+   "end": 16.967
+  },
+  {
+   "scene": 11,
+   "speaker": "mott",
+   "text": "Because your agent won't.",
+   "start": 17.217,
+   "end": 18.476
+  },
+  {
+   "scene": 11,
+   "speaker": "mott",
+   "text": "It just builds.",
+   "start": 18.726,
+   "end": 19.686
+  },
+  {
+   "scene": 12,
+   "speaker": "leo",
+   "text": "That's what I want.",
+   "start": 19.936,
+   "end": 21.109
+  },
+  {
+   "scene": 13,
+   "speaker": "mott",
+   "text": "It builds its guess.",
+   "start": 21.359,
+   "end": 22.469
+  },
+  {
+   "scene": 13,
+   "speaker": "mott",
+   "text": "Not your app.",
+   "start": 22.769,
+   "end": 23.601
+  },
+  {
+   "scene": 14,
+   "speaker": "mott",
+   "text": "There's a skill for this.",
+   "start": 24.151,
+   "end": 25.303
+  },
+  {
+   "scene": 14,
+   "speaker": "mott",
+   "text": "Grill me.",
+   "start": 25.553,
+   "end": 26.385
+  },
+  {
+   "scene": 14,
+   "speaker": "mott",
+   "text": "Free.",
+   "start": 26.585,
+   "end": 27.246
+  },
+  {
+   "scene": 15,
+   "speaker": "leo",
+   "text": "A skill?",
+   "start": 27.546,
+   "end": 28.293
+  },
+  {
+   "scene": 16,
+   "speaker": "mott",
+   "text": "A text file of instructions.",
+   "start": 28.493,
+   "end": 30.114
+  },
+  {
+   "scene": 16,
+   "speaker": "mott",
+   "text": "Your agent reads it.",
+   "start": 30.314,
+   "end": 31.466
+  },
+  {
+   "scene": 17,
+   "speaker": "leo",
+   "text": "And it does what?",
+   "start": 31.766,
+   "end": 32.747
+  },
+  {
+   "scene": 18,
+   "speaker": "mott",
+   "text": "It interviews you.",
+   "start": 32.947,
+   "end": 34.014
+  },
+  {
+   "scene": 18,
+   "speaker": "mott",
+   "text": "Until no decision is left open.",
+   "start": 34.264,
+   "end": 36.12
+  },
+  {
+   "scene": 19,
+   "speaker": "leo",
+   "text": "Sounds slow.",
+   "start": 36.47,
+   "end": 37.515
+  },
+  {
+   "scene": 20,
+   "speaker": "mott",
+   "text": "It is.",
+   "start": 37.715,
+   "end": 38.441
+  },
+  {
+   "scene": 20,
+   "speaker": "mott",
+   "text": "Slower than build it.",
+   "start": 38.641,
+   "end": 39.793
+  },
+  {
+   "scene": 21,
+   "speaker": "mott",
+   "text": "But every question brings its answer.",
+   "start": 40.143,
+   "end": 42.02
+  },
+  {
+   "scene": 21,
+   "speaker": "mott",
+   "text": "You say yes.",
+   "start": 42.22,
+   "end": 43.159
+  },
+  {
+   "scene": 22,
+   "speaker": "leo",
+   "text": "And what I don't know?",
+   "start": 43.459,
+   "end": 44.717
+  },
+  {
+   "scene": 23,
+   "speaker": "mott",
+   "text": "Facts, it looks up itself.",
+   "start": 44.917,
+   "end": 46.261
+  },
+  {
+   "scene": 23,
+   "speaker": "mott",
+   "text": "Decisions are yours.",
+   "start": 46.461,
+   "end": 47.72
+  },
+  {
+   "scene": 24,
+   "speaker": "leo",
+   "text": "Yes.",
+   "start": 48.32,
+   "end": 48.946
+  },
+  {
+   "scene": 24,
+   "speaker": "leo",
+   "text": "Yes.",
+   "start": 49.246,
+   "end": 49.846
+  },
+  {
+   "scene": 24,
+   "speaker": "leo",
+   "text": "No.",
+   "start": 50.546,
+   "end": 51.25
+  },
+  {
+   "scene": 24,
+   "speaker": "leo",
+   "text": "Wait.",
+   "start": 51.5,
+   "end": 52.226
+  },
+  {
+   "scene": 25,
+   "speaker": "leo",
+   "text": "Done. Your turn.",
+   "start": 52.826,
+   "end": 53.978
+  },
+  {
+   "scene": 25,
+   "speaker": "leo",
+   "text": "Why the lamp?",
+   "start": 54.278,
+   "end": 55.323
+  },
+  {
+   "scene": 27,
+   "speaker": "leo",
+   "text": "Recommended answer: you don't know.",
+   "start": 57.323,
+   "end": 59.35
+  },
+  {
+   "scene": 28,
+   "speaker": "mott",
+   "text": "Yes.",
+   "start": 60.25,
+   "end": 60.911
+  }
+ ],
+ "words": [
+  {
+   "text": "Mott.",
+   "start": 0.15,
+   "end": 0.826,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "One",
+   "start": 0.826,
+   "end": 0.918,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "prompt,",
+   "start": 0.918,
+   "end": 1.515,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "and",
+   "start": 1.515,
+   "end": 1.595,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "my",
+   "start": 1.565,
+   "end": 1.771,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "app",
+   "start": 1.771,
+   "end": 1.851,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "ships",
+   "start": 1.821,
+   "end": 2.027,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "tonight.",
+   "start": 2.027,
+   "end": 2.518,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "What's",
+   "start": 2.868,
+   "end": 3.38,
+   "scene": 2,
+   "line": 1,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 3.38,
+   "end": 3.636,
+   "scene": 2,
+   "line": 1,
+   "speaker": "mott"
+  },
+  {
+   "text": "prompt?",
+   "start": 3.636,
+   "end": 3.871,
+   "scene": 2,
+   "line": 1,
+   "speaker": "mott"
+  },
+  {
+   "text": "Build",
+   "start": 4.121,
+   "end": 4.718,
+   "scene": 3,
+   "line": 2,
+   "speaker": "leo"
+  },
+  {
+   "text": "me",
+   "start": 4.718,
+   "end": 4.953,
+   "scene": 3,
+   "line": 2,
+   "speaker": "leo"
+  },
+  {
+   "text": "a",
+   "start": 4.953,
+   "end": 5.059,
+   "scene": 3,
+   "line": 2,
+   "speaker": "leo"
+  },
+  {
+   "text": "habit",
+   "start": 5.059,
+   "end": 5.139,
+   "scene": 3,
+   "line": 2,
+   "speaker": "leo"
+  },
+  {
+   "text": "tracker.",
+   "start": 5.123,
+   "end": 5.678,
+   "scene": 3,
+   "line": 2,
+   "speaker": "leo"
+  },
+  {
+   "text": "For",
+   "start": 5.978,
+   "end": 6.426,
+   "scene": 4,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "who?",
+   "start": 6.426,
+   "end": 6.703,
+   "scene": 4,
+   "line": 3,
+   "speaker": "mott"
+  },
+  {
+   "text": "For…",
+   "start": 7.003,
+   "end": 7.458,
+   "scene": 5,
+   "line": 4,
+   "speaker": "leo"
+  },
+  {
+   "text": "people.",
+   "start": 7.458,
+   "end": 7.878,
+   "scene": 5,
+   "line": 4,
+   "speaker": "leo"
+  },
+  {
+   "text": "With",
+   "start": 8.178,
+   "end": 8.629,
+   "scene": 5,
+   "line": 5,
+   "speaker": "leo"
+  },
+  {
+   "text": "habits.",
+   "start": 8.629,
+   "end": 9.031,
+   "scene": 5,
+   "line": 5,
+   "speaker": "leo"
+  },
+  {
+   "text": "Where",
+   "start": 9.231,
+   "end": 9.679,
+   "scene": 6,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "do",
+   "start": 9.679,
+   "end": 9.914,
+   "scene": 6,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 9.914,
+   "end": 9.994,
+   "scene": 6,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "habits",
+   "start": 9.964,
+   "end": 10.127,
+   "scene": 6,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "get",
+   "start": 10.127,
+   "end": 10.362,
+   "scene": 6,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "saved?",
+   "start": 10.362,
+   "end": 10.618,
+   "scene": 6,
+   "line": 6,
+   "speaker": "mott"
+  },
+  {
+   "text": "In",
+   "start": 10.818,
+   "end": 11.244,
+   "scene": 7,
+   "line": 7,
+   "speaker": "leo"
+  },
+  {
+   "text": "the…",
+   "start": 11.244,
+   "end": 11.419,
+   "scene": 7,
+   "line": 7,
+   "speaker": "leo"
+  },
+  {
+   "text": "in",
+   "start": 11.419,
+   "end": 11.586,
+   "scene": 7,
+   "line": 7,
+   "speaker": "leo"
+  },
+  {
+   "text": "the",
+   "start": 11.586,
+   "end": 11.714,
+   "scene": 7,
+   "line": 7,
+   "speaker": "leo"
+  },
+  {
+   "text": "app.",
+   "start": 11.714,
+   "end": 12.077,
+   "scene": 7,
+   "line": 7,
+   "speaker": "leo"
+  },
+  {
+   "text": "And",
+   "start": 12.197,
+   "end": 12.602,
+   "scene": 8,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "if",
+   "start": 12.602,
+   "end": 12.682,
+   "scene": 8,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "they",
+   "start": 12.652,
+   "end": 12.837,
+   "scene": 8,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "miss",
+   "start": 12.837,
+   "end": 12.943,
+   "scene": 8,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "a",
+   "start": 12.943,
+   "end": 13.071,
+   "scene": 8,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "day?",
+   "start": 13.071,
+   "end": 13.178,
+   "scene": 8,
+   "line": 8,
+   "speaker": "mott"
+  },
+  {
+   "text": "I",
+   "start": 14.078,
+   "end": 14.654,
+   "scene": 9,
+   "line": 9,
+   "speaker": "leo"
+  },
+  {
+   "text": "don't",
+   "start": 14.654,
+   "end": 14.889,
+   "scene": 9,
+   "line": 9,
+   "speaker": "leo"
+  },
+  {
+   "text": "know.",
+   "start": 14.889,
+   "end": 15.102,
+   "scene": 9,
+   "line": 9,
+   "speaker": "leo"
+  },
+  {
+   "text": "Why",
+   "start": 15.602,
+   "end": 16.078,
+   "scene": 10,
+   "line": 10,
+   "speaker": "leo"
+  },
+  {
+   "text": "are",
+   "start": 16.078,
+   "end": 16.203,
+   "scene": 10,
+   "line": 10,
+   "speaker": "leo"
+  },
+  {
+   "text": "you",
+   "start": 16.203,
+   "end": 16.519,
+   "scene": 10,
+   "line": 10,
+   "speaker": "leo"
+  },
+  {
+   "text": "grilling",
+   "start": 16.519,
+   "end": 16.69,
+   "scene": 10,
+   "line": 10,
+   "speaker": "leo"
+  },
+  {
+   "text": "me?",
+   "start": 16.69,
+   "end": 16.967,
+   "scene": 10,
+   "line": 10,
+   "speaker": "leo"
+  },
+  {
+   "text": "Because",
+   "start": 17.217,
+   "end": 17.836,
+   "scene": 11,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "your",
+   "start": 17.836,
+   "end": 18.049,
+   "scene": 11,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "agent",
+   "start": 18.049,
+   "end": 18.241,
+   "scene": 11,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "won't.",
+   "start": 18.241,
+   "end": 18.476,
+   "scene": 11,
+   "line": 11,
+   "speaker": "mott"
+  },
+  {
+   "text": "It",
+   "start": 18.726,
+   "end": 19.195,
+   "scene": 11,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "just",
+   "start": 19.195,
+   "end": 19.387,
+   "scene": 11,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "builds.",
+   "start": 19.387,
+   "end": 19.686,
+   "scene": 11,
+   "line": 12,
+   "speaker": "mott"
+  },
+  {
+   "text": "That's",
+   "start": 19.936,
+   "end": 20.412,
+   "scene": 12,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "what",
+   "start": 20.412,
+   "end": 20.687,
+   "scene": 12,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "I",
+   "start": 20.687,
+   "end": 20.811,
+   "scene": 12,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "want.",
+   "start": 20.811,
+   "end": 21.109,
+   "scene": 12,
+   "line": 13,
+   "speaker": "leo"
+  },
+  {
+   "text": "It",
+   "start": 21.359,
+   "end": 21.829,
+   "scene": 13,
+   "line": 14,
+   "speaker": "mott"
+  },
+  {
+   "text": "builds",
+   "start": 21.829,
+   "end": 22.106,
+   "scene": 13,
+   "line": 14,
+   "speaker": "mott"
+  },
+  {
+   "text": "its",
+   "start": 22.106,
+   "end": 22.234,
+   "scene": 13,
+   "line": 14,
+   "speaker": "mott"
+  },
+  {
+   "text": "guess.",
+   "start": 22.234,
+   "end": 22.469,
+   "scene": 13,
+   "line": 14,
+   "speaker": "mott"
+  },
+  {
+   "text": "Not",
+   "start": 22.769,
+   "end": 23.366,
+   "scene": 13,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "your",
+   "start": 23.366,
+   "end": 23.515,
+   "scene": 13,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "app.",
+   "start": 23.515,
+   "end": 23.601,
+   "scene": 13,
+   "line": 15,
+   "speaker": "mott"
+  },
+  {
+   "text": "There's",
+   "start": 24.151,
+   "end": 24.748,
+   "scene": 14,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "a",
+   "start": 24.748,
+   "end": 24.828,
+   "scene": 14,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "skill",
+   "start": 24.798,
+   "end": 24.919,
+   "scene": 14,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "for",
+   "start": 24.919,
+   "end": 25.175,
+   "scene": 14,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "this.",
+   "start": 25.175,
+   "end": 25.303,
+   "scene": 14,
+   "line": 16,
+   "speaker": "mott"
+  },
+  {
+   "text": "Grill",
+   "start": 25.553,
+   "end": 25.958,
+   "scene": 14,
+   "line": 17,
+   "speaker": "mott"
+  },
+  {
+   "text": "me.",
+   "start": 25.958,
+   "end": 26.385,
+   "scene": 14,
+   "line": 17,
+   "speaker": "mott"
+  },
+  {
+   "text": "Free.",
+   "start": 26.585,
+   "end": 27.246,
+   "scene": 14,
+   "line": 18,
+   "speaker": "mott"
+  },
+  {
+   "text": "A",
+   "start": 27.546,
+   "end": 27.997,
+   "scene": 15,
+   "line": 19,
+   "speaker": "leo"
+  },
+  {
+   "text": "skill?",
+   "start": 27.997,
+   "end": 28.293,
+   "scene": 15,
+   "line": 19,
+   "speaker": "leo"
+  },
+  {
+   "text": "A",
+   "start": 28.493,
+   "end": 28.983,
+   "scene": 16,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "text",
+   "start": 28.983,
+   "end": 29.154,
+   "scene": 16,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "file",
+   "start": 29.154,
+   "end": 29.431,
+   "scene": 16,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "of",
+   "start": 29.431,
+   "end": 29.559,
+   "scene": 16,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "instructions.",
+   "start": 29.559,
+   "end": 30.114,
+   "scene": 16,
+   "line": 20,
+   "speaker": "mott"
+  },
+  {
+   "text": "Your",
+   "start": 30.314,
+   "end": 30.805,
+   "scene": 16,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "agent",
+   "start": 30.805,
+   "end": 31.146,
+   "scene": 16,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "reads",
+   "start": 31.146,
+   "end": 31.338,
+   "scene": 16,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "it.",
+   "start": 31.338,
+   "end": 31.466,
+   "scene": 16,
+   "line": 21,
+   "speaker": "mott"
+  },
+  {
+   "text": "And",
+   "start": 31.766,
+   "end": 32.142,
+   "scene": 17,
+   "line": 22,
+   "speaker": "leo"
+  },
+  {
+   "text": "it",
+   "start": 32.142,
+   "end": 32.317,
+   "scene": 17,
+   "line": 22,
+   "speaker": "leo"
+  },
+  {
+   "text": "does",
+   "start": 32.317,
+   "end": 32.577,
+   "scene": 17,
+   "line": 22,
+   "speaker": "leo"
+  },
+  {
+   "text": "what?",
+   "start": 32.577,
+   "end": 32.747,
+   "scene": 17,
+   "line": 22,
+   "speaker": "leo"
+  },
+  {
+   "text": "It",
+   "start": 32.947,
+   "end": 33.417,
+   "scene": 18,
+   "line": 23,
+   "speaker": "mott"
+  },
+  {
+   "text": "interviews",
+   "start": 33.417,
+   "end": 33.801,
+   "scene": 18,
+   "line": 23,
+   "speaker": "mott"
+  },
+  {
+   "text": "you.",
+   "start": 33.801,
+   "end": 34.014,
+   "scene": 18,
+   "line": 23,
+   "speaker": "mott"
+  },
+  {
+   "text": "Until",
+   "start": 34.264,
+   "end": 34.904,
+   "scene": 18,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "no",
+   "start": 34.904,
+   "end": 35.075,
+   "scene": 18,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "decision",
+   "start": 35.075,
+   "end": 35.331,
+   "scene": 18,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "is",
+   "start": 35.331,
+   "end": 35.544,
+   "scene": 18,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "left",
+   "start": 35.544,
+   "end": 35.651,
+   "scene": 18,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "open.",
+   "start": 35.651,
+   "end": 36.12,
+   "scene": 18,
+   "line": 24,
+   "speaker": "mott"
+  },
+  {
+   "text": "Sounds",
+   "start": 36.47,
+   "end": 37.153,
+   "scene": 19,
+   "line": 25,
+   "speaker": "leo"
+  },
+  {
+   "text": "slow.",
+   "start": 37.153,
+   "end": 37.515,
+   "scene": 19,
+   "line": 25,
+   "speaker": "leo"
+  },
+  {
+   "text": "It",
+   "start": 37.715,
+   "end": 38.227,
+   "scene": 20,
+   "line": 26,
+   "speaker": "mott"
+  },
+  {
+   "text": "is.",
+   "start": 38.227,
+   "end": 38.441,
+   "scene": 20,
+   "line": 26,
+   "speaker": "mott"
+  },
+  {
+   "text": "Slower",
+   "start": 38.641,
+   "end": 39.366,
+   "scene": 20,
+   "line": 27,
+   "speaker": "mott"
+  },
+  {
+   "text": "than",
+   "start": 39.366,
+   "end": 39.446,
+   "scene": 20,
+   "line": 27,
+   "speaker": "mott"
+  },
+  {
+   "text": "build",
+   "start": 39.416,
+   "end": 39.729,
+   "scene": 20,
+   "line": 27,
+   "speaker": "mott"
+  },
+  {
+   "text": "it.",
+   "start": 39.729,
+   "end": 39.809,
+   "scene": 20,
+   "line": 27,
+   "speaker": "mott"
+  },
+  {
+   "text": "But",
+   "start": 40.143,
+   "end": 40.569,
+   "scene": 21,
+   "line": 28,
+   "speaker": "mott"
+  },
+  {
+   "text": "every",
+   "start": 40.569,
+   "end": 40.847,
+   "scene": 21,
+   "line": 28,
+   "speaker": "mott"
+  },
+  {
+   "text": "question",
+   "start": 40.847,
+   "end": 41.231,
+   "scene": 21,
+   "line": 28,
+   "speaker": "mott"
+  },
+  {
+   "text": "brings",
+   "start": 41.231,
+   "end": 41.529,
+   "scene": 21,
+   "line": 28,
+   "speaker": "mott"
+  },
+  {
+   "text": "its",
+   "start": 41.529,
+   "end": 41.679,
+   "scene": 21,
+   "line": 28,
+   "speaker": "mott"
+  },
+  {
+   "text": "answer.",
+   "start": 41.679,
+   "end": 42.02,
+   "scene": 21,
+   "line": 28,
+   "speaker": "mott"
+  },
+  {
+   "text": "You",
+   "start": 42.22,
+   "end": 42.753,
+   "scene": 21,
+   "line": 29,
+   "speaker": "mott"
+  },
+  {
+   "text": "say",
+   "start": 42.753,
+   "end": 42.967,
+   "scene": 21,
+   "line": 29,
+   "speaker": "mott"
+  },
+  {
+   "text": "yes.",
+   "start": 42.967,
+   "end": 43.159,
+   "scene": 21,
+   "line": 29,
+   "speaker": "mott"
+  },
+  {
+   "text": "And",
+   "start": 43.459,
+   "end": 43.834,
+   "scene": 22,
+   "line": 30,
+   "speaker": "leo"
+  },
+  {
+   "text": "what",
+   "start": 43.834,
+   "end": 44.109,
+   "scene": 22,
+   "line": 30,
+   "speaker": "leo"
+  },
+  {
+   "text": "I",
+   "start": 44.109,
+   "end": 44.248,
+   "scene": 22,
+   "line": 30,
+   "speaker": "leo"
+  },
+  {
+   "text": "don't",
+   "start": 44.248,
+   "end": 44.525,
+   "scene": 22,
+   "line": 30,
+   "speaker": "leo"
+  },
+  {
+   "text": "know?",
+   "start": 44.525,
+   "end": 44.717,
+   "scene": 22,
+   "line": 30,
+   "speaker": "leo"
+  },
+  {
+   "text": "Facts,",
+   "start": 44.917,
+   "end": 45.515,
+   "scene": 23,
+   "line": 31,
+   "speaker": "mott"
+  },
+  {
+   "text": "it",
+   "start": 45.515,
+   "end": 45.685,
+   "scene": 23,
+   "line": 31,
+   "speaker": "mott"
+  },
+  {
+   "text": "looks",
+   "start": 45.685,
+   "end": 45.792,
+   "scene": 23,
+   "line": 31,
+   "speaker": "mott"
+  },
+  {
+   "text": "up",
+   "start": 45.792,
+   "end": 45.941,
+   "scene": 23,
+   "line": 31,
+   "speaker": "mott"
+  },
+  {
+   "text": "itself.",
+   "start": 45.941,
+   "end": 46.261,
+   "scene": 23,
+   "line": 31,
+   "speaker": "mott"
+  },
+  {
+   "text": "Decisions",
+   "start": 46.461,
+   "end": 47.293,
+   "scene": 23,
+   "line": 32,
+   "speaker": "mott"
+  },
+  {
+   "text": "are",
+   "start": 47.293,
+   "end": 47.549,
+   "scene": 23,
+   "line": 32,
+   "speaker": "mott"
+  },
+  {
+   "text": "yours.",
+   "start": 47.549,
+   "end": 47.72,
+   "scene": 23,
+   "line": 32,
+   "speaker": "mott"
+  },
+  {
+   "text": "Yes.",
+   "start": 48.32,
+   "end": 48.946,
+   "scene": 24,
+   "line": 33,
+   "speaker": "leo"
+  },
+  {
+   "text": "Yes.",
+   "start": 49.246,
+   "end": 49.846,
+   "scene": 24,
+   "line": 34,
+   "speaker": "leo"
+  },
+  {
+   "text": "No.",
+   "start": 50.546,
+   "end": 51.25,
+   "scene": 24,
+   "line": 35,
+   "speaker": "leo"
+  },
+  {
+   "text": "Wait.",
+   "start": 51.5,
+   "end": 52.226,
+   "scene": 24,
+   "line": 36,
+   "speaker": "leo"
+  },
+  {
+   "text": "Done.",
+   "start": 52.826,
+   "end": 53.427,
+   "scene": 25,
+   "line": 37,
+   "speaker": "leo"
+  },
+  {
+   "text": "Your",
+   "start": 53.427,
+   "end": 53.509,
+   "scene": 25,
+   "line": 37,
+   "speaker": "leo"
+  },
+  {
+   "text": "turn.",
+   "start": 53.509,
+   "end": 53.978,
+   "scene": 25,
+   "line": 37,
+   "speaker": "leo"
+  },
+  {
+   "text": "Why",
+   "start": 54.278,
+   "end": 54.875,
+   "scene": 25,
+   "line": 38,
+   "speaker": "leo"
+  },
+  {
+   "text": "the",
+   "start": 54.875,
+   "end": 54.961,
+   "scene": 25,
+   "line": 38,
+   "speaker": "leo"
+  },
+  {
+   "text": "lamp?",
+   "start": 54.961,
+   "end": 55.323,
+   "scene": 25,
+   "line": 38,
+   "speaker": "leo"
+  },
+  {
+   "text": "Recommended",
+   "start": 57.323,
+   "end": 58.262,
+   "scene": 27,
+   "line": 39,
+   "speaker": "leo"
+  },
+  {
+   "text": "answer:",
+   "start": 58.262,
+   "end": 58.753,
+   "scene": 27,
+   "line": 39,
+   "speaker": "leo"
+  },
+  {
+   "text": "you",
+   "start": 58.753,
+   "end": 58.833,
+   "scene": 27,
+   "line": 39,
+   "speaker": "leo"
+  },
+  {
+   "text": "don't",
+   "start": 58.803,
+   "end": 59.03,
+   "scene": 27,
+   "line": 39,
+   "speaker": "leo"
+  },
+  {
+   "text": "know.",
+   "start": 59.03,
+   "end": 59.35,
+   "scene": 27,
+   "line": 39,
+   "speaker": "leo"
+  },
+  {
+   "text": "Yes.",
+   "start": 60.25,
+   "end": 60.911,
+   "scene": 28,
+   "line": 40,
+   "speaker": "mott"
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+  "lang": "en",
+  "voice": "am_puck",
+  "speed": 1.05,
+  "speakers": {
+    "mott": {"voice": "am_puck", "speed": 1.05},
+    "leo": {"voice": "am_eric", "speed": 1.1}
+  },
+  "respell": {},
+  "scenes": [
+    {"id": 1, "speaker": "leo", "gap": 0.35, "lines": [{"text": "Mott. One prompt, and my app ships tonight.", "speed": 1.05}]},
+    {"id": 2, "speaker": "mott", "gap": 0.25, "lines": [{"text": "What's the prompt?", "speed": 1.0}]},
+    {"id": 3, "speaker": "leo", "gap": 0.3, "lines": [{"text": "Build me a habit tracker.", "speed": 1.05}]},
+    {"id": 4, "speaker": "mott", "gap": 0.3, "lines": [{"text": "For who?", "speed": 1.0}]},
+    {"id": 5, "speaker": "leo", "gap": 0.2, "lines": [{"text": "For… people.", "speed": 1.0, "pause": 0.3}, {"text": "With habits.", "speed": 1.1}]},
+    {"id": 6, "speaker": "mott", "gap": 0.2, "lines": [{"text": "Where do the habits get saved?", "speed": 1.15}]},
+    {"id": 7, "speaker": "leo", "gap": 0.12, "lines": [{"text": "In the… in the app.", "speed": 1.05}]},
+    {"id": 8, "speaker": "mott", "gap": 0.9, "lines": [{"text": "And if they miss a day?", "speed": 1.25}]},
+    {"id": 9, "speaker": "leo", "gap": 0.5, "lines": [{"text": "I don't know.", "speed": 0.92}]},
+    {"id": 10, "speaker": "leo", "gap": 0.25, "lines": [{"text": "Why are you grilling me?", "speed": 1.12}]},
+    {"id": 11, "speaker": "mott", "gap": 0.25, "lines": [{"text": "Because your agent won't.", "speed": 1.02, "pause": 0.25}, {"text": "It just builds.", "speed": 1.0}]},
+    {"id": 12, "speaker": "leo", "gap": 0.25, "lines": [{"text": "That's what I want.", "speed": 1.12}]},
+    {"id": 13, "speaker": "mott", "gap": 0.55, "lines": [{"text": "It builds its guess.", "speed": 1.0, "pause": 0.3}, {"text": "Not your app.", "speed": 0.95}]},
+    {"id": 14, "speaker": "mott", "gap": 0.3, "lines": [{"text": "There's a skill for this.", "speed": 1.05, "pause": 0.25}, {"text": "Grill me.", "speed": 0.95, "pause": 0.2}, {"text": "Free.", "speed": 0.95}]},
+    {"id": 15, "speaker": "leo", "gap": 0.2, "lines": [{"text": "A skill?", "speed": 1.05}]},
+    {"id": 16, "speaker": "mott", "gap": 0.3, "lines": [{"text": "A text file of instructions.", "speed": 1.05, "pause": 0.2}, {"text": "Your agent reads it.", "speed": 1.05}]},
+    {"id": 17, "speaker": "leo", "gap": 0.2, "lines": [{"text": "And it does what?", "speed": 1.1}]},
+    {"id": 18, "speaker": "mott", "gap": 0.35, "lines": [{"text": "It interviews you.", "speed": 1.0, "pause": 0.25}, {"text": "Until no decision is left open.", "speed": 1.05}]},
+    {"id": 19, "speaker": "leo", "gap": 0.2, "lines": [{"text": "Sounds slow.", "speed": 1.0}]},
+    {"id": 20, "speaker": "mott", "gap": 0.35, "lines": [{"text": "It is.", "speed": 0.95, "pause": 0.2}, {"text": "Slower than build it.", "speed": 1.0}]},
+    {"id": 21, "speaker": "mott", "gap": 0.3, "lines": [{"text": "But every question brings its answer.", "speed": 1.08, "pause": 0.2}, {"text": "You say yes.", "speed": 1.0}]},
+    {"id": 22, "speaker": "leo", "gap": 0.2, "lines": [{"text": "And what I don't know?", "speed": 1.1}]},
+    {"id": 23, "speaker": "mott", "gap": 0.6, "lines": [{"text": "Facts, it looks up itself.", "speed": 1.05, "pause": 0.2}, {"text": "Decisions are yours.", "speed": 0.98}]},
+    {"id": 24, "speaker": "leo", "gap": 0.6, "lines": [{"text": "Yes.", "speed": 1.1, "pause": 0.3}, {"text": "Yes.", "speed": 1.15, "pause": 0.7}, {"text": "No.", "speed": 0.95, "pause": 0.25}, {"text": "Wait.", "speed": 0.95}]},
+    {"id": 25, "speaker": "leo", "gap": 2.0, "lines": [{"text": "Done. Your turn.", "speed": 1.1, "pause": 0.3}, {"text": "Why the lamp?", "speed": 1.0}]},
+    {"id": 27, "speaker": "leo", "gap": 0.9, "lines": [{"text": "Recommended answer: you don't know.", "speed": 1.0}]},
+    {"id": 28, "speaker": "mott", "gap": 0.2, "lines": [{"text": "Yes.", "speed": 0.88}]}
+  ]
+}

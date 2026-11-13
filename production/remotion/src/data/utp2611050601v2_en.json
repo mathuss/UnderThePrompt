@@ -1,0 +1,718 @@
+{
+ "provider": "elevenlabs",
+ "model": "eleven_v4",
+ "voices": {
+  "mott": "SAz9YHcvj6GT2YYXdXww",
+  "leo": "TX3LPaxmHKxFdv7VOQHJ"
+ },
+ "duration": 50.13,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 3.4,
+   "end": 7.17
+  },
+  {
+   "id": 2,
+   "start": 7.17,
+   "end": 13.63
+  },
+  {
+   "id": 3,
+   "start": 13.63,
+   "end": 17.29
+  },
+  {
+   "id": 4,
+   "start": 17.29,
+   "end": 21.51
+  },
+  {
+   "id": 5,
+   "start": 21.51,
+   "end": 25.57
+  },
+  {
+   "id": 6,
+   "start": 25.57,
+   "end": 31.03
+  },
+  {
+   "id": 7,
+   "start": 31.03,
+   "end": 35.37
+  },
+  {
+   "id": 8,
+   "start": 35.37,
+   "end": 37.55
+  },
+  {
+   "id": 9,
+   "start": 37.55,
+   "end": 42.57
+  },
+  {
+   "id": 10,
+   "start": 42.57,
+   "end": 45.15
+  },
+  {
+   "id": 11,
+   "start": 45.15,
+   "end": 50.13
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "speaker": "leo",
+   "text": "Mott. One prompt, and my app is done.",
+   "tag": "[confident]",
+   "start": 3.4,
+   "end": 6.52
+  },
+  {
+   "scene": 2,
+   "speaker": "mott",
+   "text": "Before your AI writes code… try grill-me, by Matt Pocock.",
+   "tag": "[calm]",
+   "start": 7.17,
+   "end": 11.73
+  },
+  {
+   "scene": 3,
+   "speaker": "leo",
+   "text": "Build me a habit tracker.",
+   "tag": "[casually]",
+   "start": 13.63,
+   "end": 15.39
+  },
+  {
+   "scene": 4,
+   "speaker": "leo",
+   "text": "Wait. It's asking me questions?",
+   "tag": "[surprised]",
+   "start": 17.29,
+   "end": 19.61
+  },
+  {
+   "scene": 5,
+   "speaker": "mott",
+   "text": "Seven. Each one comes with its answer.",
+   "tag": "[matter-of-fact]",
+   "start": 21.51,
+   "end": 24.07
+  },
+  {
+   "scene": 6,
+   "speaker": "leo",
+   "text": "Yes. Yes. No… I want sync.",
+   "tag": "[thinking]",
+   "start": 25.57,
+   "end": 30.13
+  },
+  {
+   "scene": 7,
+   "speaker": "mott",
+   "text": "And your no changes the plan.",
+   "tag": "[calm]",
+   "start": 31.03,
+   "end": 33.27
+  },
+  {
+   "scene": 8,
+   "speaker": "leo",
+   "text": "When does it write code?",
+   "tag": "[curious]",
+   "start": 35.37,
+   "end": 37.05
+  },
+  {
+   "scene": 9,
+   "speaker": "mott",
+   "text": "When every decision is yours.",
+   "tag": "[warmly]",
+   "start": 37.55,
+   "end": 39.87
+  },
+  {
+   "scene": 10,
+   "speaker": "leo",
+   "text": "Slower than just building.",
+   "tag": "[skeptical]",
+   "start": 42.57,
+   "end": 44.65
+  },
+  {
+   "scene": 11,
+   "speaker": "mott",
+   "text": "Slower. But it builds your app. Not its guess.",
+   "tag": "[dry]",
+   "start": 45.15,
+   "end": 49.23
+  }
+ ],
+ "words": [
+  {
+   "text": "Mott.",
+   "start": 3.56,
+   "end": 3.96,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "One",
+   "start": 4.36,
+   "end": 4.52,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "prompt,",
+   "start": 4.6,
+   "end": 5.0,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "and",
+   "start": 5.24,
+   "end": 5.32,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "my",
+   "start": 5.4,
+   "end": 5.56,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "app",
+   "start": 5.64,
+   "end": 5.72,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "is",
+   "start": 5.8,
+   "end": 5.96,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "done.",
+   "start": 6.04,
+   "end": 6.28,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Before",
+   "start": 7.25,
+   "end": 7.65,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "your",
+   "start": 7.77,
+   "end": 7.89,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "AI",
+   "start": 7.97,
+   "end": 8.29,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "writes",
+   "start": 8.45,
+   "end": 8.61,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "code…",
+   "start": 8.69,
+   "end": 9.41,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "try",
+   "start": 9.73,
+   "end": 9.89,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "grill-me,",
+   "start": 9.97,
+   "end": 10.61,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "by",
+   "start": 10.69,
+   "end": 10.85,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Matt",
+   "start": 10.97,
+   "end": 11.09,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Pocock.",
+   "start": 11.13,
+   "end": 11.57,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Build",
+   "start": 13.79,
+   "end": 14.03,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "me",
+   "start": 14.11,
+   "end": 14.19,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "a",
+   "start": 14.27,
+   "end": 14.35,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "habit",
+   "start": 14.51,
+   "end": 14.75,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "tracker.",
+   "start": 14.83,
+   "end": 15.23,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Wait.",
+   "start": 17.37,
+   "end": 17.69,
+   "scene": 4,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "It's",
+   "start": 18.09,
+   "end": 18.25,
+   "scene": 4,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "asking",
+   "start": 18.41,
+   "end": 18.57,
+   "scene": 4,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "me",
+   "start": 18.65,
+   "end": 18.73,
+   "scene": 4,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "questions?",
+   "start": 18.81,
+   "end": 19.37,
+   "scene": 4,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Seven.",
+   "start": 21.933,
+   "end": 21.99,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Each",
+   "start": 22.47,
+   "end": 22.63,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "one",
+   "start": 22.71,
+   "end": 22.95,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "comes",
+   "start": 23.03,
+   "end": 23.19,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "with",
+   "start": 23.27,
+   "end": 23.35,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "its",
+   "start": 23.43,
+   "end": 23.51,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "answer.",
+   "start": 23.59,
+   "end": 23.91,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Yes.",
+   "start": 25.73,
+   "end": 26.29,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Yes.",
+   "start": 26.85,
+   "end": 27.41,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "No…",
+   "start": 28.05,
+   "end": 28.45,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "I",
+   "start": 29.09,
+   "end": 29.17,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "want",
+   "start": 29.29,
+   "end": 29.41,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "sync.",
+   "start": 29.57,
+   "end": 29.89,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "And",
+   "start": 31.11,
+   "end": 31.27,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "your",
+   "start": 31.35,
+   "end": 31.51,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "no",
+   "start": 31.59,
+   "end": 31.99,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "changes",
+   "start": 32.07,
+   "end": 32.47,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "the",
+   "start": 32.51,
+   "end": 32.56,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "plan.",
+   "start": 32.63,
+   "end": 33.03,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "When",
+   "start": 35.53,
+   "end": 35.61,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "does",
+   "start": 35.69,
+   "end": 35.85,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "it",
+   "start": 35.93,
+   "end": 36.01,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "write",
+   "start": 36.13,
+   "end": 36.25,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "code?",
+   "start": 36.33,
+   "end": 36.81,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "When",
+   "start": 37.63,
+   "end": 37.87,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "every",
+   "start": 38.03,
+   "end": 38.27,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "decision",
+   "start": 38.35,
+   "end": 38.91,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "is",
+   "start": 38.99,
+   "end": 39.15,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "yours.",
+   "start": 39.23,
+   "end": 39.71,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Slower",
+   "start": 42.81,
+   "end": 43.21,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "than",
+   "start": 43.29,
+   "end": 43.45,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "just",
+   "start": 43.65,
+   "end": 43.85,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "building.",
+   "start": 44.13,
+   "end": 44.41,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Slower.",
+   "start": 45.39,
+   "end": 45.87,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "But",
+   "start": 46.59,
+   "end": 46.83,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "it",
+   "start": 46.91,
+   "end": 47.07,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "builds",
+   "start": 47.19,
+   "end": 47.35,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "your",
+   "start": 47.39,
+   "end": 47.47,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "app.",
+   "start": 47.55,
+   "end": 47.79,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Not",
+   "start": 48.27,
+   "end": 48.43,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "its",
+   "start": 48.51,
+   "end": 48.59,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "guess.",
+   "start": 48.67,
+   "end": 49.07,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  }
+ ]
+}

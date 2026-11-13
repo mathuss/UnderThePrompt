@@ -1,0 +1,22 @@
+{
+  "provider": "elevenlabs",
+  "lang": "en",
+  "model": "eleven_v4",
+  "voices_from": "tools/voice_test.config.json",
+  "lead_in": 3.4,
+  "settings": {"stability": 0.35, "similarity_boost": 0.75, "style": 0.3, "use_speaker_boost": true},
+  "_note": "One scene per script line (script_v2.md). 'tag' is an ElevenLabs audio tag sent before the text and never shown in captions. 'pause' is the silence after the line, in seconds (it holds the panels long enough to read). lead_in is the silent establishing shot.",
+  "lines": [
+    {"id": 1, "speaker": "leo", "tag": "[confident]", "text": "Mott. One prompt, and my app is done.", "pause": 0.65},
+    {"id": 2, "speaker": "mott", "tag": "[calm]", "text": "Before your AI writes code… try grill-me, by Matt Pocock.", "pause": 1.9},
+    {"id": 3, "speaker": "leo", "tag": "[casually]", "text": "Build me a habit tracker.", "pause": 1.9},
+    {"id": 4, "speaker": "leo", "tag": "[surprised]", "text": "Wait. It's asking me questions?", "pause": 1.9},
+    {"id": 5, "speaker": "mott", "tag": "[matter-of-fact]", "text": "Seven. Each one comes with its answer.", "pause": 1.5},
+    {"id": 6, "speaker": "leo", "tag": "[thinking]", "text": "Yes. Yes. No… I want sync.", "pause": 0.9},
+    {"id": 7, "speaker": "mott", "tag": "[calm]", "text": "And your no changes the plan.", "pause": 2.1},
+    {"id": 8, "speaker": "leo", "tag": "[curious]", "text": "When does it write code?", "pause": 0.5},
+    {"id": 9, "speaker": "mott", "tag": "[warmly]", "text": "When every decision is yours.", "pause": 2.7},
+    {"id": 10, "speaker": "leo", "tag": "[skeptical]", "text": "Slower than just building.", "pause": 0.5},
+    {"id": 11, "speaker": "mott", "tag": "[dry]", "text": "Slower. But it builds your app. Not its guess.", "pause": 0.9}
+  ]
+}

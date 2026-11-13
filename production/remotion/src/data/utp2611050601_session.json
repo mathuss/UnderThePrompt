@@ -1,0 +1,104 @@
+{
+ "captured": "2026-11-11",
+ "plugin": "mattpocock-skills 1.3.1",
+ "prompts": [
+  "Build me a habit tracker.",
+  "Q1 yes. Q2 yes. Q3 no, wait: I want it to sync between my phone and my laptop. Q4 to Q7 yes."
+ ],
+ "rounds": [
+  {
+   "intro": "The working directory is empty and not a git repo, so there's no existing code to constrain this. These are the first-round questions. Each one is independent of the others.",
+   "questions": [
+    {
+     "n": 1,
+     "title": "Platform",
+     "body": "Where does this run? The options are a web app (browser), a mobile app (iOS/Android), a desktop app, or a CLI/TUI.",
+     "rec": "A web app. It's the fastest to build, it works on phone and desktop, and you can publish and share it as a single page."
+    },
+    {
+     "n": 2,
+     "title": "Users",
+     "body": "Is this just for you, or do other people need accounts, for example friends or an accountability partner?",
+     "rec": "Just you, with no accounts and no login. Adding multi-user support later would be a rewrite, so say now if you want it."
+    },
+    {
+     "n": 3,
+     "title": "Data storage",
+     "body": "Where do the habit data live? The options are browser-local storage (this device only), a file you can export and import, or a backend database that syncs across devices.",
+     "rec": "Browser-local storage, plus JSON export and import as a backup. It needs no server and nothing to host. The downside is that your data won't sync between your phone and your laptop."
+    },
+    {
+     "n": 4,
+     "title": "Habit types",
+     "body": "What kinds of habits do you track? The options are:\n- (a) Binary done/not-done only.\n- (b) Also counts or quantities, such as \"8 glasses of water\" or \"30 min reading\".\n- (c) Also habits that aren't daily, such as \"3× per week\" or \"Mon/Wed/Fri\".",
+     "rec": "(a) and (c) for v1: daily completion, with a simple schedule of specific weekdays. Quantities add a lot of UI and streak-logic complexity, so I'd leave them out."
+    },
+    {
+     "n": 5,
+     "title": "Streak rules",
+     "body": "What counts as keeping a streak? Does a missed day always reset it to zero? Do you want a \"skip\" or \"rest day\" that doesn't break it? Can you backfill yesterday if you forgot to log it?",
+     "rec": "Streaks count only scheduled days, so an unscheduled day never breaks one. Add a manual \"skip\" that preserves the streak. Allow backfilling any past date. A plain miss resets the streak."
+    },
+    {
+     "n": 6,
+     "title": "Views",
+     "body": "Which views do you want? The options are:\n- (a) A \"today\" checklist.\n- (b) A weekly grid.\n- (c) A GitHub-style heatmap calendar per habit.\n- (d) Stats and charts, such as completion rate and best streak.",
+     "rec": "(a) as the home screen, plus (c) and a few numbers from (d), meaning current streak, best streak and 30-day completion rate. Skip (b) because the heatmap covers it."
+    },
+    {
+     "n": 7,
+     "title": "Reminders",
+     "body": "Do you want notifications or reminders?",
+     "rec": "No for v1. Browser notifications are unreliable without a backend or an installed PWA, and a reminder feature could be added later."
+    }
+   ],
+   "outro": "Once you've answered, I'll compute the next round. It will cover things that depend on these answers: the habit editing and archiving model, the visual style, the tech stack and how you want it delivered, and what testing you expect."
+  },
+  {
+   "intro": "Settled so far: a single-user web app with no accounts, daily and weekday-scheduled habits, streaks that count only scheduled days (with skip and backfill), a today checklist plus per-habit heatmap and three stats, and no reminders. Your sync requirement changes Q3, and it raises a new question about identity, since sync needs some way to know the data is yours.\n\nStack, hosting, offline behavior and conflict handling all depend on the sync answer, so they wait for the next round. These questions don't depend on it.",
+   "questions": [
+    {
+     "n": 8,
+     "title": "Sync mechanism",
+     "body": "Which of these do you want?\n- (a) A published Claude Artifact with its built-in shared database. It has no server to run and no separate login beyond your Claude account, and it syncs across any device where you open the link. The trade-off is that it only works while the Artifact is hosted on claude.ai, and you'd be tied to that platform.\n- (b) A hosted backend such as Supabase or Firebase, with a free tier. It is a real app you control and can host anywhere, but it needs an account setup and a login. A single-user magic link would be enough.\n- (c) Sync through a file in a cloud folder (Dropbox, Drive or iCloud). It needs no backend, but browsers can't reliably write to those folders, so it's clunky on a phone.",
+     "rec": "(a). It's the least setup for a personal tool, and a habit tracker has little data. Choose (b) if you want something portable that isn't tied to Claude."
+    },
+    {
+     "n": 9,
+     "title": "Editing and archiving habits",
+     "body": "What should happen when you rename a habit, change its schedule, or stop doing it? For example, if you change \"Gym\" from Mon/Wed/Fri to Mon/Thu, does the old history keep its old schedule, or is it recalculated under the new one? Does deleting a habit erase its history, or is it archived and hidden?",
+     "rec": "Schedule changes apply from that day forward and old history keeps the old schedule, so past streaks don't silently change. \"Delete\" archives the habit and hides it, and you can restore it. A separate \"delete forever\" action removes the history."
+    },
+    {
+     "n": 10,
+     "title": "Day boundary",
+     "body": "When does \"today\" end? A strict midnight cutoff can be annoying if you log habits after midnight.",
+     "rec": "A configurable rollover hour, defaulting to 3 AM. Before that hour, the app still treats it as the previous day. It is easy to build and avoids a classic complaint. Pick plain midnight if you'd rather not have the setting."
+    },
+    {
+     "n": 11,
+     "title": "Visual style",
+     "body": "What look do you want?\n- (a) Minimal and clean.\n- (b) Playful and colorful, with per-habit colors or emoji.\n- (c) Dense and data-forward.\n\nAlso, do you need dark mode?",
+     "rec": "(b) in a light touch: each habit gets a color and an optional emoji, and the heatmap uses the habit's color. Dark mode follows the system setting."
+    },
+    {
+     "n": 12,
+     "title": "Scale and testing",
+     "body": "Roughly how many habits will you track (5, 10, 30+)? How much testing do you expect: just a manual check, or automated tests for the streak logic?",
+     "rec": "Assume 5–15 habits. Streak logic is where bugs hide, so I'd write automated tests for it (schedules, skips, backfill, rollover). The UI I'd check by hand."
+    }
+   ],
+   "outro": ""
+  }
+ ],
+ "skillFile": {
+  "frontmatter": [
+   "name: grilling",
+   "description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases."
+  ],
+  "firstParagraphs": [
+   "Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.",
+   "Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round."
+  ]
+ }
+}
