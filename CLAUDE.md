@@ -22,7 +22,7 @@ Each stage reads only the previous stage's output. State lives in the YAML `stat
 Before writing or reviewing a script, storyboard or episode, read `brand/knowledge/playbook.md`. It holds the rules distilled from the reference videos; the evidence is in `brand/knowledge/videos/`, tool checks in `brand/knowledge/tools.md`. New reference videos get added there (steps in `brand/knowledge/README.md`). Learn patterns, never recreate a reference.
 
 ## Hard rules (apply to every agent run, scheduled or manual)
-1. **Approval mode.** Nothing becomes public (upload, post, schedule, publish) without the user's explicit "approve UTP-…" in chat.
+1. **Publishing (changed by the user on 2026-11-16).** Finished videos are uploaded **public** (or scheduled) automatically; per-video approval is no longer required. The user can still stop or change any episode in chat, and the Publisher keeps writing the package in `publishing/approvals/` and logging every upload in `publishing/publication_log.md`. Publishing never skips the other rules: every claim sourced (4), no unlicensed music (5), real captures only (4), creators credited.
 2. **No accounts, money or authorizations.** Never create accounts, publish, spend money, buy plans, accept terms or grant OAuth/third-party access without the user's permission. Guide the user; they do the click.
 3. **Never permanently delete** a script or its sources. To remove something from the queue, move it to `research/archive/` and update `status:`. Same for production and publishing files.
 4. **Never fabricate** product interfaces, screenshots, demos, quotes, numbers or release dates. Show real captures, or a clearly schematic animation labeled as such. Every claim needs a source.

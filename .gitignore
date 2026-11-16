@@ -31,3 +31,10 @@ production/*/stills/
 
 # Real captures of third-party pages used in renders (kept local; sources are cited in each script)
 production/remotion/public/captures/
+
+# OAuth clients and tokens for the uploaders. Never versioned.
+.secrets/
+
+# Python bytecode
+__pycache__/
+*.pyc
