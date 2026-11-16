@@ -1,0 +1,880 @@
+{
+ "provider": "elevenlabs",
+ "model": "eleven_v4",
+ "voices": {
+  "mott": "gBTPbHzRd0ZmV75Z5Zk4",
+  "leo": "QK4xDwo9ESPHA4JNUpX3"
+ },
+ "duration": 60.88,
+ "scenes": [
+  {
+   "id": 1,
+   "start": 3.4,
+   "end": 7.52
+  },
+  {
+   "id": 2,
+   "start": 7.52,
+   "end": 14.06
+  },
+  {
+   "id": 3,
+   "start": 14.06,
+   "end": 16.14
+  },
+  {
+   "id": 4,
+   "start": 16.14,
+   "end": 20.26
+  },
+  {
+   "id": 5,
+   "start": 20.26,
+   "end": 26.86
+  },
+  {
+   "id": 6,
+   "start": 26.86,
+   "end": 31.06
+  },
+  {
+   "id": 7,
+   "start": 31.06,
+   "end": 35.82
+  },
+  {
+   "id": 8,
+   "start": 35.82,
+   "end": 41.34
+  },
+  {
+   "id": 9,
+   "start": 41.34,
+   "end": 46.18
+  },
+  {
+   "id": 10,
+   "start": 46.18,
+   "end": 48.58
+  },
+  {
+   "id": 11,
+   "start": 48.58,
+   "end": 53.82
+  },
+  {
+   "id": 12,
+   "start": 53.82,
+   "end": 55.82
+  },
+  {
+   "id": 13,
+   "start": 55.82,
+   "end": 60.88
+  }
+ ],
+ "lines": [
+  {
+   "scene": 1,
+   "speaker": "leo",
+   "text": "Mott. Con un solo prompt, Claude me arma la app.",
+   "tag": "[confident]",
+   "start": 3.4,
+   "end": 6.92
+  },
+  {
+   "scene": 2,
+   "speaker": "mott",
+   "text": "Antes de que escriba código… probá grill-me, de Matt Pocock.",
+   "tag": "[calm]",
+   "start": 7.52,
+   "end": 12.16
+  },
+  {
+   "scene": 3,
+   "speaker": "leo",
+   "text": "¿Y cómo lo instalo?",
+   "tag": "[curious]",
+   "start": 14.06,
+   "end": 15.74
+  },
+  {
+   "scene": 4,
+   "speaker": "mott",
+   "text": "Un comando, en Claude Code.",
+   "tag": "[matter-of-fact]",
+   "start": 16.14,
+   "end": 18.06
+  },
+  {
+   "scene": 5,
+   "speaker": "mott",
+   "text": "Después escribís barra grill-me, y tu idea.",
+   "tag": "[calm]",
+   "start": 20.26,
+   "end": 24.66
+  },
+  {
+   "scene": 6,
+   "speaker": "leo",
+   "text": "¡Pará! ¿Me está haciendo preguntas?",
+   "tag": "[surprised]",
+   "start": 26.86,
+   "end": 29.26
+  },
+  {
+   "scene": 7,
+   "speaker": "mott",
+   "text": "Seis. Y cada una trae su respuesta recomendada.",
+   "tag": "[matter-of-fact]",
+   "start": 31.06,
+   "end": 34.42
+  },
+  {
+   "scene": 8,
+   "speaker": "leo",
+   "text": "Ok… ok… no. Quiero que se sincronice.",
+   "tag": "[thinking]",
+   "start": 35.82,
+   "end": 40.54
+  },
+  {
+   "scene": 9,
+   "speaker": "mott",
+   "text": "Y con ese «no», cambió el plan.",
+   "tag": "[calm]",
+   "start": 41.34,
+   "end": 43.98
+  },
+  {
+   "scene": 10,
+   "speaker": "leo",
+   "text": "¿Y cuándo escribe código?",
+   "tag": "[curious]",
+   "start": 46.18,
+   "end": 48.18
+  },
+  {
+   "scene": 11,
+   "speaker": "mott",
+   "text": "Cuando no queda ninguna decisión abierta.",
+   "tag": "[warmly]",
+   "start": 48.58,
+   "end": 51.22
+  },
+  {
+   "scene": 12,
+   "speaker": "leo",
+   "text": "Es más lento.",
+   "tag": "[skeptical]",
+   "start": 53.82,
+   "end": 55.42
+  },
+  {
+   "scene": 13,
+   "speaker": "mott",
+   "text": "Más lento. Pero arma tu app, no la que se imaginó.",
+   "tag": "[dry]",
+   "start": 55.82,
+   "end": 59.98
+  }
+ ],
+ "words": [
+  {
+   "text": "Mott.",
+   "start": 3.56,
+   "end": 3.88,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Con",
+   "start": 4.28,
+   "end": 4.44,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "un",
+   "start": 4.52,
+   "end": 4.6,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "solo",
+   "start": 4.64,
+   "end": 4.84,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "prompt,",
+   "start": 4.92,
+   "end": 5.24,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Claude",
+   "start": 5.48,
+   "end": 5.8,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "me",
+   "start": 5.88,
+   "end": 5.96,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "arma",
+   "start": 6.08,
+   "end": 6.2,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "la",
+   "start": 6.28,
+   "end": 6.36,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "app.",
+   "start": 6.48,
+   "end": 6.6,
+   "scene": 1,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Antes",
+   "start": 7.6,
+   "end": 7.84,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "de",
+   "start": 7.88,
+   "end": 7.93,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "que",
+   "start": 7.96,
+   "end": 8.01,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "escriba",
+   "start": 8.08,
+   "end": 8.4,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "código…",
+   "start": 8.48,
+   "end": 8.96,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "probá",
+   "start": 9.56,
+   "end": 9.92,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "grill-me,",
+   "start": 10.16,
+   "end": 10.64,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "de",
+   "start": 10.96,
+   "end": 11.12,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Matt",
+   "start": 11.28,
+   "end": 11.44,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Pocock.",
+   "start": 11.52,
+   "end": 12.0,
+   "scene": 2,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "¿Y",
+   "start": 14.14,
+   "end": 14.38,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "cómo",
+   "start": 14.62,
+   "end": 14.78,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "lo",
+   "start": 14.82,
+   "end": 14.87,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "instalo?",
+   "start": 14.94,
+   "end": 15.42,
+   "scene": 3,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Un",
+   "start": 16.22,
+   "end": 16.3,
+   "scene": 4,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "comando,",
+   "start": 16.38,
+   "end": 16.78,
+   "scene": 4,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "en",
+   "start": 17.1,
+   "end": 17.18,
+   "scene": 4,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Claude",
+   "start": 17.26,
+   "end": 17.5,
+   "scene": 4,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Code.",
+   "start": 17.58,
+   "end": 17.82,
+   "scene": 4,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Después",
+   "start": 20.42,
+   "end": 20.9,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "escribís",
+   "start": 20.98,
+   "end": 21.62,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "barra",
+   "start": 21.7,
+   "end": 22.02,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "grill-me,",
+   "start": 22.26,
+   "end": 23.54,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "y",
+   "start": 23.94,
+   "end": 24.02,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "tu",
+   "start": 24.06,
+   "end": 24.11,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "idea.",
+   "start": 24.18,
+   "end": 24.5,
+   "scene": 5,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "¡Pará!",
+   "start": 27.07,
+   "end": 27.26,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "¿Me",
+   "start": 27.713,
+   "end": 27.763,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "está",
+   "start": 27.82,
+   "end": 27.927,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "haciendo",
+   "start": 27.953,
+   "end": 28.3,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "preguntas?",
+   "start": 28.42,
+   "end": 29.02,
+   "scene": 6,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Seis.",
+   "start": 31.277,
+   "end": 31.62,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Y",
+   "start": 32.02,
+   "end": 32.1,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "cada",
+   "start": 32.18,
+   "end": 32.42,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "una",
+   "start": 32.5,
+   "end": 32.66,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "trae",
+   "start": 32.74,
+   "end": 32.98,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "su",
+   "start": 33.02,
+   "end": 33.07,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "respuesta",
+   "start": 33.14,
+   "end": 33.54,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "recomendada.",
+   "start": 33.62,
+   "end": 34.26,
+   "scene": 7,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Ok…",
+   "start": 35.9,
+   "end": 36.62,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "ok…",
+   "start": 36.94,
+   "end": 37.58,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "no.",
+   "start": 38.22,
+   "end": 38.46,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Quiero",
+   "start": 39.02,
+   "end": 39.26,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "que",
+   "start": 39.34,
+   "end": 39.42,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "se",
+   "start": 39.46,
+   "end": 39.51,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "sincronice.",
+   "start": 39.58,
+   "end": 40.3,
+   "scene": 8,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Y",
+   "start": 41.42,
+   "end": 41.5,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "con",
+   "start": 41.58,
+   "end": 41.66,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "ese",
+   "start": 41.74,
+   "end": 41.98,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "«no»,",
+   "start": 42.3,
+   "end": 42.54,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "cambió",
+   "start": 43.1,
+   "end": 43.34,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "el",
+   "start": 43.38,
+   "end": 43.43,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "plan.",
+   "start": 43.5,
+   "end": 43.74,
+   "scene": 9,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "¿Y",
+   "start": 46.26,
+   "end": 46.42,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "cuándo",
+   "start": 46.66,
+   "end": 46.9,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "escribe",
+   "start": 46.98,
+   "end": 47.3,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "código?",
+   "start": 47.38,
+   "end": 47.78,
+   "scene": 10,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Cuando",
+   "start": 48.66,
+   "end": 48.98,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "no",
+   "start": 49.06,
+   "end": 49.14,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "queda",
+   "start": 49.3,
+   "end": 49.46,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "ninguna",
+   "start": 49.54,
+   "end": 50.02,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "decisión",
+   "start": 50.1,
+   "end": 50.5,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "abierta.",
+   "start": 50.58,
+   "end": 51.06,
+   "scene": 11,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Es",
+   "start": 53.9,
+   "end": 54.06,
+   "scene": 12,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "más",
+   "start": 54.14,
+   "end": 54.3,
+   "scene": 12,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "lento.",
+   "start": 54.38,
+   "end": 55.02,
+   "scene": 12,
+   "line": 0,
+   "speaker": "leo"
+  },
+  {
+   "text": "Más",
+   "start": 55.98,
+   "end": 56.22,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "lento.",
+   "start": 56.3,
+   "end": 56.78,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "Pero",
+   "start": 57.34,
+   "end": 57.58,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "arma",
+   "start": 57.82,
+   "end": 58.06,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "tu",
+   "start": 58.14,
+   "end": 58.22,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "app,",
+   "start": 58.3,
+   "end": 58.54,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "no",
+   "start": 58.94,
+   "end": 59.02,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "la",
+   "start": 59.1,
+   "end": 59.18,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "que",
+   "start": 59.22,
+   "end": 59.27,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "se",
+   "start": 59.3,
+   "end": 59.35,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  },
+  {
+   "text": "imaginó.",
+   "start": 59.42,
+   "end": 59.82,
+   "scene": 13,
+   "line": 0,
+   "speaker": "mott"
+  }
+ ]
+}

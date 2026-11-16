@@ -1,0 +1,24 @@
+{
+  "provider": "elevenlabs",
+  "lang": "es",
+  "model": "eleven_v4",
+  "voices_from": "tools/voice_test.config.json",
+  "lead_in": 3.4,
+  "settings": {"stability": 0.35, "similarity_boost": 0.75, "style": 0.3, "use_speaker_boost": true},
+  "_note": "script_es.md, one scene per line. Mott = Carlos Pro, Leo = Tomás (Argentine voices). 'tag' is sent to ElevenLabs, never captioned. 'pause' holds panels long enough to read.",
+  "lines": [
+    {"id": 1, "speaker": "leo", "tag": "[confident]", "text": "Mott. Con un solo prompt, Claude me arma la app.", "pause": 0.6},
+    {"id": 2, "speaker": "mott", "tag": "[calm]", "text": "Antes de que escriba código… probá grill-me, de Matt Pocock.", "pause": 1.9},
+    {"id": 3, "speaker": "leo", "tag": "[curious]", "text": "¿Y cómo lo instalo?", "pause": 0.4},
+    {"id": 4, "speaker": "mott", "tag": "[matter-of-fact]", "text": "Un comando, en Claude Code.", "pause": 2.2},
+    {"id": 5, "speaker": "mott", "tag": "[calm]", "text": "Después escribís barra grill-me, y tu idea.", "pause": 2.2},
+    {"id": 6, "speaker": "leo", "tag": "[surprised]", "text": "¡Pará! ¿Me está haciendo preguntas?", "pause": 1.8},
+    {"id": 7, "speaker": "mott", "tag": "[matter-of-fact]", "text": "Seis. Y cada una trae su respuesta recomendada.", "pause": 1.4},
+    {"id": 8, "speaker": "leo", "tag": "[thinking]", "text": "Ok… ok… no. Quiero que se sincronice.", "pause": 0.8},
+    {"id": 9, "speaker": "mott", "tag": "[calm]", "text": "Y con ese «no», cambió el plan.", "pause": 2.2},
+    {"id": 10, "speaker": "leo", "tag": "[curious]", "text": "¿Y cuándo escribe código?", "pause": 0.4},
+    {"id": 11, "speaker": "mott", "tag": "[warmly]", "text": "Cuando no queda ninguna decisión abierta.", "pause": 2.6},
+    {"id": 12, "speaker": "leo", "tag": "[skeptical]", "text": "Es más lento.", "pause": 0.4},
+    {"id": 13, "speaker": "mott", "tag": "[dry]", "text": "Más lento. Pero arma tu app, no la que se imaginó.", "pause": 0.9}
+  ]
+}

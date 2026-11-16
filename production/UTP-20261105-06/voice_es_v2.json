@@ -1,0 +1,28 @@
+{
+  "provider": "elevenlabs",
+  "lang": "es",
+  "model": "eleven_v4",
+  "voices_from": "tools/voice_test.config.json",
+  "lead_in": 3.4,
+  "settings": {"stability": 0.35, "similarity_boost": 0.75, "style": 0.3, "use_speaker_boost": true},
+  "_note": "script_es_v2.md, one scene per line. Mott = Carlos Pro, Leo = Tomás. 'tag' is sent to ElevenLabs, never captioned. 'pause' holds panels long enough to read.",
+  "lines": [
+    {"id": 1, "speaker": "leo", "tag": "[excited]", "text": "Mott, tengo una idea: una app para seguir mis hábitos.", "pause": 0.4},
+    {"id": 2, "speaker": "leo", "tag": "[confident]", "text": "Se la pido a Claude y en un minuto la tengo.", "pause": 1.6},
+    {"id": 3, "speaker": "leo", "tag": "[happy]", "text": "¡Listo! Mañana la uso desde el celu.", "pause": 1.2},
+    {"id": 4, "speaker": "mott", "tag": "[skeptical]", "text": "Mmm… esa app no sale de esta compu.", "pause": 1.6},
+    {"id": 5, "speaker": "leo", "tag": "[surprised]", "text": "¿Cómo que no?", "pause": 0.3},
+    {"id": 6, "speaker": "mott", "tag": "[calm]", "text": "Nunca te preguntó dónde la ibas a usar. Adivinó.", "pause": 0.6},
+    {"id": 7, "speaker": "mott", "tag": "[warmly]", "text": "Pero tengo justo lo que necesitás: grill-me, de Matt Pocock.", "pause": 1.6},
+    {"id": 8, "speaker": "leo", "tag": "[curious]", "text": "¿Cómo funciona esto?", "pause": 0.3},
+    {"id": 9, "speaker": "mott", "tag": "[calm]", "text": "Antes de escribir código, te entrevista.", "pause": 1.2},
+    {"id": 10, "speaker": "mott", "tag": "[calm]", "text": "Cada pregunta trae su respuesta recomendada. Vos decís ok, o la cambiás.", "pause": 1.6},
+    {"id": 11, "speaker": "leo", "tag": "[curious]", "text": "¿Y cómo lo uso?", "pause": 0.3},
+    {"id": 12, "speaker": "mott", "tag": "[matter-of-fact]", "text": "Lo instalás con un comando…", "pause": 2.0},
+    {"id": 13, "speaker": "mott", "tag": "[matter-of-fact]", "text": "…y escribís barra grill-me, con tu idea.", "pause": 1.8},
+    {"id": 14, "speaker": "leo", "tag": "[thinking]", "text": "La primera, ok. La segunda… no: la quiero en el celu y en la compu. El resto, ok.", "pause": 0.6},
+    {"id": 15, "speaker": "mott", "tag": "[calm]", "text": "Y con ese «no», cambió el plan.", "pause": 2.0},
+    {"id": 16, "speaker": "leo", "tag": "[thinking]", "text": "O sea que la primera vez… construyó lo que se imaginó.", "pause": 0.5},
+    {"id": 17, "speaker": "mott", "tag": "[warmly]", "text": "Y esta vez, lo que vos querías. Primero preguntas, después código.", "pause": 0.9}
+  ]
+}

@@ -1,9 +1,12 @@
 /**
  * Lamp projection: a panel of light the cursor-lamp casts over the scene (dialogue format).
- * Every projection carries an honesty tag (project rule 4):
+ * `kind` records what the panel is (project rule 4):
  *   REAL TEXT  = words copied from a real source or capture, typeset by us, never reworded
  *   REAL       = an unedited capture (screenshot, photo)
  *   SCHEMATIC  = our own drawing of an idea
+ * Only SCHEMATIC shows a tag on screen: a "REAL" chip on every panel reads as odd to viewers (user note 2026-11-16).
+ * `source` is kept in the code as the record of where each panel's content came from, but it is not drawn:
+ * a "sesión real · …" line under every panel was visual noise (user note 2026-11-16). Sources go in the post description.
  */
 import React from "react";
 import { clamp01, ramp } from "./sync";
@@ -39,12 +42,11 @@ export const Projection: React.FC<{
         background: "linear-gradient(180deg, rgba(34,23,12,.95), rgba(18,13,24,.95))", border: `2px solid rgba(255,178,62,.55)`,
         boxShadow: `0 0 60px rgba(255,178,62,.22), inset 0 0 80px rgba(255,178,62,.06), 0 30px 70px rgba(0,0,0,.55)`, overflow: "hidden" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
-          <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 22, letterSpacing: 3, padding: "5px 14px", borderRadius: 8,
-            color: real ? UI.night : col, background: real ? col : "transparent", border: `2px solid ${col}` }}>{kind}</div>
+          {!real && <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 22, letterSpacing: 3, padding: "5px 14px", borderRadius: 8,
+            color: col, background: "transparent", border: `2px solid ${col}` }}>{kind}</div>}
           {title && <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 26, color: UI.cream, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{title}</div>}
         </div>
         {children}
-        {source && <div style={{ position: "absolute", left: 34, right: 34, bottom: 18, fontFamily: MONO, fontSize: 20, color: UI.muted, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{source}</div>}
       </div>
     </div>
   );
@@ -59,8 +61,8 @@ export const ProjText: React.FC<{ text: string; size?: number; color?: string; m
 
 /** One question of a grilling round, as the tool printed it: number, title, body, recommended answer. */
 export const QuestionRow: React.FC<{
-  n: number; title: string; body?: string; rec: string; mark?: "yes" | "no" | null; markK?: number; recOn?: number; size?: number;
-}> = ({ n, title, body, rec, mark, markK = 1, recOn = 1, size = 32 }) => (
+  n: number; title: string; body?: string; rec: string; mark?: "yes" | "no" | null; markLabel?: string; markK?: number; recOn?: number; size?: number;
+}> = ({ n, title, body, rec, mark, markLabel, markK = 1, recOn = 1, size = 32 }) => (
   <div style={{ display: "flex", gap: 18, alignItems: "flex-start", marginBottom: 20 }}>
     <div style={{ flex: 1 }}>
       <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: size + 2, color: UI.cream, lineHeight: 1.25 }}>
@@ -71,10 +73,11 @@ export const QuestionRow: React.FC<{
         <span style={{ fontFamily: MONO }}>→ </span>{rec}
       </div>
     </div>
-    {mark && (
+    {/* mark = null reserves the chip's column before the answer arrives, so the text doesn't reflow when it appears */}
+    {mark !== undefined && (
       <div style={{ width: 120, flex: "none", textAlign: "center", fontFamily: MONO, fontWeight: 700, fontSize: 34, borderRadius: 12, padding: "6px 0",
-        color: UI.night, background: mark === "yes" ? UI.amber : UI.coral, opacity: clamp01(markK * 3), transform: `scale(${0.7 + 0.3 * clamp01(markK * 2)})` }}>
-        {mark}
+        color: UI.night, background: mark === "yes" ? UI.amber : UI.coral, opacity: mark ? clamp01(markK * 3) : 0, transform: `scale(${0.7 + 0.3 * clamp01(markK * 2)})` }}>
+        {mark ? markLabel ?? mark : ""}
       </div>
     )}
   </div>

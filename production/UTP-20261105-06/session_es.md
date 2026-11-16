@@ -1,0 +1,125 @@
+# Sesión real de grill-me en español: "Haceme una app para seguir hábitos."
+
+Capturada el 2026-11-15 en esta PC. Es la salida de texto sin editar de una sesión real; lo único escrito por nosotros son los dos prompts.
+
+- **Herramienta:** Claude Code, modo sin interfaz (`claude -p ... --output-format json`), segunda ronda con `--resume`.
+- **Skill:** `grill-me` del plugin `mattpocock-skills@claude-plugins-official` 1.3.1. **Comando verificado:** `/grill-me` funciona escrito así, sin prefijo del plugin.
+- **Carpeta:** nueva y vacía, fuera del repo. La sesión no creó ningún archivo.
+- **Sesión:** `f82921f7-51f0-4769-bcfd-50e626673754`. Ronda 1: 15.4 s. Ronda 2: 19.6 s.
+- **JSON crudo:** `captures/grill-me-es-round1.json`, `captures/grill-me-es-round2.json` (ignorados por git).
+- **Límite:** es texto, no una captura de la ventana. En pantalla se tipografía tal cual: se puede recortar, nunca reescribir.
+
+## Ronda 1
+
+**Prompt (nuestro):**
+
+```
+/grill-me Haceme una app para seguir hábitos.
+```
+
+**Respuesta (real):**
+
+Antes de escribir código, necesito cerrar las decisiones de la raíz del árbol. Estas seis no dependen unas de otras. Cada una trae mi recomendación, así que podés contestar con "ok" a las que te cierren.
+
+❓ **Q1** - **Plataforma**: ¿Dónde tiene que correr la app? Las opciones son web (se abre en el navegador), web instalable como PWA (funciona en el celular como una app), app móvil nativa (Android/iOS) o app de escritorio.
+
+➡️ PWA: una sola base de código en web que se instala en el celular y funciona offline. Es lo más barato de construir para un hábito que se marca desde el teléfono.
+
+---
+
+❓ **Q2** - **Usuarios y cuentas**: ¿La app es solo para vos o para varias personas? ¿Necesita login y sincronización entre dispositivos, o alcanza con que los datos queden en el dispositivo?
+
+➡️ Un solo usuario, sin login, con los datos guardados localmente en el navegador, y con exportar/importar JSON como respaldo. Se puede agregar cuenta y sync después.
+
+---
+
+❓ **Q3** - **Tipos de hábito**: ¿Qué clases de hábito tiene que soportar?
+- (a) Solo "hecho / no hecho" por día.
+- (b) También con cantidad (ej. 8 vasos de agua, 30 min).
+- (c) También hábitos negativos (ej. "no fumar").
+
+➡️ Solo (a) en la v1, para tener algo usable rápido. El modelo de datos queda preparado para sumar (b) después.
+
+---
+
+❓ **Q4** - **Frecuencia**: ¿Con qué periodicidad se repiten los hábitos? Pueden ser todos los días, ciertos días de la semana (ej. lun/mié/vie) o N veces por semana.
+
+➡️ Todos los días o días específicos de la semana. "N veces por semana" queda afuera de la v1.
+
+---
+
+❓ **Q5** - **Seguimiento y motivación**: ¿Qué querés ver para saber cómo vas? Puede ser una racha (días seguidos), un calendario tipo heatmap, un porcentaje de cumplimiento semanal o mensual, o gráficos. También hay que decidir si querés recordatorios o notificaciones.
+
+➡️ Racha actual y mejor racha, más un heatmap mensual por hábito. Sin notificaciones en la v1: en una PWA son poco confiables, sobre todo en iOS.
+
+---
+
+❓ **Q6** - **Idioma, estilo y stack**: ¿La interfaz va en español? ¿Preferís un estilo en particular (minimalista, colorido, modo oscuro)? ¿Tenés alguna preferencia técnica, como React, vanilla JS o algún framework en particular?
+
+➡️ Interfaz en español, minimalista, con modo oscuro automático. En lo técnico, un solo HTML con JS vanilla, sin build, porque para esta escala es lo más simple de mantener y abrir. Si preferís React/Vite, lo cambio.
+
+---
+
+Cuando me respondas, paso a la segunda ronda. Ahí van las pantallas y los flujos concretos: crear, editar y archivar hábitos, qué pasa con los días pasados y cómo se maneja el cambio de día.
+
+## Ronda 2
+
+**Prompt (nuestro):**
+
+```
+Q1 ok. Q2 no: quiero que se sincronice entre el celu y la compu. Q3 a Q6 ok.
+```
+
+**Respuesta (real):**
+
+Con sync entre celu y compu cambia la raíz del árbol. Ahora hace falta un backend y alguna forma de identificar al usuario. Esto también afecta el stack de Q6, así que lo reabro en Q1. Las demás preguntas son de producto y no dependen de la sync.
+
+❓ **Q1** - **Backend de sincronización**: ¿Cómo viajan los datos entre dispositivos?
+- (a) Un servicio gestionado gratuito (Supabase o Firebase). Tenés que crear una cuenta y darme las claves del proyecto.
+- (b) Un servidor propio chico (Node + SQLite) que hay que hostear en algún lado.
+- (c) Sin servidor: exportar e importar un archivo JSON a mano, o guardarlo en una carpeta sincronizada tipo Drive.
+
+➡️ (a) con Supabase. Tiene login, base de datos y plan gratis, y no hay que mantener ningún servidor. Con esto el "HTML único sin build" de Q6 se queda corto: pasaría a un proyecto chico con Vite y la librería de Supabase. Sigue siendo JS vanilla o Preact, sin framework pesado.
+
+---
+
+❓ **Q2** - **Login**: ¿Cómo entrás a tu cuenta?
+- (a) Email con link mágico, sin contraseña.
+- (b) Email y contraseña.
+- (c) Google.
+
+➡️ (a). Es lo más simple para un solo usuario y no tenés que recordar nada.
+
+---
+
+❓ **Q3** - **Offline y conflictos**: ¿La app tiene que funcionar sin internet y sincronizar después? Si marcás un hábito en el celu sin conexión y también en la compu, ¿qué gana?
+
+➡️ Sí, funciona offline: los datos se guardan en local y se suben cuando vuelve la conexión. Los conflictos se resuelven con "gana el último cambio". Con un tilde por hábito y día, un conflicto real es casi imposible.
+
+---
+
+❓ **Q4** - **Días pasados**: ¿Se pueden marcar o desmarcar días anteriores, para cuando te olvidaste de anotar? ¿Hasta cuántos días atrás?
+
+➡️ Sí, hasta 7 días atrás desde la vista semanal. Más atrás queda bloqueado para que las rachas sean confiables.
+
+---
+
+❓ **Q5** - **Cambio de día y zona horaria**: ¿A qué hora empieza el "día nuevo"? Si te acostás a las 2 a.m., ¿marcar el hábito cuenta para el día anterior?
+
+➡️ El día cambia a las 00:00 en la zona horaria del dispositivo. Para marcar algo de ayer usás la vista semanal de Q4. Para la v1, es lo más predecible.
+
+---
+
+❓ **Q6** - **Ciclo de vida de un hábito**: ¿Qué pasa cuando editás, pausás o borrás un hábito? ¿Si lo borrás se pierde todo el historial?
+
+➡️ Hay "archivar", que lo oculta pero conserva el historial y se puede restaurar. Borrar de verdad pide confirmación. Si cambiás los días de la semana de un hábito, solo vale hacia adelante, sin reescribir cómo se calcularon las rachas pasadas.
+
+---
+
+❓ **Q7** - **Pantallas**: ¿Te sirve esta estructura? (1) "Hoy": lista de hábitos con un toque para marcar y la racha al lado. (2) "Semana": grilla de hábitos por 7 días, editable. (3) "Detalle de hábito": racha actual, mejor racha, heatmap mensual y editar o archivar. (4) "Ajustes": cuenta, exportar JSON y tema.
+
+➡️ Sí, esas cuatro con navegación inferior, pensadas primero para el celu. En la compu es la misma interfaz, con un ancho máximo centrado.
+
+---
+
+Cuando me contestes, paso a la ronda final. Ahí van las cosas de detalle: campos de un hábito (nombre, color, ícono), orden de la lista, estado vacío, cómo hostear la PWA y qué datos de Supabase necesito de tu parte.
