@@ -1,0 +1,13 @@
+Le pedí a Claude Code una app para seguir hábitos. En 31 segundos escribió 117 líneas… sin hacerme ni una pregunta. Y guardó todo en el navegador: en el celu no la podía usar.
+
+grill-me es una skill gratuita (licencia MIT) de Matt Pocock: antes de escribir código te entrevista, y cada pregunta trae su respuesta recomendada.
+
+Cómo instalarla en Claude Code:
+claude plugin install mattpocock-skills@claude-plugins-official
+Después escribís: /grill-me + tu idea
+
+Repo: https://github.com/mattpocock/skills
+
+Lo que se ve es real: las dos sesiones de Claude Code se grabaron el 15 y el 16 de noviembre de 2026, y la página del repo es una captura del 12 de noviembre. Las voces son generadas con IA.
+
+#claude #claudecode #ia #programacion

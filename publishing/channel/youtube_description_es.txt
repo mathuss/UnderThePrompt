@@ -1,0 +1,9 @@
+Debajo del Prompt: lo que de verdad hay debajo de la tecnología que usás.
+
+Explicaciones cortas y con fuentes sobre IA, herramientas para programar, software, seguridad e internet, contadas por Mott (una polilla del turno noche) y Leo (un pasante que instala primero y lee después).
+
+Cada video muestra un problema real, la herramienta que lo resuelve y cómo usarla, paso a paso. Lo que se ve en pantalla es real: sesiones grabadas, capturas y comandos que probamos nosotros. Cada dato tiene su fuente en la descripción, y siempre damos crédito a quien hizo cada herramienta.
+
+Las voces de Mott y Leo son generadas con IA.
+
+Shorts nuevos los lunes, miércoles y viernes.
